@@ -61,6 +61,7 @@
     kitty
     htop
     neofetch
+    cowsay
   ];
 
   # Enable the OpenSSH daemon.
