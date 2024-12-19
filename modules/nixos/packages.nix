@@ -6,6 +6,6 @@
     kitty
     htop
     neofetch
-    cowsay
+    fortune
   ];
 }
