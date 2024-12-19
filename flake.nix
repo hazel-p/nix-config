@@ -33,7 +33,7 @@
       ms1-hzl4 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs outputs;};
-        modules = [./configuration.nix];
+        modules = [./machines/hzl4/configuration.nix];
       };
       
       #TODO: Add:
