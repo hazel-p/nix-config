@@ -6,7 +6,7 @@
     eula = true;
     declarative = true;
  
-    package = pkgs.papermcServers.papermc-1_21.1;
+    package = pkgs.papermcServers.papermc-1_21_1;
  
     serverProperties = {
       gamemode = "survival";
