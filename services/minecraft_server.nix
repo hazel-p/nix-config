@@ -1,6 +1,6 @@
 # Minecraft Server 
 
-{ pkgs, lib, …}: {
+{pkgs, ...}: {
   services.minecraft = {
     enable = true;
     eula = true;
