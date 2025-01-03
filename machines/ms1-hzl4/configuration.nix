@@ -9,6 +9,7 @@
 
       ./../../modules/nixos/base.nix
 
+      ./../../services/minecraft_server.nix
       # Add other services here
     ];
   
