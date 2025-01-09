@@ -31,13 +31,11 @@
   in {
     nixosConfigurations = {
       ms1-hzl4 = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
         specialArgs = {inherit inputs outputs;};
         modules = [./machines/ms1-hzl4/configuration.nix];
       };
       
       dt1-hzl4 = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
         specialArgs = {inherit inputs outputs;};
         modules = [./machines/dt1-hzl4/configuration.nix];
       };
