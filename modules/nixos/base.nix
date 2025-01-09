@@ -8,10 +8,6 @@
     ./packages.nix
   ];
 
-    # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   # Localisation
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_GB.UTF-8";
