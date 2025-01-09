@@ -20,7 +20,6 @@
         s = "status";
         ac = "!git add -A && git commit -m ";
       };
-    }
-    fastfetch.enable = true;
+    };
   };
 }
