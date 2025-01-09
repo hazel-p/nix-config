@@ -17,5 +17,18 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  home-manager = {
+    extraSpecialArgs = {inherit inputs outputs;};
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users = {
+      hazel = {
+        imports = [
+          ./../../modules/home-manager/base.nix
+        ];
+      };
+    };
+  };
+
   networking.hostName = "ms1-hzl4";
 }
