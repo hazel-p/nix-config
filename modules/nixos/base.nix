@@ -4,8 +4,15 @@
   pkgs,
   ...
 }: {
-  imports = [
-    ./packages.nix
+  
+  environment.systemPackages = with pkgs; [
+    git
+    neovim 
+    wget
+    kitty
+    htop
+    neofetch
+    fortune
   ];
 
   # Localisation
