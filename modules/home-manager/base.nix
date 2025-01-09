@@ -14,12 +14,6 @@
       enable = true;
       userName = "Hazel Pumphrey";
       userEmail = "hazel.pumphrey@proton.me";
-      aliases = {
-        ci = "commit";
-        co = "checkout";
-        s = "status";
-        ac = "!git add -A && git commit -m ";
-      };
     };
   };
 }
