@@ -15,6 +15,19 @@
   boot.loader.grub.device = "/dev/nvme0n1";
   boot.loader.grub.useOSProber = true;
 
+  home-manager = {
+    extraSpecialArgs = {inherit inputs outputs;};
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users = {
+      hazel = {
+        imports = [
+          ./../../modules/home-manager/base.nix
+        ];
+      };
+    };
+  };
+
   networking.hostName = "dt1-hzl4";
 
   # Install firefox.
