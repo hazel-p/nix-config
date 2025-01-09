@@ -11,7 +11,7 @@
 
   programs = {
     git = {
-      enable = true;i
+      enable = true;
       userName = "Hazel Pumphrey";
       userEmail = "hazel.pumphrey@proton.me";
       aliases = {
