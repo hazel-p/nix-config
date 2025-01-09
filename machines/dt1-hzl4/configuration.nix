@@ -29,7 +29,4 @@
   };
 
   networking.hostName = "dt1-hzl4";
-
-  # Install firefox.
-  programs.firefox.enable = true;
 }
