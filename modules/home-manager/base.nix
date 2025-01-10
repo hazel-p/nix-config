@@ -37,7 +37,7 @@
         
         languages = {
           enableLSP = true;
-          enable Treesitter = true;
+          enableTreesitter = true;
 
           nix.enable = true;
         };
