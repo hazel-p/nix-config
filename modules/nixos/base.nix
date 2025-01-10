@@ -36,6 +36,7 @@
   console.keyMap = "uk";
 
   # Nix
+  nixpkgs.config.allowUnfree = true;
   nix = {
     gc = {
       automatic = true;
