@@ -20,8 +20,8 @@
       enable = true;
       vim.theme = {
         enable = true;
-	name = "gruvbox"
-	style = "dark"
+	name = "gruvbox";
+	style = "dark";
       };
     };
   };
