@@ -6,6 +6,7 @@
 }: {
   imports = [
     inputs.nvf.homeManagerModules.default
+    ./base-packages.nix
   ];
 
   home = {

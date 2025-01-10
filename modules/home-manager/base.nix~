@@ -6,6 +6,7 @@
 }: {
   imports = [
     inputs.nvf.homeManagerModules.default
+    ./base-packages
   ];
 
   home = {
@@ -19,6 +20,20 @@
       enable = true;
       userName = "Hazel Pumphrey";
       userEmail = "hazel.pumphrey@proton.me";
+    };
+    
+    zsh = {
+      enable = true;
+      enableCompletion = true;
+      autosuggestion.enable = true;
+      syntaxHighlighting.enable = true;
+      shellAliases = {
+        ".." = "cd ..";
+        cat = "bat --style=plain --theme=base16 --paging=never ";
+        neofetch = "fastfetch";
+        v = "nvim ";
+      };
+      initExtra = "fortune";
     };
 
     nvf = {
