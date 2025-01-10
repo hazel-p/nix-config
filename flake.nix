@@ -24,6 +24,7 @@
     self,
     nixpkgs,
     home-manager,
+    nvf,
     ...
   } @ inputs: let
     inherit (self) outputs;
