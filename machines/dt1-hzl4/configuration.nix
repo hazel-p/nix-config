@@ -16,7 +16,7 @@
   boot.loader.grub.useOSProber = true;
 
   home-manager = {
-    extraSpecialArgs = {inherit inputs outputs;};
+    specialArgs = {inherit inputs outputs;};
     useGlobalPkgs = true;
     useUserPackages = true;
     users = {
