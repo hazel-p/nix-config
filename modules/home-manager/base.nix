@@ -27,7 +27,7 @@
         
         theme = {
           enable = true;
-	  name = "gruvbox";
+          name = "gruvbox";
           style = "dark";
         };
 
