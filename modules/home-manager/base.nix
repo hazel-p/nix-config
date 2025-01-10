@@ -23,10 +23,12 @@
 
     nvf = {
       enable = true;
-      vim.theme = {
-        enable = true;
-	name = "gruvbox";
-	style = "dark";
+      settings = {
+        vim.theme = {
+          enable = true;
+	  name = "gruvbox";
+	  style = "dark";
+        };
       };
     };
   };
