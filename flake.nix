@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nvf.url = "github:notashelf/nvf";
     
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";

@@ -21,5 +21,14 @@
         ac = "!git add -A && git commit -m ";
       };
     };
+
+    nvf = {
+      enable = true
+      vim.theme = {
+        enable = true;
+	name = "gruvbox"
+	style = "dark"
+      };
+    };
   };
 }
