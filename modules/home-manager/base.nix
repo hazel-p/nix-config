@@ -17,7 +17,7 @@
     };
 
     nvf = {
-      enable = true
+      enable = true;
       vim.theme = {
         enable = true;
 	name = "gruvbox"
