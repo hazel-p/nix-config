@@ -23,7 +23,4 @@
     jack.enable = true;
     wireplumber.enable = true;
   };
-
-  # Enable pure desktop packages
-  programs.steam.enable = true;
 }
