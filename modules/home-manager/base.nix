@@ -3,6 +3,10 @@
   pkgs,
   ...
 }: {
+  imports = [
+    inputs.nvf.homeManagerModules.default
+  ];
+
   home = {
     username = "hazel";
     homeDirectory = "/home/hazel";
