@@ -16,15 +16,13 @@
   boot.loader.grub.useOSProber = true;
 
   home-manager = {
-    specialArgs = {inherit inputs outputs;};
     useGlobalPkgs = true;
     useUserPackages = true;
-    users = {
-      hazel = {
-        imports = [
-          ./../../modules/home-manager/base.nix
-        ];
-      };
+    extraSpecialArgs = {inherit inputs outputs; };
+    users.hazel = {
+      imports = [
+        ./../../modules/home-manager/base.nix
+      ];
     };
   };
 
