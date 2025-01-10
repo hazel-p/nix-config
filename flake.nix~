@@ -29,11 +29,10 @@
   } @ inputs: let
     inherit (self) outputs;
     system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-    };
   in {
+    packages = import ./pkgs nixpkgs.legacyPackages.${system};
+    formatter = nixpkgs.legacyPackages.${system}.alejandra;
+
     nixosConfigurations = {
       ms1-hzl4 = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
