@@ -36,9 +36,6 @@
         autocomplete.nvim-cmp.enable = true;
         
         languages = {
-          enableLSP = true;
-          enable Treesitter = true;
-
           nix.enable = true;
         };
 
