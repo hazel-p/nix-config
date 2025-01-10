@@ -8,11 +8,6 @@
   environment.systemPackages = with pkgs; [
     git
     neovim 
-    wget
-    kitty
-    htop
-    neofetch
-    fortune
   ];
 
   # Localisation
@@ -55,7 +50,9 @@
     description = "Hazel";
     extraGroups = [ "networkmanager" "wheel" ];
     initialPassword = "secure-me!";
+    shell = pkgs.zsh;
   };
+  programs.zsh.enable = true;
   
   # Enable the OpenSSH daemon.
   services.openssh = {

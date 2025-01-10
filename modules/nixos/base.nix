@@ -5,6 +5,7 @@
   ...
 }: {
   
+  # Essential System-wide Packages
   environment.systemPackages = with pkgs; [
     git
     neovim 
