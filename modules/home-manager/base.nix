@@ -41,12 +41,6 @@
       enable = true;
       enableZshIntegration = true;
     };
-    zellij = { # Multiplexer
-      enable = true;
-      settings = {
-        theme = "gruvbox";
-      };
-    };
     tealdeer = { # Improved TLDR
       enable = true;
       settings.updates.auto_update = true;
