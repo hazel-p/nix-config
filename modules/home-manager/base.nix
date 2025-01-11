@@ -16,13 +16,15 @@
   };
 
   programs = {
+    # Git
     git = {
       enable = true;
       userName = "Hazel Pumphrey";
       userEmail = "hazel.pumphrey@proton.me";
     };
     
-    zsh = {
+    # Shell
+    zsh = { # Z Shell
       enable = true;
       enableCompletion = true;
       autosuggestion.enable = true;
@@ -35,7 +37,29 @@
       };
       initExtra = "fortune";
     };
+    fzf = { # Fuzzy Finder
+      enable = true;
+      enableZshIntegration = true;
+    };
+    zellij = { # Multiplexer
+      enable = true;
+      settings = {
+        theme = "gruvbox";
+      };
+    };
+    tealdeer = { # Improved TLDR
+      enable = true;
+      settings.updates.auto_update = true;
+    };
 
+    # Editors
+    helix = {
+      enable = true;
+      defaultEditor = true;
+      settings = {
+        theme = "gruvbox";
+      };
+    };
     nvf = {
       enable = true;
       settings.vim = {
