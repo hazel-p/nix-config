@@ -54,7 +54,7 @@
               };
               Noisium = pkgs.fetchurl {
                 url = "https://cdn.modrinth.com/data/KuNKN7d2/versions/4sGQgiu2/noisium-fabric-2.3.0%2Bmc1.21-1.21.1.jar";
-                sha512 = "sha512-L5heO8ygfuoHcataiOykM0YFEPEa8O/foB0v/rX4Yos6EhAOxQ2y0qqVZ90RaE4CfZRCvhb35ljOWUZwbZ5Paw==";
+                sha512 = "sha512-YGunjPfzDZnkF8lqoEL2AMG2Ju2ceDkZSW0TneZQAT8UNPz5NUV4LjiJZgMig3zm6FUw2eGlzCD5rRYTV+3kPg==";
               };
 
             # Terrain Generators
