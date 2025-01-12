@@ -21,6 +21,7 @@
  
     whitelist = {
       hzl4 = "a7bbac4b-d6f2-425e-a984-82f092b13da3";
+      Poyni = "3dfb2091-cdea-4ffb-bc49-7117454a57ff";
     };
  
     jvmOpts = "-Xms4092M -Xmx4092M -XX:+UseG1GC";

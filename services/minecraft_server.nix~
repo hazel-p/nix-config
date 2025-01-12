@@ -20,7 +20,7 @@
     };
  
     whitelist = {
-      ShoQ_ = "a7bbac4b-d6f2-425e-a984-82f092b13da3";
+      hzl4 = "a7bbac4b-d6f2-425e-a984-82f092b13da3";
     };
  
     jvmOpts = "-Xms4092M -Xmx4092M -XX:+UseG1GC";
