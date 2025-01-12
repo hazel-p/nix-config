@@ -42,7 +42,7 @@
               };
               Krypton = pkgs.fetchurl {
                 url = "https://cdn.modrinth.com/data/fQEb0iXm/versions/Acz3ttTp/krypton-0.2.8.jar";
-                sha512 = "2f985e3bcca07eea0771ab5a88eca433460510f11af0efdfa01d2ffeb5f8628b3a12100ec50db2d2aa9567dd11684e027d9442be16f7e658ce5946706d9e4f6b";
+                sha512 = "sha512-X4z5bHm/1NiT8dcNpYLmICa+02r0mn+nseAPtu+yjZrWoe7BRwIElrT+OGk9M/5r/NHuu9k0dWEu5EKQwkg3hA==";
               };
               C2ME = pkgs.fetchurl {
                 url = "https://cdn.modrinth.com/data/VSNURh3q/versions/H5YtgA2t/c2me-fabric-mc1.21.1-0.3.0%2Balpha.0.310.jar";
