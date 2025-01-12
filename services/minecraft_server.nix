@@ -46,7 +46,7 @@
               };
               C2ME = pkgs.fetchurl {
                 url = "https://cdn.modrinth.com/data/VSNURh3q/versions/H5YtgA2t/c2me-fabric-mc1.21.1-0.3.0%2Balpha.0.310.jar";
-                sha512 = "2f985e3bcca07eea0771ab5a88eca433460510f11af0efdfa01d2ffeb5f8628b3a12100ec50db2d2aa9567dd11684e027d9442be16f7e658ce5946706d9e4f6b";
+                sha512 = "sha512-6sjys9MfKWzYTVgjisARsQeuNCj0cKv1Cw7fe2ObomCO4Hi/Uw1IRil8XBREZjWFeMxUYjzufvxD50OBlPhcbQ==";
               };
               ScalableLux = pkgs.fetchurl {
                 url = "https://cdn.modrinth.com/data/Ps1zyz6x/versions/Oh80nTJ5/ScalableLux-0.1.0%2Bfabric.26c6e72-all.jar";
