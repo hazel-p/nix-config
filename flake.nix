@@ -18,19 +18,22 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-minecraft = {
+      url = "github:Infinidoge/nix-minecraft";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
-    nvf,
     ...
   } @ inputs: let
     inherit (self) outputs;
     systems = [
       "aarch64-linux"
-      "i686-linux"
       "x86_64-linux"
     ];
     forAllSystems = nixpkgs.lib.genAttrs systems;

@@ -35,7 +35,6 @@
     ];
     forAllSystems = nixpkgs.lib.genAttrs systems;
   in {
-    packages = forAllSystems (system: import ./packages nixpkgs.legacyPackages.${system});
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
     nixosConfigurations = {
 
