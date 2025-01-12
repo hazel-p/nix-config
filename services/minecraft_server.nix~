@@ -60,7 +60,7 @@
             # Terrain Generators
               Tectonic = pkgs.fetchurl {
                 url = "https://cdn.modrinth.com/data/lWDHr9jE/versions/mSYrCaov/tectonic-fabric-1.21.1-2.4.1a.jar"; # 1.21.1
-                sha512 = "2f985e3bcca07eea0771ab5a88eca433460510f11af0efdfa01d2ffeb5f8628b3a12100ec50db2d2aa9567dd11684e027d9442be16f7e658ce5946706d9e4f6b";
+                sha512 = "sha512-qd2k6xkSpyTh7/ZMpwvp8WX5dD6TbccDxC6+LstM/Rpmpowiqv7wipXIMs6ezPfPg2jG5FV1b5pQV1Ug3UgZGw==";
               };
               Terralith = pkgs.fetchurl {
                 url = "https://cdn.modrinth.com/data/8oi3bsk5/versions/lQreFvOm/Terralith_1.21.x_v2.5.7.jar"; # 1.21.x
