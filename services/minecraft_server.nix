@@ -69,7 +69,7 @@
               };
           });
         };
-        jvmOpts = “-Xms4092M -Xmx4092M -XX:+UseG1GC”
+        jvmOpts = "-Xms4092M -Xmx4092M -XX:+UseG1GC";
       };
 
     };

@@ -12,6 +12,7 @@
       hide-and-soc = {
         enable = true;
         package = pkgs.fabricServers.fabric-1_21_1;
+        openFirewall = true;
  
         serverProperties = {
           server-port = 25565;
@@ -30,7 +31,7 @@
 
         symlinks = {
           # Fetching from the internet
-          "mods" = pkgs.linkFarmFromDrvs "mods" (builtins.attrValues {
+          mods = pkgs.linkFarmFromDrvs "mods" (builtins.attrValues {
             # Optimisations
               Lithium = pkgs.fetchurl {
                 url = "https://cdn.modrinth.com/data/gvQqBUqZ/versions/9xfJi96s/lithium-fabric-0.14.3-snapshot%2Bmc1.21.1-build.92.jar";
@@ -66,10 +67,11 @@
                 url = "https://cdn.modrinth.com/data/8oi3bsk5/versions/lQreFvOm/Terralith_1.21.x_v2.5.7.jar"; # 1.21.x
                 sha512 = "sha512-Q9QL/o3OYDt8nr63LbOJ4nfNMFVBRik1DyiDpsdkcqiHrDUKldnsVcKK7BZd7nc2QEYstnTNxMPvswCZ80Y7cg==";
               };
-
           });
         };
+        jvmOpts = “-Xms4092M -Xmx4092M -XX:+UseG1GC”
       };
+
     };
   };
 }
