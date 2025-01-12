@@ -58,18 +58,22 @@
                 sha512 = "sha512-YGunjPfzDZnkF8lqoEL2AMG2Ju2ceDkZSW0TneZQAT8UNPz5NUV4LjiJZgMig3zm6FUw2eGlzCD5rRYTV+3kPg==";
               };
 
+            /*
             # Terrain Generators
               Tectonic = pkgs.fetchurl {
                 url = "https://cdn.modrinth.com/data/lWDHr9jE/versions/mSYrCaov/tectonic-fabric-1.21.1-2.4.1a.jar"; # 1.21.1
                 sha512 = "sha512-qd2k6xkSpyTh7/ZMpwvp8WX5dD6TbccDxC6+LstM/Rpmpowiqv7wipXIMs6ezPfPg2jG5FV1b5pQV1Ug3UgZGw==";
               };
+            /*
               Terralith = pkgs.fetchurl {
                 url = "https://cdn.modrinth.com/data/8oi3bsk5/versions/lQreFvOm/Terralith_1.21.x_v2.5.7.jar"; # 1.21.x
                 sha512 = "sha512-Q9QL/o3OYDt8nr63LbOJ4nfNMFVBRik1DyiDpsdkcqiHrDUKldnsVcKK7BZd7nc2QEYstnTNxMPvswCZ80Y7cg==";
               };
+            */
           });
         };
-        jvmOpts = "-Xms4092M -Xmx4092M -XX:+UseG1GC";
+
+        jvmOpts = "-Xms2048M -Xmx2048M -XX:+UseG1GC";
       };
 
     };
