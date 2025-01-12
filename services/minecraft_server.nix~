@@ -50,7 +50,7 @@
               };
               ScalableLux = pkgs.fetchurl {
                 url = "https://cdn.modrinth.com/data/Ps1zyz6x/versions/Oh80nTJ5/ScalableLux-0.1.0%2Bfabric.26c6e72-all.jar";
-                sha512 = "";
+                sha512 = "sha256-Q/SnqtT3LF1v/Xkn7HFWRLA/KlZEuz3vnx1PCakFSMo=";
               };
               Noisium = pkgs.fetchurl {
                 url = "https://cdn.modrinth.com/data/KuNKN7d2/versions/4sGQgiu2/noisium-fabric-2.3.0%2Bmc1.21-1.21.1.jar";
