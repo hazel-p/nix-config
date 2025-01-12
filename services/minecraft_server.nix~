@@ -50,7 +50,7 @@
               };
               ScalableLux = pkgs.fetchurl {
                 url = "https://cdn.modrinth.com/data/Ps1zyz6x/versions/Oh80nTJ5/ScalableLux-0.1.0%2Bfabric.26c6e72-all.jar";
-                sha512 = "sha256-Q/SnqtT3LF1v/Xkn7HFWRLA/KlZEuz3vnx1PCakFSMo=";
+                sha512 = "2f985e3bcca07eea0771ab5a88eca433460510f11af0efdfa01d2ffeb5f8628b3a12100ec50db2d2aa9567dd11684e027d9442be16f7e658ce5946706d9e4f6b";
               };
               Noisium = pkgs.fetchurl {
                 url = "https://cdn.modrinth.com/data/KuNKN7d2/versions/4sGQgiu2/noisium-fabric-2.3.0%2Bmc1.21-1.21.1.jar";
