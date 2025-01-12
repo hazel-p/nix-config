@@ -8,9 +8,6 @@
     enable = true;
     eula = true;
     
-    package = pkgs.papermcServers.papermc-1_21_1;
-    dataDir = "/nix/var/mc-servers";
- 
     servers = {
       hide-and-soc = {
         enable = true;
