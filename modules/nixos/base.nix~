@@ -52,7 +52,7 @@
   # Configure Sops
   sops = {
     defaultSopsFile = ./../../secrets/secrets.yaml;
-    defauleSopsFormat = "yaml";
+    defaultSopsFormat = "yaml";
     age.keyFile = "/home/hazel/.config/sops/age/keys.txt";
     secrets."user-password".neededForUsers = true;
     secrets."user-password" = {};
