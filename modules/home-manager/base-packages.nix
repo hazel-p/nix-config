@@ -14,6 +14,7 @@
         fastfetch
         bat
         memtester
+        sops
     ];
   };
 }
