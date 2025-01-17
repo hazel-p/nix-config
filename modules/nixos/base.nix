@@ -4,7 +4,10 @@
   pkgs,
   ...
 }: {
-  
+  imports = [
+    inputs.sops-nix.nixosModules.sops
+  ];
+
   # Essential System-wide Packages
   environment.systemPackages = with pkgs; [
     git
@@ -46,13 +49,24 @@
     };
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Configure Sops
+  sops = {
+    defaultSopsFile = ./../../secrets/secrets.yaml;
+    defaultSopsFormat = "yaml";
+    age.keyFile = "/home/hazel/.config/sops/age/keys.txt";
+    secrets."user-password".neededForUsers = true;
+    secrets."user-password" = {};
+    # inspo: https://github.com/Mic92/sops-nix/issues/427
+    gnupg.sshKeyPaths = [];
+  };
+
+  # Add personal user account
   users.users.hazel = {
     isNormalUser = true;
-    description = "Hazel";
+    description = "Hazel P";
     extraGroups = [ "networkmanager" "wheel" ];
-    initialPassword = "secure-me!";
     shell = pkgs.zsh;
+    hashedPasswordFile = config.sops.secrets."user-password".path;
   };
   programs.zsh.enable = true;
   

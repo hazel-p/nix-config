@@ -1,0 +1,7 @@
+keys:
+  - &dt1-hzl4 age1wz5pek04hmplxklvncq7xtzygjvdlrxrpknlcmmhrhc92hhdyp2qwyf4u7
+creation_rules:
+  - path_regex: secrets/[^/]+(\.(yaml|json|env|ini|conf))?$
+    key_groups:
+      - age:
+        - *dt1-hzl4
