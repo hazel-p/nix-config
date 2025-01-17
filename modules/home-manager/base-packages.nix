@@ -13,6 +13,7 @@
         alejandra
         fastfetch
         bat
+        memtester
     ];
   };
 }
