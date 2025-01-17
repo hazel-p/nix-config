@@ -14,6 +14,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  services.xserver.enable = true;
+  services.xserver.videoDrivers = ["amdgpu"];
+
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
