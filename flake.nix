@@ -41,16 +41,16 @@
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
     nixosConfigurations = {
 
-      # Micro-Server 1 Setup
-      ms1-hzl4 = nixpkgs.lib.nixosSystem {
+      # Server 1 Setup
+      home-server-1 = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./machines/ms1-hzl4/configuration.nix];
+        modules = [./hosts/home-server-1/configuration.nix];
       };
       
       # Desktop Setup
-      dt1-hzl4 = nixpkgs.lib.nixosSystem {
+      home-desktop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./machines/dt1-hzl4/configuration.nix];
+        modules = [./hosts/home-desktop/configuration.nix];
       };
 
     };

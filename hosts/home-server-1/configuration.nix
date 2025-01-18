@@ -11,17 +11,14 @@
 
       ./../../services/minecraft_server.nix
       
-      #./../../services/immich.nix
+      ./../../services/immich.nix
+      ./../../services/tailscale.nix
       # Add other services here
     ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  services.immich.enable = true;
-  services.immich.port = 2283;
-  services.immich.openFirewall = true;
 
   home-manager = {
     extraSpecialArgs = {inherit inputs outputs;};
@@ -36,5 +33,5 @@
     };
   };
 
-  networking.hostName = "ms1-hzl4";
+  networking.hostName = "home-server-1";
 }

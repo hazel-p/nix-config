@@ -31,5 +31,5 @@
     };
   };
 
-  networking.hostName = "dt1-hzl4";
+  networking.hostName = "home-desktop";
 }
