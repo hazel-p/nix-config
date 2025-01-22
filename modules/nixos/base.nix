@@ -66,18 +66,23 @@
     isNormalUser = true;
     description = "Hazel P";
     extraGroups = [ "networkmanager" "wheel" ];
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHUW/Z5paE3aBdN6qFshFs/dopVA2w5aMqNPy6ndeRLh"
+    ];
     shell = pkgs.zsh;
     hashedPasswordFile = config.sops.secrets."user-password".path;
   };
-  programs.zsh.enable = true;
-  
-  # Enable the OpenSSH daemon.
-  services.openssh = {
-    enable = true;
-    settings = {
-      PermitRootLogin = "no";
+
+  services = {
+    openssh = {
+      enable = true;
+      settings = {
+        PermitRootLogin = "no";
+        PasswordAuthentication = false;
+      };
+      openFirewall = true;
     };
-    openFirewall = true;
+    fstrim.enable = true;
   };
 
   networking = {
