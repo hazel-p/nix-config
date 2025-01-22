@@ -61,7 +61,7 @@
   };
 
   # Add personal user account
-  users.mutableUsers = false;
+  # users.mutableUsers = false;
   users.users.hazel = {
     isNormalUser = true;
     description = "Hazel P";
