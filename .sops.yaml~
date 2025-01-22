@@ -1,6 +1,6 @@
 keys:
   - &home-desktop age1wz5pek04hmplxklvncq7xtzygjvdlrxrpknlcmmhrhc92hhdyp2qwyf4u7
-  - &home-server-1 age1peytujyghq3q0f85vdcw2hmmjcrc8mrk0ap6s9lanke6wsln9a5qvjdpqa
+  - &home-server-1 age13400msdw44y3prwxvjl4sxt446t50w2jf2ut92qknvmksuyeeuqqn236cy 
 creation_rules:
   - path_regex: secrets/[^/]+(\.(yaml|json|env|ini|conf))?$
     key_groups:
