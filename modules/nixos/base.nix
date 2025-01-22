@@ -72,18 +72,17 @@
     shell = pkgs.zsh;
     hashedPasswordFile = config.sops.secrets."user-password".path;
   };
+  programs.zsh.enable = true;
 
-  services = {
-    openssh = {
-      enable = true;
-      settings = {
-        PermitRootLogin = "no";
-        PasswordAuthentication = false;
-      };
-      openFirewall = true;
+  services.openssh = {
+    enable = true;
+    settings = {
+      PermitRootLogin = "no";
+      PasswordAuthentication = false;
     };
-    fstrim.enable = true;
+    openFirewall = true;
   };
+  services.fstrim.enable = true;
 
   networking = {
     firewall.enable = true;
