@@ -16,8 +16,14 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  services.xserver.enable = true;
-  services.xserver.videoDrivers = ["amdgpu"];
+  # AMD GPU settings
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+  environment.systemPackages = with pkgs; [ lact ];
+  systemd.packages = with pkgs; [ lact ];
+  systemd.services.lactd.wantedBy = ["multi-user.target"];
 
   home-manager = {
     useGlobalPkgs = true;
