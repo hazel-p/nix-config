@@ -1,4 +1,4 @@
-ta# Minecraft Server 
+# Minecraft Server 
 
 {pkgs, inputs, ...}: {
   imports = [ inputs.nix-minecraft.nixosModules.minecraft-servers ];
