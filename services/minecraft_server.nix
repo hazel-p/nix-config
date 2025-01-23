@@ -1,4 +1,4 @@
-# Minecraft Server 
+ta# Minecraft Server 
 
 {pkgs, inputs, ...}: {
   imports = [ inputs.nix-minecraft.nixosModules.minecraft-servers ];
@@ -18,9 +18,9 @@
 
         serverProperties = {
           server-port = 25565;
-          gamemode = "survival";
+          gamemode = "spectator";
           difficulty = "normal";
-          simulation-distance = 10;
+          simulation-distance = 16;
           level-seed = "-2529980149474362834";
           motd = "UoN Hide and Soc Server - no mods required";
           white-list = true;
