@@ -21,7 +21,7 @@
           gamemode = "survival";
           difficulty = "normal";
           simulation-distance = 10;
-          level-seed = "seeker";
+          level-seed = "braaains";
           motd = "UoN Hide and Soc Server - no mods required";
           white-list = true;
         };
