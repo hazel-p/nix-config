@@ -9,7 +9,7 @@
     dataDir = "/var/lib/minecraft";
     
     servers = {
-      home_server = {
+      hazel-main-server = {
         enable = true;
         package = pkgs.fabricServers.fabric-1_21_1;
         openFirewall = true;
@@ -18,7 +18,7 @@
           server-port = 25565;
           gamemode = "spectator";
           difficulty = "normal";
-          view_distance = 16;
+          view-distance = 16;
           simulation-distance = 8;
           level-seed = "-2529980149474362834";
           motd = "Hazel's Friends - No Mods Required";
