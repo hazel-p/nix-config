@@ -16,7 +16,7 @@
 
         serverProperties = {
           server-port = 25565;
-          gamemode = "spectator";
+          gamemode = "survival";
           difficulty = "normal";
           view-distance = 16;
           simulation-distance = 8;
@@ -28,6 +28,7 @@
         whitelist = {
           hzl4 = "a7bbac4b-d6f2-425e-a984-82f092b13da3";
           Poyni = "3dfb2091-cdea-4ffb-bc49-7117454a57ff";
+          naphan = "0cff98ad-e580-4383-89a6-c95b04bad2d1";
         };
 
         jvmOpts = "-Xms20G -Xmx20G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1";
