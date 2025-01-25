@@ -21,6 +21,12 @@
       enable = true;
       userName = "Hazel Pumphrey";
       userEmail = "hazel.pumphrey@proton.me";
+      aliases = {
+        c = "commit";
+        co = "checkout";
+        s = "status";
+        ac = "!git add -A && git commit -m ";
+      };
     };
     
     # Shell
@@ -33,7 +39,8 @@
         ".." = "cd ..";
         cat = "bat --style=plain --theme=base16 --paging=never ";
         neofetch = "fastfetch";
-        v = "nvim ";
+        rebuild = "git pull && sudo nixos-rebuild switch --flake ~/nix-config";
+        rebuild-git = "sudo nixos-rebuild switch --flake github:hzl4/nix-config"; 
       };
       initExtra = "fortune";
     };
@@ -53,29 +60,12 @@
       settings = {
         theme = "gruvbox";
       };
-    };
-    nvf = {
-      enable = true;
-      settings.vim = {
-        
-        theme = {
-          enable = true;
-          name = "gruvbox";
-          style = "dark";
-        };
-
-        statusline.lualine.enable = true;
-        telescope.enable = true;
-        autocomplete.nvim-cmp.enable = true;
-        
-        languages = {
-          enableLSP = true;
-          enableTreesitter = true;
-
-          nix.enable = true;
-        };
-
-      };
+      languages.language = [
+        {
+          name = "nix";
+          auto-format = true;
+        }
+      ];
     };
   };
 }
