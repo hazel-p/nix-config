@@ -5,7 +5,6 @@
   ...
 }: {
   imports = [
-    inputs.nvf.homeManagerModules.default
     ./base-packages.nix
   ];
 
@@ -53,7 +52,7 @@
       settings.updates.auto_update = true;
     };
 
-    # Editors
+    # Helix Text Editor
     helix = {
       enable = true;
       defaultEditor = true;
