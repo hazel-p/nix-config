@@ -4,7 +4,10 @@
     [
       spotify
       discord
+      stremio
       prismlauncher
+      remmina
+      freerdp
     ];
 }
 
