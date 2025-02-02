@@ -9,6 +9,7 @@
 
       ./../../modules/nixos/base.nix
       ./../../modules/nixos/desktop.nix
+      ./../../modules/nixos/gnome.nix
       
       ./../../services/tailscale.nix
     ];
@@ -27,12 +28,10 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     extraSpecialArgs = {inherit inputs outputs; };
-    users.hazel = {
-      imports = [
-        ./../../modules/home-manager/base.nix
-        ./../../modules/home-manager/desktop.nix
-      ];
-    };
+    users.hazel.imports = [
+      ./../../modules/home-manager/base.nix
+      ./../../modules/home-manager/desktop.nix
+    ];
   };
 
   networking.hostName = "home-desktop";

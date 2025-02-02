@@ -7,8 +7,6 @@
       [
         btop
         fortune
-        kitty
-        foot
         htop
         alejandra
         fastfetch
