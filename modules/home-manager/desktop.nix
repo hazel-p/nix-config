@@ -7,13 +7,37 @@
     prismlauncher
     remmina
     freerdp
+    # /*
     gnomeExtensions.alphabetical-app-grid
     gnomeExtensions.appindicator
     gnomeExtensions.blur-my-shell
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.just-perfection
+    #*/
   ];
-    
+/*
+  wayland.windowManager.hyprland.enable = true; # enable Hyprland
+  wayland.windowManager.hyprland.settings = {
+    "$mod" = "SUPER";
+    bind =
+      [
+        "$mod, F, exec, firefox"
+        ", Print, exec, grimblast copy area"
+      ]
+      ++ (
+        # workspaces
+        # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
+        builtins.concatLists (builtins.genList (i:
+            let ws = i + 1;
+            in [
+              "$mod, code:1${toString i}, workspace, ${toString ws}"
+              "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+            ]
+          )
+          9)
+      );
+  };
+  #*/
   dconf = {
     enable = true;
     settings = {
@@ -22,6 +46,10 @@
           "firefox.desktop"
           "kitty.desktop"
           "spotify.desktop"
+          "steam.desktop"
+          "stremio.desktop"
+          "discord.desktop"
+          "prishlauncher.desktop"
         ];
       };
       "org/gnome/desktop/interface" = {
@@ -31,8 +59,7 @@
         experimental-features = ["scale-monitor-framebuffer"];
       };
       "org/gnome/desktop/background" = {
-        picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/morphogenesis-l.svg";
-        picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/morphogenesis-l.svg";
+        picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/blobs-d.svg";
       };
       "org/gnome/shell" = {
         disable-user-extensions = false;
@@ -49,5 +76,6 @@
       };
     };
   };
+  #*/
 }
 
