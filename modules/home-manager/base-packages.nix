@@ -13,6 +13,7 @@
         bat
         memtester
         sops
+        obsidian
     ];
   };
 }
