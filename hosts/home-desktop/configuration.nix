@@ -10,6 +10,7 @@
       ./../../modules/nixos/base.nix
       ./../../modules/nixos/desktop.nix
       ./../../modules/nixos/gnome.nix
+      ./../../modules/nixos/university.nix
       
       ./../../services/tailscale.nix
     ];
