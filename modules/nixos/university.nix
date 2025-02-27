@@ -10,5 +10,6 @@
     hunspell
     texstudio
     texlive.combined.scheme-basic
+    pandoc
   ];
 }
