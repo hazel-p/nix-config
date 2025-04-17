@@ -9,7 +9,7 @@
     libreoffice-qt
     hunspell
     texstudio
-    texlive.combined.scheme-basic
+    texlive.combined.scheme-full
     pandoc
   ];
 }

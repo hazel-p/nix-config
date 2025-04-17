@@ -13,6 +13,12 @@
     git
     neovim
     memtester
+
+    #for installing chromebook stuff
+    clang
+    debootstrap
+    parted
+    gnumake
   ];
 
   # Localisation
