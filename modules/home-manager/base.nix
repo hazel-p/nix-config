@@ -41,7 +41,7 @@
         rebuild = "git pull && sudo nixos-rebuild switch --flake ~/nix-config";
         rebuild-git = "sudo nixos-rebuild switch --flake github:hzl4/nix-config"; 
       };
-      initExtra = "fortune";
+      initContent = "fortune";
     };
     kitty = {
       enable = true;
