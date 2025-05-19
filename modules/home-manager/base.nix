@@ -27,9 +27,10 @@
         ac = "!git add -A && git commit -m ";
       };
     };
-    
+
     # Shell
-    zsh = { # Z Shell
+    zsh = {
+      # Z Shell
       enable = true;
       enableCompletion = true;
       autosuggestion.enable = true;
@@ -39,7 +40,7 @@
         cat = "bat --style=plain --theme=base16 --paging=never ";
         neofetch = "fastfetch";
         rebuild = "git pull && sudo nixos-rebuild switch --flake ~/nix-config";
-        rebuild-git = "sudo nixos-rebuild switch --flake github:hzl4/nix-config"; 
+        rebuild-git = "sudo nixos-rebuild switch --flake github:hzl4/nix-config";
       };
       initContent = "fortune";
     };
@@ -52,15 +53,17 @@
         mouse_hide_wait = "-1.0";
         window_padding_width = 10;
         background_opacity = "0.9";
-        background_blur = 10 ;
+        background_blur = 10;
         hide_window_decorations = true;
       };
     };
-    fzf = { # Fuzzy Finder
+    fzf = {
+      # Fuzzy Finder
       enable = true;
       enableZshIntegration = true;
     };
-    tealdeer = { # Improved TLDR
+    tealdeer = {
+      # Improved TLDR
       enable = true;
       settings.updates.auto_update = true;
     };

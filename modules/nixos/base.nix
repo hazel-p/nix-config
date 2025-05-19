@@ -71,7 +71,7 @@
   users.users.hazel = {
     isNormalUser = true;
     description = "Hazel P";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHUW/Z5paE3aBdN6qFshFs/dopVA2w5aMqNPy6ndeRLh"
     ];

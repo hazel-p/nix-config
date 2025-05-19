@@ -1,20 +1,23 @@
-{ inputs, outputs, config, pkgs, ... }:
-
 {
-  imports =
-    [ 
-      inputs.home-manager.nixosModules.home-manager
+  inputs,
+  outputs,
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
 
-      ./hardware-configuration.nix
+    ./hardware-configuration.nix
 
-      ./../../modules/nixos/base.nix
+    ./../../modules/nixos/base.nix
 
-      ./../../services/minecraft_server.nix
-      
-      ./../../services/immich.nix
-      ./../../services/tailscale.nix
-      # Add other services here
-    ];
+    ./../../services/minecraft_server.nix
+
+    ./../../services/immich.nix
+    ./../../services/tailscale.nix
+    # Add other services here
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

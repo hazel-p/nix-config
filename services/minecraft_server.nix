@@ -1,13 +1,17 @@
 # Minecraft Servers
-{pkgs, inputs, ...}: {
-  imports = [ inputs.nix-minecraft.nixosModules.minecraft-servers ];
-  nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [inputs.nix-minecraft.nixosModules.minecraft-servers];
+  nixpkgs.overlays = [inputs.nix-minecraft.overlay];
 
   services.minecraft-servers = {
     enable = true;
     eula = true;
     dataDir = "/var/lib/minecraft";
-    
+
     servers = {
       hazel-main-server = {
         enable = true;

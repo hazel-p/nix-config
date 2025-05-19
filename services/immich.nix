@@ -1,5 +1,9 @@
 # Immich setup
-{pkgs, inputs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   services.immich = {
     enable = true;
     #port = 2283;

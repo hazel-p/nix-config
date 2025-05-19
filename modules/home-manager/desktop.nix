@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   programs.firefox.enable = true;
-  home.packages = with pkgs;[
+  home.packages = with pkgs; [
     spotify
     discord
     stremio
@@ -15,7 +15,7 @@
     gnomeExtensions.just-perfection
     #*/
   ];
-/*
+  /*
   wayland.windowManager.hyprland.enable = true; # enable Hyprland
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
@@ -37,7 +37,8 @@
           9)
       );
   };
-  #*/
+  #
+  */
   dconf = {
     enable = true;
     settings = {
@@ -78,4 +79,3 @@
   };
   #*/
 }
-

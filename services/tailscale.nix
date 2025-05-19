@@ -7,7 +7,8 @@
     authKeyFile = config.sops.secrets."tailscale-authkey".path;
     useRoutingFeatures = "server";
   };
-  /* TODO: Add persistence
+  /*
+     TODO: Add persistence
   environment.persistence."/nix/persist" = {
     directories = [
       "/var/lib/tailscale"
