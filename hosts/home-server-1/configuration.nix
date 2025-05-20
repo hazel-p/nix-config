@@ -16,6 +16,7 @@
 
     ./../../services/immich.nix
     ./../../services/tailscale.nix
+    ./../../services/seafile.nix
     # Add other services here
   ];
 
