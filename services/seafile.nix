@@ -5,7 +5,8 @@
     adminEmail = "hazel.pumphrey@proton.me";
     initialAdminPassword = "change this later!";
 
-    ccnetSettings.General.SERVICE_URL = "http://100.66.121.60:8000";
+    ccnetSettings.General.SERVICE_URL = "http://127.0.0.1:8000";
+
 
     seafileSettings = {
       fileserver = {
