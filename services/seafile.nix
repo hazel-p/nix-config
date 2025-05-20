@@ -5,12 +5,11 @@
     adminEmail = "hazel.pumphrey@proton.me";
     initialAdminPassword = "change this later!";
 
-    ccnetSettings.General.SERVICE_URL = "http://127.0.0.1:8000";
-
+    seahubAddress = "[::1]:8083";
 
     seafileSettings = {
       fileserver = {
-        host = "unix:/run/seafile/server.sock";
+        host = "0.0.0.0";
       };
     };
   };
