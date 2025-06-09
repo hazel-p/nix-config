@@ -13,7 +13,6 @@
     ./../../modules/nixos/base.nix
     ./../../modules/nixos/desktop.nix
     ./../../modules/nixos/gnome.nix
-    ./../../modules/nixos/university.nix
 
     ./../../services/tailscale.nix
   ];
@@ -21,12 +20,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # AMD GPU settings
-  hardware.graphics.enable = true;
-  environment.systemPackages = with pkgs; [lact];
-  systemd.packages = with pkgs; [lact];
-  systemd.services.lactd.wantedBy = ["multi-user.target"];
-  boot.kernelParams = ["amdgpu.ppfeaturemask=0xffffffff"];
 
   home-manager = {
     useGlobalPkgs = true;
@@ -38,5 +31,5 @@
     ];
   };
 
-  networking.hostName = "home-desktop";
+  networking.hostName = "home-elitebook";
 }
