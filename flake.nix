@@ -49,6 +49,12 @@
         specialArgs = {inherit inputs outputs;};
         modules = [./hosts/home-desktop/configuration.nix];
       };
+      
+      # Elitebook Setup
+      home-elitebook = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [./hosts/home-elitebook/configuration.nix];
+      };
     };
   };
 }
