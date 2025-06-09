@@ -50,7 +50,8 @@
           "steam.desktop"
           "stremio.desktop"
           "discord.desktop"
-          "prishlauncher.desktop"
+          "obsidian.desktop"
+          "prismlauncher.desktop"
         ];
       };
       "org/gnome/desktop/interface" = {
