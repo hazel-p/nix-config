@@ -6,7 +6,7 @@
       fastfetch
       bat
       sops
-      alexandra
+      alejandra
       dwarf-fortress
     ];
   };
