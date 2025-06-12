@@ -5,8 +5,7 @@
     discord
     stremio
     prismlauncher
-    remmina
-    freerdp
+    obsidian
     # /*
     gnomeExtensions.alphabetical-app-grid
     gnomeExtensions.appindicator
