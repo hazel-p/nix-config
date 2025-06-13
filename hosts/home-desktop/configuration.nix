@@ -23,7 +23,7 @@
 
   # AMD GPU settings
   hardware.graphics.enable = true;
-  environment.systemPackages = with pkgs; [lact];
+  environment.systemPackages = with pkgs; [lact rocmPackages.rocm-smi];
   systemd.packages = with pkgs; [lact];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
   boot.kernelParams = ["amdgpu.ppfeaturemask=0xffffffff"];
