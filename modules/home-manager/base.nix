@@ -28,9 +28,8 @@
       };
     };
 
-    # Shell
+    # Z Shell
     zsh = {
-      # Z Shell
       enable = true;
       enableCompletion = true;
       autosuggestion.enable = true;
@@ -44,6 +43,8 @@
       };
       initContent = "fortune";
     };
+
+    # Kitty - Terminal Emulator
     kitty = {
       enable = true;
       settings = {
@@ -57,15 +58,11 @@
         hide_window_decorations = true;
       };
     };
+    
+    # Fuzzy Finder
     fzf = {
-      # Fuzzy Finder
       enable = true;
       enableZshIntegration = true;
-    };
-    tealdeer = {
-      # Improved TLDR
-      enable = true;
-      settings.updates.auto_update = true;
     };
 
     # Helix Text Editor
@@ -82,14 +79,14 @@
         }
       ];
     };
+
+    # btop Resource Monitor
     btop = {
       enable = true;
       package = pkgs.btop-rocm;
-      settings = {
-        color_theme = "gruvbox-dark";
-        theme_background = false;
-      };
-      
-    }
+      #settings.color_theme = "gruvbox_dark";
+      #settings.theme_background = false;
+    };
+
   };
 }
