@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-
   home.packages = with pkgs; [
     gnomeExtensions.alphabetical-app-grid
     gnomeExtensions.appindicator
@@ -7,7 +6,7 @@
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.just-perfection
   ];
-  
+
   dconf = {
     enable = true;
     settings = {

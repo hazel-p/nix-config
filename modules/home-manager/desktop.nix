@@ -1,8 +1,12 @@
-{inputs,lib,pkgs, ...}: {
-
+{
+  inputs,
+  lib,
+  pkgs,
+  ...
+}: {
   # Import used desktop configuration
   imports = [./gnome.nix];
-  
+
   # Import used desktop apps
   programs.firefox.enable = true;
   home.packages = with pkgs; [

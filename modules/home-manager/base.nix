@@ -58,7 +58,7 @@
         hide_window_decorations = true;
       };
     };
-    
+
     # Fuzzy Finder
     fzf = {
       enable = true;
@@ -87,6 +87,5 @@
       #settings.color_theme = "gruvbox_dark";
       #settings.theme_background = false;
     };
-
   };
 }

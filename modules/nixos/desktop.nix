@@ -4,10 +4,9 @@
   pkgs,
   ...
 }: {
-
   # Add desktop environment
   imports = [./gnome.nix];
-  
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
