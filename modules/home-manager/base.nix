@@ -37,9 +37,9 @@
       shellAliases = {
         ".." = "cd ..";
         cat = "bat --style=plain --theme=base16 --paging=never ";
-        neofetch = "fastfetch";
-        rebuild = "git pull && sudo nixos-rebuild switch --flake ~/nix-config";
-        rebuild-git = "sudo nixos-rebuild switch --flake github:hazel-p/nix-config";
+        nf = "fastfetch";
+        nrs-local = "sudo nixos-rebuild switch --flake ~/nix-config";
+        nrs = "sudo nixos-rebuild switch --flake github:hazel-p/nix-config";
       };
       initContent = "fortune";
     };
