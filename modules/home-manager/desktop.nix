@@ -6,6 +6,11 @@
     stremio
     prismlauncher
     obsidian
+    libreoffice-qt
+    hunspell
+    texstudio
+    texlive.combined.scheme-full
+    pandoc
     # /*
     gnomeExtensions.alphabetical-app-grid
     gnomeExtensions.appindicator

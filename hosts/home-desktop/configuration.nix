@@ -12,8 +12,6 @@
 
     ./../../modules/nixos/base.nix
     ./../../modules/nixos/desktop.nix
-    ./../../modules/nixos/gnome.nix
-    ./../../modules/nixos/university.nix
 
     ./../../services/tailscale.nix
   ];
@@ -23,7 +21,7 @@
 
   # AMD GPU settings
   hardware.graphics.enable = true;
-  environment.systemPackages = with pkgs; [lact rocmPackages.rocm-smi];
+  environment.systemPackages = with pkgs; [lact];
   systemd.packages = with pkgs; [lact];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
   boot.kernelParams = ["amdgpu.ppfeaturemask=0xffffffff"];
