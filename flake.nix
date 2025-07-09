@@ -9,6 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     alejandra.url = "github:kamadorueda/alejandra/4.0.0";
     alejandra.inputs.nixpkgs.follows = "nixpkgs";
 

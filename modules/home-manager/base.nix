@@ -80,10 +80,30 @@
       ];
     };
 
+    # NeoVim Text Editor
+    nvf = {
+      enable = true;
+      settings.vim = {
+        theme = {
+          enable = true;
+          name = "gruvbox";
+          style = "dark";
+        };
+        statusline.lualine.enable = true;
+        telescope.enable = true;
+        autocomplete.nvim-cmp.enable = true;
+        languages = {
+          enableLSP = true;
+          enableTreesitter = true;
+          nix.enable = true;
+        };
+      };
+    };
+
     # btop Resource Monitor
     btop = {
       enable = true;
-      package = pkgs.btop-rocm;
+      package = pkgs.btop-rocm; #Built with ROCM for AMD GPU compatibility
       #settings.color_theme = "gruvbox_dark";
       #settings.theme_background = false;
     };
