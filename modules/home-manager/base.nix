@@ -39,6 +39,7 @@
         ".." = "cd ..";
         cat = "bat --style=plain --theme=base16 --paging=never ";
         nf = "fastfetch";
+	nv = "nvim";
         nrs-local = "sudo nixos-rebuild switch --flake ~/nix-config";
         nrs = "sudo nixos-rebuild switch --flake github:hazel-p/nix-config";
       };
@@ -93,6 +94,7 @@
         statusline.lualine.enable = true;
         telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
+
         lsp.enable = true;
         languages = {
           enableTreesitter = true;
