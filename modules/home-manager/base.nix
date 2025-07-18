@@ -99,6 +99,7 @@
         languages = {
           enableTreesitter = true;
           nix.enable = true;
+          clang.enable = true;
         };
       };
     };
