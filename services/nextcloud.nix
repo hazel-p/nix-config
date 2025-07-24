@@ -5,8 +5,9 @@
     enable = true;
     hostName = "localhost";
     database.createLocally = true;
-    config.adminpassFile = "/etc/nextcloud-admin-pass";
     config.dbtype = "sqlite";
+    config.adminpassFile = "/etc/nextcloud-admin-pass";
+    settings.trusted_domains = ["192.168.0.2" "100.66.121.60"];
   };
   networking.firewall.allowedTCPPorts = [80 443];
 }
