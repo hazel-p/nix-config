@@ -17,6 +17,7 @@
     ./../../services/immich.nix
     ./../../services/tailscale.nix
     ./../../services/seafile.nix
+    ./../../services/nextcloud.nix
     # Add other services here
   ];
 
