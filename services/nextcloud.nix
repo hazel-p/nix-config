@@ -5,6 +5,7 @@
     enable = true;
     hostName = "localhost";
     config.adminpassFile = "/etc/nextcloud-admin-pass";
+    config.dbtype = "dbsql";
   };
   networking.firewall.allowedTCPPorts = [80 443];
 }
