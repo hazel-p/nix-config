@@ -9,6 +9,7 @@
     inputs.home-manager.nixosModules.home-manager
 
     ./hardware-configuration.nix
+    ./../../modules/nixos/amdgpu-patch.nix
 
     ./../../modules/nixos/base.nix
     ./../../modules/nixos/desktop.nix
