@@ -9,7 +9,7 @@
     inputs.home-manager.nixosModules.home-manager
 
     ./hardware-configuration.nix
-    ./../../modules/nixos/amdgpu-patch.nix
+    #./../../modules/nixos/amdgpu-patch.nix
 
     ./../../modules/nixos/base.nix
     ./../../modules/nixos/desktop.nix
@@ -21,6 +21,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # AMD GPU settings
+  boot.initrd.kernelModules = [ "amdgpu" ];
   hardware.graphics.enable = true;
   environment.systemPackages = with pkgs; [lact];
   systemd.packages = with pkgs; [lact];
