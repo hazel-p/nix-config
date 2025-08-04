@@ -8,7 +8,7 @@
   nixpkgs.overlays = [inputs.nix-minecraft.overlay];
 
   services.minecraft-servers = {
-    enable = false;
+    enable = true;
     eula = true;
     dataDir = "/var/lib/minecraft";
 
