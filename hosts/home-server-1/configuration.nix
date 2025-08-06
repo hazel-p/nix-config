@@ -18,6 +18,7 @@
     ./../../services/tailscale.nix
     ./../../services/seafile.nix
     ./../../services/nextcloud.nix
+    ./../../services/samba.nix
     # Add other services here
   ];
 
