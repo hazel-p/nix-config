@@ -1,5 +1,4 @@
 {config, ...}: {
-
   environment.etc."nextcloud-admin-pass".text = "PWD";
   services.nextcloud = {
     enable = false;
