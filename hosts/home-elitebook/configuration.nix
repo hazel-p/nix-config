@@ -17,7 +17,7 @@
     ./../../services/tailscale.nix
   ];
 
-  nixpkgs.config.permittedInsecurePackages = ["broadcom-sta-6.30.223.271-57-6.12.43"];
+  nixpkgs.config.permittedInsecurePackages = ["broadcom-sta-6.30.223.271-57-6.12.44"];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -28,6 +28,9 @@
   systemd.packages = with pkgs; [lact];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
   boot.kernelParams = ["amdgpu.ppfeaturemask=0xffffffff"];
+
+  powerManagement.enable = true;
+  services.thermald.enable = true;
 
   home-manager = {
     useGlobalPkgs = true;
