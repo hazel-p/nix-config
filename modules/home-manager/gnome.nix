@@ -12,16 +12,16 @@
     settings = {
       "org/gnome/shell" = {
         favorite-apps = [
-          "firefox.desktop"
           "kitty.desktop"
-          "spotify.desktop"
+          "firefox.desktop"
           "steam.desktop"
           "stremio.desktop"
           "discord.desktop"
           "obsidian.desktop"
+          "spotify.desktop"
+          "io.bassi.Amberol.desktop"
           "prismlauncher.desktop"
-          "krita.desktop"
-          "amberol.desktop"
+          "org.kde.krita.desktop"
         ];
       };
       "org/gnome/desktop/interface" = {
