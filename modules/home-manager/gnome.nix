@@ -20,6 +20,8 @@
           "discord.desktop"
           "obsidian.desktop"
           "prismlauncher.desktop"
+          "krita.desktop"
+          "amberol.desktop"
         ];
       };
       "org/gnome/desktop/interface" = {

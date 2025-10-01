@@ -6,6 +6,9 @@
       bat
       sops
       alejandra
+      krita
+      zathura
+      amberol
       dwarf-fortress
     ];
   };
