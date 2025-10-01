@@ -16,10 +16,10 @@
           "kitty.desktop"
           "spotify.desktop"
           "steam.desktop"
-          "stremio.desktop"
+          "smartcode-stremio.desktop"
           "discord.desktop"
           "obsidian.desktop"
-          "prismlauncher.desktop"
+          "org.prismlauncher.PrismLauncher.desktop"
           "krita.desktop"
           "amberol.desktop"
         ];
