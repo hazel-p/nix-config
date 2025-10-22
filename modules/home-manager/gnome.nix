@@ -15,17 +15,20 @@
           "kitty.desktop"
           "firefox.desktop"
           "steam.desktop"
-          "stremio.desktop"
           "discord.desktop"
-          "obsidian.desktop"
+          "smartcode-stremio.desktop"
           "spotify.desktop"
           "io.bassi.Amberol.desktop"
-          "prismlauncher.desktop"
+          "org.prismlauncher.PrismLauncher.desktop"
           "org.kde.krita.desktop"
+          "audacity.desktop"
+          "obsidian.desktop"
         ];
       };
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
+        accent-color = "orange";
+        clock-show-seconds = true;
       };
       "org/gnome/mutter" = {
         experimental-features = ["scale-monitor-framebuffer"];
@@ -42,9 +45,6 @@
           "clipboard-indicator@tudmotu.com"
           "just-perfection-desktop@just-perfection"
         ];
-      };
-      "org/gnome/desktop/interface" = {
-        clock-show-seconds = true;
       };
     };
   };

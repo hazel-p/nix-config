@@ -9,6 +9,7 @@
       krita
       zathura
       amberol
+      audacity
       dwarf-fortress
     ];
   };
