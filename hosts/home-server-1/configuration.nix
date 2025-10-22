@@ -19,6 +19,7 @@
     ./../../services/seafile.nix
     ./../../services/nextcloud.nix
     ./../../services/samba-server.nix
+    ./../../services/blocky.nix
     # Add other services here
   ];
 
