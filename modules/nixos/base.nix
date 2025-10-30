@@ -75,7 +75,7 @@
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHUW/Z5paE3aBdN6qFshFs/dopVA2w5aMqNPy6ndeRLh" # desktop
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMGbwlt08duYdR/PY93ANEIWbV4GJmp7GxkGq97srpgc" # elitebook
-
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJGpM0dOSQtSSoH2VNe5gBIXG+jM/4x+BVH78PQ3TGdp" # work pc
     ];
     shell = pkgs.zsh;
     hashedPasswordFile = config.sops.secrets."user-password".path;
