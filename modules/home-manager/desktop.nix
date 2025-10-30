@@ -11,6 +11,7 @@
   programs.firefox.enable = true;
   home.packages = with pkgs; [
     spotify
+    reaper
     discord
     stremio
     prismlauncher
