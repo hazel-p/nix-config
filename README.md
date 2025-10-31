@@ -11,14 +11,17 @@ Featuring:
 - GNOME environment
 - Kitty, Zshell, and Neovim
 - Declarative modded Minecraft servers
+- Basic homelabbing setup
 
 Inspiration from:
 - Eric Cheng
 
 Planned improvements include:
 - Impermanence via tmpfs
-- Samba fileshare mounted to hosts
-- Server backup system
-- Flake update scheduling
-- Migrating from Zshell to FISH
+- Server backup system using Borg backup
+- Samba fileshare mounted to hosts through VPN
+- Weekly flake update scheduling
 - Migrating from GNOME to Hyprland
+- Adding html hosting using NginX
+- Adding or replacing Tailscale with Wireguard
+- Neovim and Hyprland dotfile management
