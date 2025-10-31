@@ -77,7 +77,7 @@
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMGbwlt08duYdR/PY93ANEIWbV4GJmp7GxkGq97srpgc" # elitebook
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJGpM0dOSQtSSoH2VNe5gBIXG+jM/4x+BVH78PQ3TGdp" # work pc
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIVb9oSvZCMIOJKaQhNhU68Xb1BiUq40lYMsrK/He0hh" # mobile phone
-  ];
+    ];
     shell = pkgs.zsh;
     hashedPasswordFile = config.sops.secrets."user-password".path;
   };

@@ -39,7 +39,7 @@
         ".." = "cd ..";
         cat = "bat --style=plain --theme=base16 --paging=never ";
         nf = "fastfetch";
-	nv = "nvim";
+        nv = "nvim";
         nrs-local = "sudo nixos-rebuild switch --flake ~/nix-config";
         nrs = "sudo nixos-rebuild switch --flake github:hazel-p/nix-config";
       };
