@@ -1,4 +1,7 @@
 {config, ...}: {
+  
+  # Nextcloud example setup
+  # Not used - conserved as an example
   environment.etc."nextcloud-admin-pass".text = "PWD";
   services.nextcloud = {
     enable = false;

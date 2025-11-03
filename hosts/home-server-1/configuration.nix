@@ -12,15 +12,14 @@
 
     ./../../modules/nixos/base.nix
 
+    # Services
     ./../../services/minecraft_server.nix
-
     ./../../services/immich.nix
     ./../../services/tailscale.nix
-    ./../../services/seafile.nix
-    ./../../services/nextcloud.nix
+    #./../../services/seafile.nix
+    #./../../services/nextcloud.nix
     ./../../services/samba-server.nix
     ./../../services/blocky.nix
-    # Add other services here
   ];
 
   # Bootloader.
