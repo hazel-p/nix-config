@@ -1,9 +1,14 @@
-# Minecraft Servers
 {
   pkgs,
   inputs,
   ...
 }: {
+
+  # Using nix-minecraft by Infinidoge
+  # Featuring:
+  # - Multiple Servers
+  # - Declarative mod management 
+
   imports = [inputs.nix-minecraft.nixosModules.minecraft-servers];
   nixpkgs.overlays = [inputs.nix-minecraft.overlay];
 
@@ -18,7 +23,7 @@
 
     servers = {
       hazel-private-server = {
-        enable = true;
+        enable = false;
         package = pkgs.fabricServers.fabric-1_21_5;
         openFirewall = true;
 

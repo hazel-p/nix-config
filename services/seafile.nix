@@ -1,4 +1,8 @@
 {config, ...}: {
+  
+  # Seafile Server - Not functioning fully
+  # Can serve as an example of an initial configuration
+
   services.seafile = {
     enable = true;
 
