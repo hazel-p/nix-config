@@ -4,7 +4,7 @@ name: update flake.lock
 on:
   schedule:
     # 10am UTC is 6am EDT/5am EST
-    - cron: 0 10 * * *
+    - cron: 17 12 * * *
   workflow_dispatch: null
 jobs:
   build:
