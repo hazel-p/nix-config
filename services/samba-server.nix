@@ -1,12 +1,22 @@
 {config, ...}: let
-  user = "samba";
-  privatePath = "/var/lib/samba/private";
+  user = "samba-user";
+  privatePath = "/mnt/Shares/Private";
 in {
   # https://wiki.nixos.org/wiki/Samba#Server_setup
   # https://carlosvaz.com/posts/setting-up-samba-shares-on-nixos-with-support-for-macos-time-machine-backups
+
+  users.users.${user} = {
+    description = "Write-access to samba media shares";
+    extraGroups = [ "users" ];
+    hashedPasswordFile = config.sops.secrets."samba-password".path;
+    isNormalUser = true;
+  };
+
   services = {
     samba = {
       enable = true;
+      securityType = "user";
+      openFirewall = true;
 
       settings = {
         global = {
@@ -34,8 +44,11 @@ in {
     };
   };
 
-  # Set up password: https://wiki.nixos.org/wiki/Samba#User_Authentication
-  users.users.${user}.isNormalUser = true;
+  system.activationScripts = {
+    init_smbpasswd.text = ''
+      /run/current-system/sw/bin/printf "$(/run/current-system/sw/bin/cat ${config.sops.secrets."samba-password".path})\n$(/run/current-system/sw/bin/cat ${config.sops.secrets."samba-password".path})\n" | /run/current-system/sw/bin/smbpasswd -sa ${user}
+    '';
+  };
 
   # Share path must be owned by the respective unix user. (e.g. ❯ chown -R samba: /samba)
   systemd.tmpfiles.rules = [

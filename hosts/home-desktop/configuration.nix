@@ -13,6 +13,7 @@
 
     ./../../modules/nixos/base.nix
     ./../../modules/nixos/desktop.nix
+    ./../../modules/nixos/samba-client.nix
 
     ./../../services/tailscale.nix
   ];

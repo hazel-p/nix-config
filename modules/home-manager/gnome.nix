@@ -31,7 +31,7 @@
         clock-show-seconds = true;
       };
       "org/gnome/mutter" = {
-        experimental-features = ["scale-monitor-framebuffer"];
+        #experimental-features = ["scale-monitor-framebuffer"];
       };
       "org/gnome/desktop/background" = {
         picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/blobs-d.svg";
