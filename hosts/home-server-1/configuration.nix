@@ -20,6 +20,7 @@
     #./../../services/nextcloud.nix
     ./../../services/samba-server.nix
     ./../../services/blocky.nix
+    ./../../services/jellyfin.nix
   ];
 
   # Bootloader.
