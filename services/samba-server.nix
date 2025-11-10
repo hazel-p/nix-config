@@ -1,6 +1,6 @@
 {config, ...}: let
   user = "hazel";
-  privatePath = "/mnt/nas";
+  privatePath = "/srv/nas";
 in {
   # https://wiki.nixos.org/wiki/Samba#Server_setup
   # https://carlosvaz.com/posts/setting-up-samba-shares-on-nixos-with-support-for-macos-time-machine-backups
