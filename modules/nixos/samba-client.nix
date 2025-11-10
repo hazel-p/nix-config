@@ -20,4 +20,10 @@
   services.gvfs.enable = true;
   
   networking.firewall.extraCommands = ''iptables -t raw -A OUTPUT -p udp -m udp --dport 137 -j CT --helper netbios-ns'';
+  
+  users.users."samba-user".isNormalUser = true;
+  systemd.tmpfiles.rules = [
+    "d /mnt/share/private 0755 samba-user users"    
+  ];
+
 }
