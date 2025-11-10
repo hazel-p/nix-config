@@ -37,9 +37,11 @@ in {
 
         "private" = {
           "path" = privatePath;
-          "valid users" = user;
-          "public" = "no";
-          "writeable" = "yes";
+          "browseable" = "yes";
+          "read only" = "no";
+          "guest ok" = "no";
+          "create mask" = "0644";
+          "directory mask" = "0755";         
           "force user" = user;
         };
       };
