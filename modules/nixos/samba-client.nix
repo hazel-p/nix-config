@@ -7,14 +7,16 @@
 
   sops.secrets."samba-password" = {};
   
+  services.samba.enable = true;
+
   environment.systemPackages = [pkgs.cifs-utils];
-  fileSystems."/mnt/share" = {
+  fileSystems."/mnt/nas" = {
     device = "//100.66.121.60/private";
     fsType = "cifs";
     options = let
       # this line prevents hanging on network split
       automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
-    in ["${automount_opts},user=samba-user,password=${config.sops.secrets."samba-password".path}"];
+    in ["${automount_opts},user=hazel,password=${config.sops.secrets."samba-password".path}"];
   };
 
   services.gvfs.enable = true;
@@ -23,7 +25,7 @@
   
   users.users."samba-user".isNormalUser = true;
   systemd.tmpfiles.rules = [
-    "d /mnt/share/private 0755 samba-user users"    
+    "d /mnt/nas 0755 hazel users"    
   ];
 
 }
