@@ -1,7 +1,8 @@
 # NixOS Configuration
 Configurations are for:
 - Desktop (7745HX, RX7600)
-- Server (Optiplex 3070 Micro)
+- Server 1 (Optiplex 3070 Micro)
+- Server 2 (Lenovo M920Q) - Upcoming
 - Laptop (HP Elitebook 745 G2)
 
 Featuring:
@@ -23,9 +24,9 @@ Inspiration from:
 Planned improvements:
 - [Impermanence](https://grahamc.com/blog/erase-your-darlings/) via tmpfs - Will develop on branch & prototype on laptop
 - Server backup system using Borg backup - Need better physical infrastructure (another drive/device maybe)
-- Samba fileshare mounted to hosts through VPN - Almost there
+- Samba fileshare mounted to hosts through VPN - Almost there, might remove all security as on private network anyway
 - Host simple HTML server using NginX - Need to buy domain name
 - Adding or replacing Tailscale with Wireguard
-- Introduce Nix-Managed Hyprland as an alternative DE
+- Introduce Nix-Managed Niri or Hyprland as an alternative DE, package waybar and other essentials as a module
 - Migrate from Home manager-based Neovim to classic dotfile style for improved portability & support - Find way to import as a flake
 - Integrate more game servers - UT2004, Quake 3, Satisfactory
