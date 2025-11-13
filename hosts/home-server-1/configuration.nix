@@ -10,15 +10,15 @@
 
     ./hardware-configuration.nix
 
-    ./../../modules/nixos/base.nix
+    ./../../modules/nixos/base.nix 
+    ./../../modules/nixos/powersave.nix
 
     # Services
     ./../../services/minecraft_server.nix
     ./../../services/immich.nix
     ./../../services/tailscale.nix
-    #./../../services/seafile.nix
-    #./../../services/nextcloud.nix
     ./../../services/samba-server.nix
+    ./../../services/samba-client.nix
     ./../../services/blocky.nix
     ./../../services/jellyfin.nix
   ];
