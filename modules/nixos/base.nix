@@ -21,6 +21,9 @@
     gnumake
   ];
 
+  # Kernel
+  boot.kernelPackages = pkgs.linuxPackages_6_13;
+
   # Localisation
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_GB.UTF-8";
