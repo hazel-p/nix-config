@@ -3,11 +3,10 @@
   inputs,
   ...
 }: {
-
   # Using nix-minecraft by Infinidoge
   # Featuring:
   # - Multiple Servers
-  # - Declarative mod management 
+  # - Declarative mod management
 
   imports = [inputs.nix-minecraft.nixosModules.minecraft-servers];
   nixpkgs.overlays = [inputs.nix-minecraft.overlay];

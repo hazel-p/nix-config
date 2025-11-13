@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
-let
+{
+  config,
+  pkgs,
+  ...
+}: let
   amdgpu-kernel-module = pkgs.callPackage ./packages/amdgpu-kernel-module.nix {
     # Make sure the module targets the same kernel as your system is using.
     kernel = config.boot.kernelPackages.kernel;
@@ -11,8 +14,7 @@ let
     url = "https://github.com/torvalds/linux/compare/ffd294d346d185b70e28b1a28abe367bbfe53c04...SeryogaBrigada:linux:4c55a12d64d769f925ef049dd6a92166f7841453.diff";
     hash = "sha256-q/gWUPmKHFBHp7V15BW4ixfUn1kaeJhgDs0okeOGG9c=";
   };
-in
-{
+in {
   # AMD GPU settings
   hardware.graphics.enable = true;
   hardware.graphics.enable32 = true;
