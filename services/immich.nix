@@ -11,7 +11,7 @@
     openFirewall = true;
     package = pkgs.immich;
   };
-  
+
   # TODO:
   # - Add /var/lib/immich to persist
   # - Consider burying behind Nginx once web domain is up

@@ -12,25 +12,16 @@
 
     ./../../modules/nixos/base.nix
     ./../../modules/nixos/desktop.nix
-    ./../../modules/nixos/gnome.nix
+    ./../../modules/nixos/powersave.nix
+    ./../../modules/nixos/amdgpu.nix
 
+    ./../../services/samba-client.nix
     ./../../services/tailscale.nix
   ];
 
   nixpkgs.config.permittedInsecurePackages = ["broadcom-sta-6.30.223.271-57-6.12.55"];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  # AMD GPU settings
-  boot.initrd.kernelModules = ["amdgpu"];
-  hardware.graphics.enable = true;
-  environment.systemPackages = with pkgs; [lact];
-  systemd.packages = with pkgs; [lact];
-  systemd.services.lactd.wantedBy = ["multi-user.target"];
-  boot.kernelParams = ["amdgpu.ppfeaturemask=0xffffffff"];
-
-  powerManagement.enable = true;
-  services.thermald.enable = true;
 
   home-manager = {
     useGlobalPkgs = true;

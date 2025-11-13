@@ -4,9 +4,8 @@
   pkgs,
   ...
 }: {
-
   sops.secrets."samba-password" = {};
-  
+
   services.samba.enable = true;
 
   environment.systemPackages = [pkgs.cifs-utils];
@@ -20,12 +19,11 @@
   };
 
   services.gvfs.enable = true;
-  
+
   networking.firewall.extraCommands = ''iptables -t raw -A OUTPUT -p udp -m udp --dport 137 -j CT --helper netbios-ns'';
-  
+
   users.users."samba-user".isNormalUser = true;
   systemd.tmpfiles.rules = [
-    "d /mnt/nas 0755 hazel users"    
+    "d /mnt/nas 0755 hazel users"
   ];
-
 }
