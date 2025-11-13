@@ -9,7 +9,7 @@
     inputs.home-manager.nixosModules.home-manager
 
     ./hardware-configuration.nix
-    #./../../modules/nixos/amdgpu-patch.nix
+    ./../../modules/nixos/amdgpu.nix
 
     ./../../modules/nixos/base.nix
     ./../../modules/nixos/desktop.nix
@@ -21,13 +21,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # AMD GPU settings
-  boot.initrd.kernelModules = ["amdgpu"];
-  hardware.graphics.enable = true;
-  environment.systemPackages = with pkgs; [lact];
-  systemd.packages = with pkgs; [lact];
-  systemd.services.lactd.wantedBy = ["multi-user.target"];
-  boot.kernelParams = ["amdgpu.ppfeaturemask=0xffffffff"];
+  # Monitor Settings
+  boot.kernelParams = "video=HDMI-1:2560x1440@60"; # Home PC
 
   home-manager = {
     useGlobalPkgs = true;
