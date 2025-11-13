@@ -12,7 +12,7 @@
 
     ./../../modules/nixos/base.nix
     ./../../modules/nixos/powersave.nix
-    ./../../modules/nixos/intelgpu.nix
+                #./../../modules/nixos/intelgpu.nix
 
     # Services
     ./../../services/minecraft_server.nix
