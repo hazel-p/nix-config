@@ -3,6 +3,7 @@
   outputs,
   config,
   pkgs,
+  lib,
   ...
 }: {
   imports = [
@@ -19,7 +20,7 @@
     ./../../services/tailscale.nix
   ];
 
-  nixpkgs.config.permittedInsecurePackages = ["broadcom-sta-6.30.223.271-57-6.12.57"];
+  nixpkgs.config.allowInsecurePredicate = pkg: builtins.elem (lib.getName pkg) ["broadcom-sta"];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
