@@ -48,7 +48,7 @@
       # Server 1 Setup
       home-server-1 = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./hosts/home-server-1/configuration.nix];
+        modules = [./hosts/clio/configuration.nix];
       };
 
       # Desktop Setup
@@ -60,7 +60,7 @@
       # Elitebook Setup
       home-elitebook = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./hosts/home-elitebook/configuration.nix];
+        modules = [./hosts/melpomene/configuration.nix];
       };
     };
   };

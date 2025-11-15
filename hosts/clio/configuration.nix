@@ -41,5 +41,5 @@
     };
   };
 
-  networking.hostName = "home-server-1";
+  networking.hostName = "clio";
 }

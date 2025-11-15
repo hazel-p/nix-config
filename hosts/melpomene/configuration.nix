@@ -33,5 +33,5 @@
     ];
   };
 
-  networking.hostName = "home-elitebook";
+  networking.hostName = "melpomene";
 }
