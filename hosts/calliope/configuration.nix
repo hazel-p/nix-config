@@ -34,5 +34,5 @@
     ];
   };
 
-  networking.hostName = "home-desktop";
+  networking.hostName = "calliope";
 }

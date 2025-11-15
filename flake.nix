@@ -54,7 +54,7 @@
       # Desktop Setup
       home-desktop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./hosts/home-desktop/configuration.nix];
+        modules = [./hosts/calliope/configuration.nix];
       };
 
       # Elitebook Setup
