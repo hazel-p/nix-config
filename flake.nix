@@ -51,6 +51,12 @@
         modules = [./hosts/melpomene/configuration.nix];
       };
 
+      # Lenovo Setup
+      clio = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [./hosts/clio/configuration.nix];
+      };
+
       # Desktop Setup
       calliope = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
