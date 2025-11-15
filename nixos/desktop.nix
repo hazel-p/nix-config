@@ -5,7 +5,9 @@
   ...
 }: {
   # Add desktop environment
-  imports = [./gnome.nix];
+  imports = [
+                #./gnome.nix
+  ];
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
