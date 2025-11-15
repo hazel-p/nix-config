@@ -6,7 +6,7 @@
 }: {
   # Add desktop environment
   imports = [
-                #./gnome.nix
+    ./gnome.nix
   ];
 
   # Enable sound with pipewire.
