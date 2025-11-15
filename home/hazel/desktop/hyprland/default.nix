@@ -20,7 +20,6 @@
     swaynotificationcenter # must have notification daemon for smooth hyprland experience (includes pipewire, XDG desktop portal, Authentication agent, Qt wayland support)
     waybar # wayland native panel
     eww # compositor independent to create widgets (alternative:fabric) , I prefer over waybar
-    wofi # launcher
     clipse # clipboard manager, stores both text and images, can display in a box (alternative:cliphist)
     wl-clip-persist # solves the problem of copied data getting deleted from clipboard upon closing of applications
     wl-clipboard # required for clipboards in wayland , cli utility for wayland
@@ -34,6 +33,28 @@
     nwg-look # GTK settings editor, designed to work properly in wlroots-based Wayland environment
   ];
 
+  # Rofi Configuration
+  programs.rofi = {
+    enable = true;
+    package = pkgs.rofi-wayland;
+    theme = "${pkgs.rofi}/share/rofi/themes/material.rasi";
+    extraConfig = {
+      modi = "drun,run,window";
+      show-icons = true;
+    };
+  };
+
+  services.swww.enable = true;
+
+  # Environment Variables
+  home.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    QT_QPA_PLATFORM = "wayland";
+    SDL_VIDEODRIVER = "wayland";
+    XDG_SESSION_TYPE = "wayland";
+    XCURSOR_SIZE = "24";
+  };
+
   # Enable Hyprland
   wayland.windowManager.hyprland = {
     enable = true;
@@ -42,7 +63,7 @@
     systemd.enable = true;
     settings = {
       exec-once = [
-        "systemctl --user enable --now hyprpaper.service"
+        "swww img ~/Pictures/hyprland-wallpapers/dreamscape.png"
         "hypridle"
         "systemctl --user start hyprpolkitagent"
         "swaynotificationcenter"
@@ -50,6 +71,67 @@
         "clipse -listen"
         "udiskie"
         "hyprpm reload -n"
+      ];
+
+      general = {
+        gaps_in = "10, 10, 10, 10";
+        gaps_out = "10, 10, 10, 10";
+        #col.inactive_border = "#E94057";
+        #col.active_border = "#3b8d99";
+        #col.nogroup_border = "#240b36";
+        #col.nogroup_border_active = "#93291E";
+        no_focus_fallback = true;
+        resize_on_border = true;
+        allow_tearing = true;
+      };
+
+      decoration = {
+        rounding = "6";
+        rounding_power = "4.0";
+        active_opacity = "0.95";
+        inactive_opacity = "0.9";
+      };
+
+      input = {
+        kb_layout = "gb";
+        sensitivity = "0.0";
+        accel_profile = "";
+        follow_mouse = "2";
+        touchpad.clickfinger_behavior = true;
+      };
+
+      misc = {
+        disable_hyprland_logo = true;
+        font_family = "iosevka";
+        vrr = "3";
+        render_unfocused_fps = "10";
+        anr_missed_pings = "1";
+      };
+
+      cursor = {
+        sync_gsettings_theme = true;
+        inactive_timeout = "5.0";
+        warp_on_change_workspace = "1";
+        enable_hyprcursor = true;
+      };
+
+      ecosystem.no_donation_nag = true;
+
+      env = [
+        "NIXOS_OZONE_WL, 1"
+                                #"GTK_THEME, Dark-Gruvbox" # required for Nautilus to apply current theme
+                                #"COLOR_SCHEME, prefer-dark"
+        "XDG_SESSION_DESKTOP, Hyprland"
+        "XDG_CURRENT_DESKTOP, Hyprland"
+        "XDG_DESKTOP_DIR, $HOME/Desktop"
+        "XDG_DOWNLOAD_DIR, $HOME/Downloads"
+        "XDG_TEMPLATES_DIR, $HOME/Templates"
+        "XDG_PUBLICSHARE_DIR, $HOME/Public"
+        "XDG_DOCUMENTS_DIR, $HOME/Documents"
+        "XDG_MUSIC_DIR, $HOME/Music"
+        "XDG_PICTURES_DIR, $HOME/Pictures"
+        "XDG_VIDEOS_DIR, $HOME/Videos"
+        "HYPRSHOT_DIR, $HOME/Pictures/Screenshots"
       ];
 
       # Keybindings
@@ -144,120 +226,6 @@
         "$mod, KP_ADD, exec, hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 * 1.1}')"
         "$mod, KP_SUBTRACT, exec, hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 * 0.9}')"
       ];
-      general = {
-        gaps_in = "10, 10, 10, 10";
-        gaps_out = "10, 10, 10, 10";
-        col.inactive_border = "#E94057";
-        col.active_border = "#3b8d99";
-        col.nogroup_border = "#240b36";
-        col.nogroup_border_active = "#93291E";
-        no_focus_fallback = true;
-        resize_on_border = true;
-        allow_tearing = true;
-      };
-
-      decoration = {
-        rounding = "6";
-        rounding_power = "4.0";
-        active_opacity = "0.95";
-        inactive_opacity = "0.9";
-      };
-
-      input = {
-        kb_layout = "gb";
-        sensitivity = "0.0";
-        accel_profile = "";
-        follow_mouse = "2";
-        touchpad.clickfinger_behavior = true;
-      };
-
-      misc = {
-        disable_hyprland_logo = true;
-        font_family = "iosevka";
-        vrr = "3";
-        render_unfocused_fps = "10";
-        anr_missed_pings = "1";
-      };
-
-      cursor = {
-        sync_gsettings_theme = true;
-        inactive_timeout = "5.0";
-        warp_on_change_workspace = "1";
-        enable_hyprcursor = true;
-      };
-
-      ecosystem.no_donation_nag = true;
     };
   };
-
-  # Environment Variables
-  home.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    QT_QPA_PLATFORM = "wayland";
-    SDL_VIDEODRIVER = "wayland";
-    XDG_SESSION_TYPE = "wayland";
-    XCURSOR_SIZE = "24";
-  };
-
-  # ========================================================= App configurations ================================================================================
-
-  # For hypridle (uses listner) along with hyprlock
-  #  general = {
-  #      lock_cmd = pidof hyprlock || hyprlock;                            # avoid starting multiple hyprlock instances.
-  #      before_sleep_cmd = loginctl lock-session;                         # lock before suspend.
-  #      after_sleep_cmd = hyprctl dispatch dpms on;                       # to avoid having to press a key twice to turn on the display.
-  #  };
-
-  #  listener = {
-  #      timeout = "150";                                                  # 2.5min.
-  #      on-timeout = brightnessctl -s set 10;                             # set monitor backlight to minimum, avoid 0 on OLED monitor.
-  #      on-resume = brightnessctl -r;                                     # monitor backlight restore.
-  #      on-timeout = brightnessctl -sd rgb:kbd_backlight set 0;           # turn off keyboard backlight.
-  #     on-resume = brightnessctl -rd rgb:kbd_backlight;                  # turn on keyboard backlight.
-  #  };
-
-  #  listener = {
-  #      timeout = "300";                                                  # 5min
-  #      on-timeout = loginctl lock-session;                               # lock screen when timeout has passed
-  #  };
-
-  #  listener = {
-  #      timeout = "330";                                                  # 5.5min
-  #      on-timeout = hyprctl dispatch dpms off;                           # screen off when timeout has passed
-  #      on-resume = hyprctl dispatch dpms on && brightnessctl -r;         # screen on when activity is detected after timeout has fired.
-  #  };
-
-  #  listener = {
-  #      timeout = "1800";                                                 # 30min
-  #      on-timeout = systemctl suspend;                                   # suspend pc
-  #  };
-
-  #------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  # for hyprland-qt-support                                              # out of (1-3)
-  # roundness = "2";
-  # border_width = "1";
-  # reduce_motion = true;                                                 # reduce motion of elements (transitions, hover effects, etc)
-  #------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-  # Rofi Configuration
-  programs.rofi = {
-    enable = true;
-    package = pkgs.rofi-wayland;
-    theme = "${pkgs.rofi}/share/rofi/themes/material.rasi";
-    extraConfig = {
-      modi = "drun,run,window";
-      show-icons = true;
-    };
-  };
-        #/*
-  services.hyprpaper = {
-    enable = true;
-    settings = {
-      ipc = true;
-      splash = false;
-      preload = ["/home/hazel/Pictures/hyprland-wallpapers/dreamscape.png"];
-      wallpaper = [",/home/hazel/Pictures/hyprland-wallpapers/dreamscape.png"];
-    };
-  };
-#*/
 }
