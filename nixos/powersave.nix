@@ -4,11 +4,12 @@
   pkgs,
   ...
 }: {
-  powerManagement.enable = true;
-
   services.thermald.enable = true;
 
-  powerManagement.powertop.enable = true;
+  powerManagement = {
+    enable = true;
+    powertop.enable = true;
+  };
 
   services.auto-cpufreq.enable = true;
   services.auto-cpufreq.settings = {
