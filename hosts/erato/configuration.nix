@@ -19,7 +19,7 @@
     ./../../services/tailscale.nix
   ];
 
-  nixpkgs.config.permittedInsecurePackages = ["broadcom-sta-6.30.223.271-57-6.12.57"];
+  nixpkgs.config.permittedInsecurePackages = ["broadcom-sta-6.30.223.271-59-6.12.57"];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
