@@ -6,8 +6,8 @@
 }: {
   # Import used desktop configuration
   imports = [
-                #./gnome.nix 
-    ./hyprland.nix
+    #./gnome
+    ./hyprland
   ];
 
   # Import used desktop apps
