@@ -518,4 +518,10 @@
       show-icons = true;
     };
   };
+
+  home.file.".config/hypr/hyprpaper.conf".text = ''
+   preload = /home/hazel/Pictures/hyprland-wallpapers/dreamscape.jpg
+   wallpaper = HDMI-1,/home/hazel/Pictures/hyprland-wallpapers/dreamscape.jpg
+   ipc = 0n
+  '';
 }
