@@ -45,10 +45,10 @@
   in {
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
     nixosConfigurations = {
-      # Server 1 Setup
-      home-server-1 = nixpkgs.lib.nixosSystem {
+      # Optiplex Setup
+      clio = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./hosts/clio/configuration.nix];
+        modules = [./hosts/melpomene/configuration.nix];
       };
 
       # Desktop Setup
@@ -60,7 +60,7 @@
       # Elitebook Setup
       home-elitebook = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./hosts/melpomene/configuration.nix];
+        modules = [./hosts/erato/configuration.nix];
       };
     };
   };

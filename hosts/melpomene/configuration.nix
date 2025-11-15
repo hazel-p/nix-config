@@ -11,26 +11,34 @@
     ./hardware-configuration.nix
 
     ./../../nixos/base.nix
-    ./../../nixos/desktop.nix
     ./../../nixos/powersave.nix
-    ./../../nixos/amdgpu.nix
+    #./../../nixos/intelgpu.nix
 
-    ./../../services/samba-client.nix
+    # Services
+    ./../../services/minecraft_server.nix
+    ./../../services/immich.nix
     ./../../services/tailscale.nix
+    ./../../services/samba-server.nix
+    ./../../services/samba-client.nix
+    ./../../services/blocky.nix
+    ./../../services/jellyfin.nix
   ];
 
-  nixpkgs.config.permittedInsecurePackages = ["broadcom-sta-6.30.223.271-57-6.12.55"];
+  # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   home-manager = {
+    extraSpecialArgs = {inherit inputs outputs;};
     useGlobalPkgs = true;
     useUserPackages = true;
-    extraSpecialArgs = {inherit inputs outputs;};
-    users.hazel.imports = [
-      ./../../home/hazel/base.nix
-      ./../../home/hazel/desktop.nix
-    ];
+    users = {
+      hazel = {
+        imports = [
+          ./../../home/hazel/base.nix
+        ];
+      };
+    };
   };
 
   networking.hostName = "melpomene";
