@@ -5,7 +5,7 @@
   ...
 }: {
   # Import used desktop configuration
-  imports = [./gnome.nix];
+  imports = [./gnome.nix ./hyprland.nix];
 
   # Import used desktop apps
   programs.firefox.enable = true;

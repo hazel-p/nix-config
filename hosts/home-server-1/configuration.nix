@@ -10,9 +10,9 @@
 
     ./hardware-configuration.nix
 
-    ./../../modules/nixos/base.nix
-    ./../../modules/nixos/powersave.nix
-    #./../../modules/nixos/intelgpu.nix
+    ./../../nixos/base.nix
+    ./../../nixos/powersave.nix
+    #./../../nixos/intelgpu.nix
 
     # Services
     ./../../services/minecraft_server.nix
@@ -35,7 +35,7 @@
     users = {
       hazel = {
         imports = [
-          ./../../modules/home-manager/base.nix
+          ./../../home/hazel/base.nix
         ];
       };
     };

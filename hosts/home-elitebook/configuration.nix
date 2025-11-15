@@ -10,10 +10,10 @@
 
     ./hardware-configuration.nix
 
-    ./../../modules/nixos/base.nix
-    ./../../modules/nixos/desktop.nix
-    ./../../modules/nixos/powersave.nix
-    ./../../modules/nixos/amdgpu.nix
+    ./../../nixos/base.nix
+    ./../../nixos/desktop.nix
+    ./../../nixos/powersave.nix
+    ./../../nixos/amdgpu.nix
 
     ./../../services/samba-client.nix
     ./../../services/tailscale.nix
@@ -28,8 +28,8 @@
     useUserPackages = true;
     extraSpecialArgs = {inherit inputs outputs;};
     users.hazel.imports = [
-      ./../../modules/home-manager/base.nix
-      ./../../modules/home-manager/desktop.nix
+      ./../../home/hazel/base.nix
+      ./../../home/hazel/desktop.nix
     ];
   };
 
