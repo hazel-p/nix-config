@@ -46,7 +46,7 @@
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
     nixosConfigurations = {
       # Optiplex Setup
-      clio = nixpkgs.lib.nixosSystem {
+      melpomene = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [./hosts/melpomene/configuration.nix];
       };
@@ -58,7 +58,7 @@
       };
 
       # Elitebook Setup
-      home-elitebook = nixpkgs.lib.nixosSystem {
+      erato = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [./hosts/erato/configuration.nix];
       };
