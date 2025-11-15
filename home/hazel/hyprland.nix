@@ -58,6 +58,7 @@
       "$mod" = "SUPER";
       bind = [
         "$mod, return, exec, kitty"
+        "$mod, F, exec, firefox"
         "$mod, C, killactive,"
         "$mod, M, exit,"
         "$mod, TAB, exec, nautilus"
