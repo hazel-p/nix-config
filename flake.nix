@@ -52,7 +52,7 @@
       };
 
       # Desktop Setup
-      home-desktop = nixpkgs.lib.nixosSystem {
+      calliope = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [./hosts/calliope/configuration.nix];
       };
