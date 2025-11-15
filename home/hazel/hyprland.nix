@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   # Initial inspiration from github.com/weatflac505/hyprland-config-with-home-manager
   home.packages = with pkgs; [
-    yprpaper # wallpaper utility
+    hyprpaper # wallpaper utility
     hyprpicker # color picker from your screen
     hypridle # idle management  daemon
     hyprlock # screen locker
