@@ -5,9 +5,13 @@
   ...
 }: let
   tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
-  hyprland-sessions = "${pkgs/hyprland}/share/wayland-sessions";
+  hyprland-sessions = "${pkgs.hyprland}/share/wayland-sessions";
   gnome-sessions = "${config.services.displayManager.sessionData.desktops}/share/wayland-sessions";
 in {
+  # Huge thanks to these two:
+  # https://github.com/sjcobb2022/nixos-config/blob/main/hosts/common/optional/greetd.nix 
+  # https://ryjelsum.me/homelab/greetd-session-choose/
+
   services.greetd = {
     enable = true;
     settings = {
@@ -18,10 +22,6 @@ in {
     };
   };
 
-  # this is a life saver.
-  # literally no documentation about this anywhere.
-  # might be good to write about this...
-  # https://www.reddit.com/r/NixOS/comments/u0cdpi/tuigreet_with_xmonad_how/
   systemd.services.greetd.serviceConfig = {
     Type = "idle";
     StandardInput = "tty";

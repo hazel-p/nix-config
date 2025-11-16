@@ -6,13 +6,8 @@
 }: {
   # Import used desktop configuration
   imports = [
-<<<<<<< HEAD:home/hazel/desktop/default.nix
-    #./gnome
+    ./gnome 
     ./hyprland
-=======
-    ./gnome.nix 
-    ./hyprland.nix
->>>>>>> f1a2d3aaafef16fb42869add34b11c1ccc9cbc0d:home/hazel/desktop.nix
   ];
 
   # Import used desktop apps
