@@ -4,14 +4,16 @@ Configurations are for:
 - Clio      - Main server, Lenovo M920q
 - Melpomene - Backup server, Optiplex 3070 Micro
 - Erato     - HP Elitebook 745 G2
-- Thalia    - Steam Deck OLED
+- Thalia    - Steam Deck OLED (Upcoming)
 
 Featuring:
 - Unique flakes for each individual host
 - Daily automated flake updates
 - User packages and settings managed by [home-manager](https://github.com/nix-community/home-manager)
 - Secrets encrypted using [sops-nix](https://github.com/Mic92/sops-nix)
+- Logins managed by greetd-tuigreet
 - GNOME desktop environment with declarative GNOME-Apps
+- Hyprland window manager with waybar, rofi, swww, and others
 - Neovim managed by [nvf](https://github.com/NotAShelf/nvf)
 - Basic self-hosted home server with configurable services
 - Tailscale network
@@ -28,6 +30,6 @@ Planned improvements:
 - Samba fileshare mounted to hosts through VPN - Almost there, might remove all security as on private network anyway
 - Host simple HTML server using NginX - Need to buy domain name
 - Adding or replacing Tailscale with Wireguard
-- Introduce Nix-Managed Niri or Hyprland as an alternative WM, package waybar and other essentials as wayland WM accessories
+- Include Niri using premade waybar and other Wayland WM accessories
 - Migrate from Home manager-based Neovim to classic dotfile style for improved portability & support - Find way to import as a flake
 - Integrate more game servers - UT2004, Quake 3, Satisfactory

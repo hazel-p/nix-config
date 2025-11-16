@@ -35,7 +35,7 @@
     users = {
       hazel = {
         imports = [
-          ./../../home/hazel/base.nix
+          ./../../home/hazel
         ];
       };
     };
