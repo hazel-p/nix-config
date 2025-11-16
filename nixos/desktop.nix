@@ -2,11 +2,13 @@
   inputs,
   config,
   pkgs,
+  lib,
   ...
 }: {
   # Add desktop environment
   imports = [
     ./gnome.nix
+    ./greetd.nix
   ];
 
   # Enable sound with pipewire.

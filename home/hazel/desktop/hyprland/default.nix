@@ -1,5 +1,14 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
+  imports = [
+    ./waybar.nix
+  ];
   # Initial inspiration from github.com/weatflac505/hyprland-config-with-home-manager
+  # Functional inspiration from github.com/Misterio77/nix-config
+
   home.packages = with pkgs; [
     hyprpicker # color picker from your screen
     hypridle # idle management  daemon
@@ -18,7 +27,6 @@
     hyprland-qtutils # small bunch of utility applications that hyprland might invoke (stuffs like dialogs and popups)
 
     swaynotificationcenter # must have notification daemon for smooth hyprland experience (includes pipewire, XDG desktop portal, Authentication agent, Qt wayland support)
-    waybar # wayland native panel
     eww # compositor independent to create widgets (alternative:fabric) , I prefer over waybar
     clipse # clipboard manager, stores both text and images, can display in a box (alternative:cliphist)
     wl-clip-persist # solves the problem of copied data getting deleted from clipboard upon closing of applications
@@ -67,19 +75,14 @@
         "hypridle"
         "systemctl --user start hyprpolkitagent"
         "swaynotificationcenter"
-        "waybar"
         "clipse -listen"
         "udiskie"
         "hyprpm reload -n"
       ];
 
       general = {
-        gaps_in = "10, 10, 10, 10";
-        gaps_out = "10, 10, 10, 10";
-        #col.inactive_border = "#E94057";
-        #col.active_border = "#3b8d99";
-        #col.nogroup_border = "#240b36";
-        #col.nogroup_border_active = "#93291E";
+        gaps_in = 5;
+        gaps_out = 10;
         no_focus_fallback = true;
         resize_on_border = true;
         allow_tearing = true;
@@ -119,8 +122,8 @@
 
       env = [
         "NIXOS_OZONE_WL, 1"
-                                #"GTK_THEME, Dark-Gruvbox" # required for Nautilus to apply current theme
-                                #"COLOR_SCHEME, prefer-dark"
+        #"GTK_THEME, Dark-Gruvbox" # required for Nautilus to apply current theme
+        #"COLOR_SCHEME, prefer-dark"
         "XDG_SESSION_DESKTOP, Hyprland"
         "XDG_CURRENT_DESKTOP, Hyprland"
         "XDG_DESKTOP_DIR, $HOME/Desktop"
@@ -133,6 +136,34 @@
         "XDG_VIDEOS_DIR, $HOME/Videos"
         "HYPRSHOT_DIR, $HOME/Pictures/Screenshots"
       ];
+
+      monitor = let
+        waybarSpace = let
+          inherit (config.wayland.windowManager.hyprland.settings.general) gaps_in gaps_out;
+          inherit (config.programs.waybar.settings.primary) position height width;
+          gap = gaps_out - gaps_in;
+        in {
+          top =
+            if (position == "top")
+            then height + gap
+            else 0;
+          bottom =
+            if (position == "bottom")
+            then height + gap
+            else 0;
+          left =
+            if (position == "left")
+            then width + gap
+            else 0;
+          right =
+            if (position == "right")
+            then width + gap
+            else 0;
+        };
+      in
+        [
+          ",addreserved,${toString waybarSpace.top},${toString waybarSpace.bottom},${toString waybarSpace.left},${toString waybarSpace.right}"
+        ];
 
       # Keybindings
       "$mod" = "SUPER";
@@ -156,17 +187,17 @@
         "$mod SHIFT, 0, exec, hyprctl -q keyword cursor:zoom_factor 1" # for zooming
 
         # Move focus with mainMod + arrow keys
-        "$mod, left, movefocus, l"
-        "$mod, right, movefocus, r"
-        "$mod, up, movefocus, u"
-        "$mod, down, movefocus, d"
+        "$mod, M, movefocus, l"
+        "$mod, I, movefocus, r"
+        "$mod, N, movefocus, u"
+        "$mod, E, movefocus, d"
 
         # Switch workspaces with mainMod + [0-9]
-        "$mod, 1, workspace, 1"
-        "$mod, 2, workspace, 2"
-        "$mod, 3, workspace, 3"
-        "$mod, 4, workspace, 4"
-        "$mod, 5, workspace, 5"
+        "$mod, K, workspace, 1"
+        "$mod, H, workspace, 2"
+        "$mod, comma, workspace, 3"
+        "$mod, period, workspace, 4"
+        "$mod, code:47, workspace, 5"
         "$mod, 6, workspace, 6"
         "$mod, 7, workspace, 7"
         "$mod, 8, workspace, 8"
@@ -184,14 +215,6 @@
         "$mod SHIFT, 8, movetoworkspace, 8"
         "$mod SHIFT, 9, movetoworkspace, 9"
         "$mod SHIFT, 0, movetoworkspace, 10"
-
-        # Example special workspace (scratchpad)
-        "$mod, S, togglespecialworkspace, magic"
-        "$mod SHIFT, S, movetoworkspace, special:magic"
-
-        # Scroll through existing workspaces with mainMod + scroll
-        "$mod, mouse_down, workspace, e+1"
-        "$mod, mouse_up, workspace, e-1"
       ];
 
       bindm = [
