@@ -29,7 +29,7 @@ Planned improvements:
 - Server backup system using Borg backup - Need better physical infrastructure (another drive/device maybe)
 - Samba fileshare mounted to hosts through VPN - Almost there, might remove all security as on private network anyway
 - Host simple HTML server using NginX - Need to buy domain name
-- Adding or replacing Tailscale with Wireguard
-- Include Niri using premade waybar and other Wayland WM accessories
+- Implement Headscale or Wireguard - Zero trust systems
+- Include Niri using current waybar and other Wayland WM accessories
 - Migrate from Home manager-based Neovim to classic dotfile style for improved portability & support - Find way to import as a flake
 - Integrate more game servers - UT2004, Quake 3, Satisfactory
