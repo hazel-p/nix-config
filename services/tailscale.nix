@@ -5,7 +5,7 @@
     enable = true;
     openFirewall = true;
     authKeyFile = config.sops.secrets."tailscale-authkey".path;
-    useRoutingFeatures = "server";
+    useRoutingFeatures = "both";
   };
   /*
      TODO: Add persistence

@@ -160,10 +160,9 @@
             then width + gap
             else 0;
         };
-      in
-        [
-          ",addreserved,${toString waybarSpace.top},${toString waybarSpace.bottom},${toString waybarSpace.left},${toString waybarSpace.right}"
-        ];
+      in [
+        ",addreserved,${toString waybarSpace.top},${toString waybarSpace.bottom},${toString waybarSpace.left},${toString waybarSpace.right}"
+      ];
 
       # Keybindings
       "$mod" = "SUPER";

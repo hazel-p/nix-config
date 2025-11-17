@@ -9,7 +9,7 @@
   gnome-sessions = "${config.services.displayManager.sessionData.desktops}/share/wayland-sessions";
 in {
   # Huge thanks to these two:
-  # https://github.com/sjcobb2022/nixos-config/blob/main/hosts/common/optional/greetd.nix 
+  # https://github.com/sjcobb2022/nixos-config/blob/main/hosts/common/optional/greetd.nix
   # https://ryjelsum.me/homelab/greetd-session-choose/
 
   services.greetd = {

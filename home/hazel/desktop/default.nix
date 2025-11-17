@@ -6,7 +6,7 @@
 }: {
   # Import used desktop configuration
   imports = [
-    ./gnome 
+    ./gnome
     ./hyprland
   ];
 
