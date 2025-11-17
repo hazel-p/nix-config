@@ -15,9 +15,6 @@
     ./../../nixos/desktop.nix
     ./../../nixos/powersave.nix
     ./../../nixos/amdgpu.nix
-
-    ./../../services/samba-client.nix
-    ./../../services/tailscale.nix
   ];
 
 

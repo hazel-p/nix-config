@@ -13,9 +13,6 @@
 
     ./../../nixos/base.nix
     ./../../nixos/desktop.nix
-
-    ./../../services/samba-client.nix
-    ./../../services/tailscale.nix
   ];
 
   boot.loader.systemd-boot.enable = true;

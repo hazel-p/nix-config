@@ -17,9 +17,7 @@
     # Services
     ./../../services/minecraft_server.nix
     ./../../services/immich.nix
-    ./../../services/tailscale.nix
     ./../../services/samba-server.nix
-    ./../../services/samba-client.nix
     ./../../services/blocky.nix
     ./../../services/jellyfin.nix
   ];
