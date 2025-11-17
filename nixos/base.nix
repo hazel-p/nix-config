@@ -2,6 +2,7 @@
   inputs,
   config,
   pkgs,
+  lib,
   ...
 }: {
   imports = [
@@ -22,9 +23,6 @@
     parted
     gnumake
   ];
-
-  # Kernel
-  boot.kernelPackages = pkgs.linuxPackages_6_12;
 
   # Localisation
   time.timeZone = "Europe/London";

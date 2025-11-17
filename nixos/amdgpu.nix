@@ -11,10 +11,7 @@
   systemd.packages = with pkgs; [lact];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
 
-  # Using Liqorix and LQX to mitigate freezes on the RX7600
-  # https://lists.debian.org/debian-kernel/2025/08/msg00516.html
-  boot.kernelPackages = lib.mkForce pkgs.linuxPackages_lqx;
-  # This issue presents itself on every kernel after and including 6.10
-  # downgrading the kernel is another option, but would disable undervolting
-  #boot.kernelPackages = lib.mkForce pkgs.linuxPackages_6_6
+  # Currently using Liqorix kernel, which may help with crashes
+  # Using downgraded LTS kernel mitigate crashing, but will also disable undervolting
+  #boot.kernelPackages = lib.mkForce pkgs.linuxPackages_6_6;
 }
