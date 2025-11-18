@@ -6,6 +6,7 @@
 }: let
   tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
   hyprland-sessions = "${pkgs.hyprland}/share/wayland-sessions";
+  niri-sessions = "${pkgs.niri}/share/wayland-sessions";
   gnome-sessions = "${config.services.displayManager.sessionData.desktops}/share/wayland-sessions";
 in {
   # Huge thanks to these two:
@@ -16,7 +17,7 @@ in {
     enable = true;
     settings = {
       default_session = {
-        command = "${tuigreet} --sessions ${hyprland-sessions}:${gnome-sessions} --remember --remember-user-session";
+        command = "${tuigreet} --sessions ${hyprland-sessions}:${niri-sessions}:${gnome-sessions} --remember --remember-user-session";
         user = "greeter";
       };
     };
