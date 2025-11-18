@@ -41,17 +41,6 @@
     nwg-look # GTK settings editor, designed to work properly in wlroots-based Wayland environment
   ];
 
-  # Rofi Configuration
-  programs.rofi = {
-    enable = true;
-    package = pkgs.rofi-wayland;
-    theme = "${pkgs.rofi}/share/rofi/themes/material.rasi";
-    extraConfig = {
-      modi = "drun,run,window";
-      show-icons = true;
-    };
-  };
-
   services.swww.enable = true;
 
   # Environment Variables
@@ -72,6 +61,7 @@
     settings = {
       exec-once = [
         "swww img ~/Pictures/hyprland-wallpapers/dreamscape.png"
+        "waybar"
         "hypridle"
         "systemctl --user start hyprpolkitagent"
         "swaynotificationcenter"

@@ -47,6 +47,7 @@
   swayCfg = config.wayland.windowManager.sway;
   hyprlandCfg = config.wayland.windowManager.hyprland;
 in {
+  /*
   systemd.user.services.waybar = {
     Unit = {
       # Let it try to start a few more times
@@ -56,6 +57,7 @@ in {
       X-SwitchMethod = "reload";
     };
   };
+  */
 
   programs.waybar = {
     enable = true;
