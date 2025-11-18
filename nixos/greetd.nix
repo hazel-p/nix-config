@@ -6,7 +6,7 @@
 }: let
   tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
   hyprland-sessions = "${pkgs.hyprland}/share/wayland-sessions";
-  niri-sessions = "${pkgs.niri}/share/wayland-sessions";
+  niri-sessions = "niri-session";
   gnome-sessions = "${config.services.displayManager.sessionData.desktops}/share/wayland-sessions";
 in {
   # Huge thanks to these two:
