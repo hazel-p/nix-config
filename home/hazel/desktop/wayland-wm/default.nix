@@ -6,12 +6,10 @@
 }: {
   # Import used desktop configuration
   imports = [
-    ./gnome
-    ./hyprland
-    ./niri
+    ./waybar
   ];
 
-  # Import used desktop apps
+  # Import wayland apps
   programs.firefox.enable = true;
   home.packages = with pkgs; [
     spotify

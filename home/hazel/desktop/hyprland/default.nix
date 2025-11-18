@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./waybar.nix
+    ./../wayland-wm
   ];
   # Initial inspiration from github.com/weatflac505/hyprland-config-with-home-manager
   # Functional inspiration from github.com/Misterio77/nix-config
