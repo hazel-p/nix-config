@@ -6,24 +6,13 @@
 }: {
   # Import used desktop configuration
   imports = [
-    ./gnome
+    # Display Settings
+    #./gnome
     ./hyprland
-    ./niri
-  ];
-
-  # Import used desktop apps
-  programs.firefox.enable = true;
-  home.packages = with pkgs; [
-    spotify
-    reaper
-    discord
-    stremio
-    prismlauncher
-    obsidian
-    libreoffice-qt
-    hunspell
-    texstudio
-    texlive.combined.scheme-full
-    pandoc
+    #./niri
+    
+    # Additional packages for desktop & cli
+    ./packages.nix
+    ./../extra-packages.nix
   ];
 }

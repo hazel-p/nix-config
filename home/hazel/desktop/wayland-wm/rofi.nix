@@ -5,7 +5,7 @@
   pkgs,
   inputs,
   ...
-}:{
+}: {
   # Rofi Configuration
   programs.rofi = {
     enable = true;

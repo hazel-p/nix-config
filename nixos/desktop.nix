@@ -7,7 +7,7 @@
 }: {
   # Add desktop environment
   imports = [
-    ./gnome.nix
+    #./gnome.nix
     ./greetd.nix
   ];
   # Using Liqorix and LQX to mitigate freezes on the RX7600
