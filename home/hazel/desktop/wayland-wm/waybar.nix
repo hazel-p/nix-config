@@ -44,21 +44,8 @@
       '';
     };
 
-  swayCfg = config.wayland.windowManager.sway;
   hyprlandCfg = config.wayland.windowManager.hyprland;
 in {
-  /*
-  systemd.user.services.waybar = {
-    Unit = {
-      # Let it try to start a few more times
-      StartLimitBurst = 30;
-      # Reload instead of restarting
-      X-Restart-Triggers = lib.mkForce [];
-      X-SwitchMethod = "reload";
-    };
-  };
-  */
-
   programs.waybar = {
     enable = true;
     package = pkgs.waybar.overrideAttrs (oa: {
@@ -72,53 +59,31 @@ in {
         height = 40;
         margin = "6";
         position = "top";
-        modules-left =
-          ["custom/menu"]
-          ++ (lib.optionals swayCfg.enable [
-            "sway/workspaces"
-            "sway/mode"
-          ])
+        modules-left = [
+          "custom/menu"
+          "custom/currentplayer"
+          "custom/player"
+        ];
+
+        modules-center =
+          [
+            "tray"
+            "network"
+            "battery"
+            "pulseaudio"
+          ]
           ++ (lib.optionals hyprlandCfg.enable [
             "hyprland/workspaces"
             "hyprland/submap"
           ])
           ++ [
-            "custom/currentplayer"
-            "custom/player"
+            "clock"
           ];
-
-        modules-center = [
-          "cpu"
-          "custom/gpu"
-          "memory"
-        ];
-        modules-right = [
-          "tray"
-          "network"
-          "custom/rfkill"
-          "battery"
-          "pulseaudio"
-          "clock"
-        ];
 
         clock = {
           format = "{:%H:%M %d/%m}";
           on-click-left = "mode";
           tooltip-format = "<tt><small>{calendar}</small></tt>";
-        };
-
-        cpu = {
-          interval = 5;
-          format = "  {usage}%";
-        };
-        "custom/gpu" = {
-          interval = 5;
-          exec = mkScript {script = "cat /sys/class/drm/card*/device/gpu_busy_percent | head -1";};
-          format = "󰒋  {}%";
-        };
-        memory = {
-          format = "  {}%";
-          interval = 5;
         };
 
         "pulseaudio" = {
@@ -166,9 +131,6 @@ in {
           format-charging = "󰂄";
           tooltip-format = "{capacity}% ({time})";
           onclick = "";
-        };
-        "sway/window" = {
-          max-length = 20;
         };
         network = {
           interval = 3;
