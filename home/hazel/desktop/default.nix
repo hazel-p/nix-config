@@ -10,7 +10,7 @@
     #./gnome
     ./hyprland
     #./niri
-    
+
     # Additional packages for desktop & cli
     ./packages.nix
     ./../extra-packages.nix
