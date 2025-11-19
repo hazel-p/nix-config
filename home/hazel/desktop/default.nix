@@ -13,6 +13,6 @@
 
     # Additional packages for desktop & cli
     ./packages.nix
-    ./../extra-packages.nix
+    ./../cli/extra-packages.nix
   ];
 }

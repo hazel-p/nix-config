@@ -13,7 +13,7 @@
     ./btop.nix
   ];
 
-  packages = with pkgs; [
+  home.packages = with pkgs; [
     # Command line tools
     fortune
     fastfetch
