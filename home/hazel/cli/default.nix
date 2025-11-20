@@ -11,6 +11,7 @@
     ./helix.nix
     ./neovim.nix
     ./btop.nix
+    ./starship.nix
   ];
 
   home.packages = with pkgs; [
