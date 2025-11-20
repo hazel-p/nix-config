@@ -13,6 +13,7 @@
 
     ./../../nixos/base.nix
     ./../../nixos/desktop.nix
+    ./../../services/foldingathome.nix
   ];
 
   boot.loader.systemd-boot.enable = true;

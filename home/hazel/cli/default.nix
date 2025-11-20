@@ -5,9 +5,9 @@
   ...
 }: {
   imports = [
+    ./git.nix
     ./kitty.nix
     ./zsh.nix
-    ./fzf.nix
     ./helix.nix
     ./neovim.nix
     ./btop.nix

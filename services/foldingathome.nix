@@ -1,11 +1,9 @@
 {config, pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    fahviewer
-    fahcontrol
   ];
   services.foldingathome = {
     enable = true;
-    user = "hazel-p";
-    daemonNiceLevel = 15;
+    user = "hazelp";
+    daemonNiceLevel = 5;
   };
 }
