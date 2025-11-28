@@ -14,10 +14,7 @@
       ".cache"
       ".config"
       ".local"
-      {
-        directory = ".ssh";
-        mode = "0700";
-      }
+      ".ssh"
     ];
   };
 }

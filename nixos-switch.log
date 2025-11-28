@@ -1,34 +1,34 @@
 warning: Git tree '/home/hazel/nix-config' is dirty
-unpacking 'github:nix-community/impermanence/4b3e914cdf97a5b536a889e939fb2fd2b043a170' into the Git cache...
 warning: input 'impermanence' has an override for a non-existent input 'home-manager'
 warning: input 'impermanence' has an override for a non-existent input 'nixpkgs'
-warning: updating lock file '"/home/hazel/nix-config/flake.lock"':
-• Updated input 'impermanence':
-    'github:misterio77/impermanence/c69232cd3962b6b1b67ad4e38a3916ad67f20d76?narHash=sha256-aCEKGoPLZccGQBkjAjFFPfdyF9yWlM%2B4XSBRZZSvShY%3D' (2025-10-01)
-  → 'github:nix-community/impermanence/4b3e914cdf97a5b536a889e939fb2fd2b043a170?narHash=sha256-LJggUHbpyeDvNagTUrdhe/pRVp4pnS6wVKALS782gRI%3D' (2025-01-25)
-• Removed input 'impermanence/home-manager'
-• Removed input 'impermanence/nixpkgs'
+building the system configuration...
 warning: Git tree '/home/hazel/nix-config' is dirty
+warning: input 'impermanence' has an override for a non-existent input 'home-manager'
+warning: input 'impermanence' has an override for a non-existent input 'nixpkgs'
 error:
-       … while calling the 'seq' builtin
-         at /nix/store/hr5pl7m833kkr0zv98iydy7mxyl10qld-source/lib/modules.nix:359:18:
-          358|         options = checked options;
-          359|         config = checked (removeAttrs config [ "_module" ]);
-             |                  ^
-          360|         _module = checked (config._module);
+       … while calling the 'head' builtin
+         at /nix/store/hr5pl7m833kkr0zv98iydy7mxyl10qld-source/lib/attrsets.nix:1571:13:
+         1570|           if length values == 1 || pred here (elemAt values 1) (head values) then
+         1571|             head values
+             |             ^
+         1572|           else
 
-       … while evaluating a branch condition
-         at /nix/store/hr5pl7m833kkr0zv98iydy7mxyl10qld-source/lib/modules.nix:295:9:
-          294|       checkUnmatched =
-          295|         if config._module.check && config._module.freeformType == null && merged.unmatchedDefns != [ ] then
-             |         ^
-          296|           let
+       … while evaluating the attribute 'value'
+         at /nix/store/hr5pl7m833kkr0zv98iydy7mxyl10qld-source/lib/modules.nix:1083:7:
+         1082|     // {
+         1083|       value = addErrorContext "while evaluating the option `${showOption loc}':" value;
+             |       ^
+         1084|       inherit (res.defsFinal') highestPrio;
+
+       … while evaluating the option `system.build.toplevel':
+
+       … while evaluating definitions from `/nix/store/hr5pl7m833kkr0zv98iydy7mxyl10qld-source/nixos/modules/system/activation/top-level.nix':
+
+       … while evaluating the option `home-manager.users.hazel.home.file':
+
+       … while evaluating definitions from `/nix/store/cfshnw8f2761i9iy5spxghyvihrqqg7s-source/home/hazel/persistence.nix':
 
        (stack trace truncated; use '--show-trace' to show the full, detailed trace)
 
-       error: attribute 'persistence' missing
-       at /nix/store/yrw76qi3mxp9l6nm8rgm3393p5xy1wgc-source/nixos/persistence.nix:9:5:
-            8|   imports = [
-            9|     inputs.persistence.nixosModules.persistence
-             |     ^
-           10|   ];
+       error: The option `home-manager.users.hazel.home.persistence."/nix/home-persist".directories."[definition 1-entry 5]".mode' does not exist. Definition values:
+       - In `/nix/store/cfshnw8f2761i9iy5spxghyvihrqqg7s-source/home/hazel/persistence.nix': "0700"
