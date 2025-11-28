@@ -2,7 +2,9 @@
   pkgs,
   inputs,
   ...
-}: {
+}: let
+  directory = "/var/lib/servers";
+in {
   # Using nix-minecraft by Infinidoge
   # Featuring:
   # - Multiple Servers
@@ -15,10 +17,16 @@
     pkgs.lazymc
   ];
 
+  environment.persistence."/nix/persist" = {
+    directories = [
+      directory
+    ];
+  };
+
   services.minecraft-servers = {
     enable = true;
     eula = true;
-    dataDir = "/var/lib/minecraft";
+    dataDir = directory;
 
     servers = {
       hazel-private-server = {
