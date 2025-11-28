@@ -24,11 +24,21 @@ error:
 
        … while evaluating definitions from `/nix/store/hr5pl7m833kkr0zv98iydy7mxyl10qld-source/nixos/modules/system/activation/top-level.nix':
 
-       … while evaluating the option `home-manager.users.hazel.home.file':
-
-       … while evaluating definitions from `/nix/store/cfshnw8f2761i9iy5spxghyvihrqqg7s-source/home/hazel/persistence.nix':
-
        (stack trace truncated; use '--show-trace' to show the full, detailed trace)
 
-       error: The option `home-manager.users.hazel.home.persistence."/nix/home-persist".directories."[definition 1-entry 5]".mode' does not exist. Definition values:
-       - In `/nix/store/cfshnw8f2761i9iy5spxghyvihrqqg7s-source/home/hazel/persistence.nix': "0700"
+       error:
+       Failed assertions:
+       - environment.persistence:
+           The following files were specified two or more
+           times:
+             /etc/machine-id
+             /etc/ssh/ssh_host_ed25519_key.pub
+             /etc/ssh/ssh_host_ed25519_key
+             /etc/ssh/ssh_host_rsa_key.pub
+             /etc/ssh/ssh_host_rsa_key
+
+       - environment.persistence:
+           The following directories were specified two or more
+           times:
+             /var/log
+             /var/lib/nixos
