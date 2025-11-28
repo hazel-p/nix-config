@@ -9,6 +9,7 @@
     inputs.home-manager.nixosModules.home-manager
 
     ./hardware-configuration.nix
+    ./../../nixos/persistence.nix
 
     ./../../nixos/base.nix
     ./../../nixos/powersave.nix

@@ -3,6 +3,7 @@
   config,
   pkgs,
   lib,
+  vars,
   ...
 }: {
   # Add desktop environment
@@ -29,4 +30,38 @@
 
   # Enable pure desktop packages
   programs.steam.enable = true;
+
+  # Persist within home directory
+  environment.persistence."/nix/persist" = {
+    directories = [
+      "/etc/NetworkManager/system-connections"
+    ];
+
+    users.${vars.userName} = {
+      directories = [
+        "Desktop"
+        "Documents"
+        "Downloads"
+        "Music"
+        "Pictures"
+        "Videos"
+
+        ".cache"
+        ".config"
+        ".mozilla"
+        ".local"
+        {
+          directory = ".gnupg";
+          mode = "0700";
+        }
+        {
+          directory = ".ssh";
+          mode = "0700";
+        }
+      ];
+      files = [
+        ".zsh_history"
+      ];
+    };
+  };
 }
