@@ -15,4 +15,16 @@
     ./packages.nix
     ./../cli/extra-packages.nix
   ];
+
+  home.persistence."/home-persist" = {
+    directories = [
+      "Desktop"
+      "Documents"
+      "Downloads"
+      "Music"
+      "Pictures"
+      "Videos"
+      ".mozilla"
+    ];
+  };
 }

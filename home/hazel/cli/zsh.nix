@@ -24,4 +24,10 @@
     enable = true;
     enableZshIntegration = true;
   };
+
+  home.persistence."/home-persist" = {
+    files = [
+      ".zsh_history"
+    ];
+  };
 }
