@@ -1,8 +1,14 @@
+warning: Git tree '/home/hazel/nix-config' is dirty
+unpacking 'github:nix-community/impermanence/4b3e914cdf97a5b536a889e939fb2fd2b043a170' into the Git cache...
+warning: input 'impermanence' has an override for a non-existent input 'home-manager'
+warning: input 'impermanence' has an override for a non-existent input 'nixpkgs'
 warning: updating lock file '"/home/hazel/nix-config/flake.lock"':
-• Updated input 'impermanence/home-manager':
-    'github:nix-community/home-manager/7419250703fd5eb50e99bdfb07a86671939103ea?narHash=sha256-pQQnbxWpY3IiZqgelXHIe/OAE/Yv4NSQq7fch7M6nXQ%3D' (2025-05-23)
-  → follows 'home-manager'
-• Removed input 'impermanence/home-manager/nixpkgs'
+• Updated input 'impermanence':
+    'github:misterio77/impermanence/c69232cd3962b6b1b67ad4e38a3916ad67f20d76?narHash=sha256-aCEKGoPLZccGQBkjAjFFPfdyF9yWlM%2B4XSBRZZSvShY%3D' (2025-10-01)
+  → 'github:nix-community/impermanence/4b3e914cdf97a5b536a889e939fb2fd2b043a170?narHash=sha256-LJggUHbpyeDvNagTUrdhe/pRVp4pnS6wVKALS782gRI%3D' (2025-01-25)
+• Removed input 'impermanence/home-manager'
+• Removed input 'impermanence/nixpkgs'
+warning: Git tree '/home/hazel/nix-config' is dirty
 error:
        … while calling the 'seq' builtin
          at /nix/store/hr5pl7m833kkr0zv98iydy7mxyl10qld-source/lib/modules.nix:359:18:
@@ -21,7 +27,7 @@ error:
        (stack trace truncated; use '--show-trace' to show the full, detailed trace)
 
        error: attribute 'persistence' missing
-       at /nix/store/5clcaka7k30xmz73izg7x0xkqwkwpz4i-source/nixos/persistence.nix:9:5:
+       at /nix/store/yrw76qi3mxp9l6nm8rgm3393p5xy1wgc-source/nixos/persistence.nix:9:5:
             8|   imports = [
             9|     inputs.persistence.nixosModules.persistence
              |     ^

@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-    inputs.persistence.nixosModules.persistence
+    inputs.impermanence.nixosModules.impermanence
   ];
 
   # Using persistence within the /nix partition - removes need for reformatting
