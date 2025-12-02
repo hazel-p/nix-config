@@ -26,7 +26,7 @@ Inspiration from:
 
 Planned improvements:
 - [Impermanence](https://grahamc.com/blog/erase-your-darlings/) via tmpfs - Will develop on branch & prototype on laptop
-- Server backup system using Borg backup - Need better physical infrastructure (another drive/device maybe)
+- Server backup system using Borg backup - Need to set up full server architecture on Clio and Melpomene
 - Samba fileshare mounted to hosts through VPN - Almost there, might remove all security as on private network anyway
 - Host simple HTML server using NginX - Need to buy domain name
 - Implement Headscale or Wireguard - Zero trust systems
