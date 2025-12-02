@@ -40,6 +40,14 @@ in {
       git_metrics = {
         disabled = false;
       };
+      nix_shell = {
+          format = "[$symbol$state( ($name))]($style) ";
+          disabled = false;
+          impure_msg = "[impure](bold red)";
+          pure_msg = "[pure](bold green)";
+          style = "bold blue";
+          symbol = " ";
+      };
 
       #Custom Seperators
       custom.directory_git = {
