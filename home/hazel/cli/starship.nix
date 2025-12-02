@@ -16,22 +16,27 @@ in {
       add_newline = true;
       command_timeout = 1300;
       scan_timeout = 50;
-      format = "[](fg:${colour_bg1})$username[ ](bg:${colour_bg1} fg:${colour_bg2})$directory$custom$symbol($git_branch[](fg:${colour_bg3}))$symbol( $git_commit$git_status$git_metrics$git_state)$fill$cmd_duration$nix_shell$all$character";
+      format = "[](fg:${colour_bg1})$username$hostname[](bg:${colour_bg1} fg:${colour_bg2})$directory$custom$symbol($git_branch[](fg:${colour_bg3}))$symbol( $git_commit$git_status$git_metrics$git_state)$fill$cmd_duration$nix_shell$all$character";
 
       username = {
         show_always = true;
         format = "[$user](bg:${colour_bg1} fg:${colour_text_dark})";
         disabled = false;
       };
-      directory = {
-        truncate_to_repo = true;
-        format = "[$path](bg:${colour_bg2} fg:${colour_text_dark})";
+      hostname = {
+        format = "[@$hostname ](bg:${colour_bg1} fg:${colour_text_dark})";
       };
-
+      directory = {
+        format = "[ $path ](bg:${colour_bg2} fg:${colour_text_dark})";
+        truncate_to_repo = true;
+        truncation_length = 4;
+        truncation_symbol = "…/";
+      };
       git_branch = {
-        symbol = " ";
+        symbol = "branch:"; #Use actual symbol later!
         format = "[ $symbol$branch(:$remote_branch) ](bg:${colour_bg3} fg:${colour_text_dark})";
       };
+
       git_metrics = {
         disabled = false;
       };
