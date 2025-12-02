@@ -6,13 +6,15 @@
 }: {
   programs.git = {
     enable = true;
-    userName = "Hazel Pumphrey";
-    userEmail = "hazel.pumphrey@proton.me";
-    aliases = {
-      c = "commit";
-      co = "checkout";
-      s = "status";
-      ac = "!git add -A && git commit -m ";
+    settings = {
+      user.name = "Hazel Pumphrey";
+      user.email = "hazel.pumphrey@proton.me";
+      alias = {
+        c = "commit";
+        co = "checkout";
+        s = "status";
+        ac = "!git add -A && git commit -m ";
+      };
     };
   };
 }
