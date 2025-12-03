@@ -4,9 +4,9 @@
   pkgs,
   ...
 }: let
-  colour_bg1 = "#8C9579";#"green";
-  colour_bg2 = "#E6BB96";
-  colour_bg3 = "#BE9A98";
+  colour_bg1 = "cyan";
+  colour_bg2 = "green";
+  colour_bg3 = "yellow";
   colour_text_dark = "black";
 in {
   programs.starship = {

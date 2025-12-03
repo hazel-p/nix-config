@@ -12,7 +12,6 @@
     oh-my-zsh = {
       enable = true;
       plugins = ["git" "sudo"];
-      theme = "miasma";
     };
     shellAliases = {
       ".." = "cd ..";
@@ -24,8 +23,6 @@
     };
     initContent = "fortune";
   };
-
-        #environment.pathsToLink = [ "/share/zsh" ];
 
   programs.fzf = {
     enable = true;
