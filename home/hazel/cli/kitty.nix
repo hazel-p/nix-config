@@ -8,7 +8,7 @@
     enable = true;
     enableGitIntegration = true;
     shellIntegration.enableZshIntegration = true;
-    themeFile = "Terafox";
+    themeFile = "Twilight";
 
     settings = {
       confirm_os_window_close = 0;

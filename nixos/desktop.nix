@@ -27,6 +27,9 @@
     wireplumber.enable = true;
   };
 
+  # Enable sharing with home-manager modules
+  environment.pathsToLink = [ "/share/applications" "/share/xdg-desktop-portal" ];
+
   # Enable pure desktop packages
   programs.steam.enable = true;
 }
