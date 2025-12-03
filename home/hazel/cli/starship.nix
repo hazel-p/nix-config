@@ -24,6 +24,7 @@ in {
         disabled = false;
       };
       hostname = {
+        ssh_only = false;
         format = "[@$hostname ](bg:${colour_bg1} fg:${colour_text_dark})";
       };
       directory = {
