@@ -11,7 +11,8 @@
     syntaxHighlighting.enable = true;
     oh-my-zsh = {
       enable = true;
-      theme = "gruvbox-dark";
+      plugins = ["git" "sudo"];
+      theme = "miasma";
     };
     shellAliases = {
       ".." = "cd ..";
@@ -23,6 +24,8 @@
     };
     initContent = "fortune";
   };
+
+        #environment.pathsToLink = [ "/share/zsh" ];
 
   programs.fzf = {
     enable = true;
