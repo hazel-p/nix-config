@@ -14,13 +14,13 @@
   boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
   boot.initrd.luks = {
-        reusePassphrases = true;
-        devices = {
-          "cryptroot" = {
-            device = "/dev/sda2";
-            allowDiscards = true;
-          };
-        };
+    reusePassphrases = true;
+    devices = {
+      "cryptroot" = {
+        device = "/dev/sda2";
+        allowDiscards = true;
+      };
+    };
   };
 
   fileSystems = {
