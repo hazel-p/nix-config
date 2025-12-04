@@ -21,6 +21,7 @@
             allowDiscards = true;
           };
         };
+  };
 
   fileSystems = {
     "/" = {
