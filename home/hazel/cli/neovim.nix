@@ -10,7 +10,6 @@
   programs.nvf = {
     enable = true;
     settings.vim = {
-
       # Visual Theming
       theme = {
         enable = true;
@@ -22,7 +21,7 @@
         enable = true;
       };
       telescope.enable = true;
-                        
+
       # Autocomplete using blink.cmp
       autocomplete.blink-cmp = {
         enable = true;
