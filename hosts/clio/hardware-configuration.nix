@@ -28,7 +28,7 @@
       fsType = "tmpfs";
       options = ["defaults" "size=2G" "mode=777"];
     };
-    "nix" = {
+    "/nix" = {
       device = "/dev/disk/by-uuid/d3a33401-cbd8-487c-b172-5d74365dfb54";
       fsType = "ext4";
     };
