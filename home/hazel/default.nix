@@ -5,7 +5,7 @@
   ...
 }: {
   imports = [
-    #./packages.nix
+    ./packages.nix
     #./cli
     ./cli/git.nix
     ./cli/zsh.nix
