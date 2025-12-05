@@ -8,7 +8,8 @@
     inputs.impermanence.homeManagerModules.impermanence
   ];
 
-  home.persistence."/nix/persist/home/hazel" = {
+  home.persistence."/nix/persist/home/hazel" = 
+    allowOther = true;
     directories = [
       "nix-config"
       ".cache"
