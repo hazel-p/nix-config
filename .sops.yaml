@@ -1,7 +1,7 @@
 keys:
   - &calliope age1wz5pek04hmplxklvncq7xtzygjvdlrxrpknlcmmhrhc92hhdyp2qwyf4u7
   - &melpomene age1nsmpn9ar69nkeyjwdvz7mrgd8fygt2vsz0xywja6hquqcl8kcv5sv270vu
-  - &clio age12vmd3d7cd7rhyj3qzp3sy5kvny24l7uddrcvdqshyzn5vpthvy9s7neau9
+  - &clio age1r9c3d6kaeytcz6lf00u2kt86zun0jnz7h6cfl6evv3nvha2ls9ksghngkl
   - &erato age1cyz0kj9av07dk7sz97jr29q2ryxftsl932weyhtjfk5ylda04gtqed8vqd
 creation_rules:
   - path_regex: secrets/[^/]+(\.(yaml|json|env|ini|conf))?$
