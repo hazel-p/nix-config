@@ -35,7 +35,6 @@
       hazel = {
         imports = [
           ./../../home/hazel
-          ./../../home/hazel/persistence.nix
         ];
       };
     };

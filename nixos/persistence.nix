@@ -28,5 +28,15 @@
       "/etc/ssh/ssh_host_rsa_key.pub"
       "/etc/ssh/ssh_host_rsa_key"
     ];
+
+    users.hazel =  {
+      directories = [
+        ".config"
+        ".cache"
+        ".local"
+      ];
+
+      files = [".zsh_history"];
+    };
   };
 }

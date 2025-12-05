@@ -27,12 +27,7 @@
     "/" = {
       device = "none";
       fsType = "tmpfs";
-      options = ["defaults" "size=2G" "mode=0755"];
-    };
-    "/home/hazel" = {
-      device = "none";
-      fsType = "tmpfs";
-      options = ["defaults" "size=2G" "mode=777"];
+      options = ["defaults" "size=4G" "mode=0755"];
     };
     "/nix" = {
       device = "/dev/disk/by-label/nix";
