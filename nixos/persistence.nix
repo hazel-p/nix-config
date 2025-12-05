@@ -35,6 +35,7 @@
         ".cache"
         ".local"
         ".ssh"
+        "nix-config"
       ];
       files = [".zsh_history"];
     };

@@ -20,6 +20,7 @@
     fastfetch
     bat
     tree
+    net-tools
 
     # Nix-specific tools
     sops
