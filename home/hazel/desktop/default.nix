@@ -16,7 +16,7 @@
     ./../cli/extra-packages.nix
   ];
 
-  home.persistence."/home-persist" = {
+  home.persistence."/nix/persist/home/hazel" = {
     directories = [
       "Desktop"
       "Documents"

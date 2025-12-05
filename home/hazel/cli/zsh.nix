@@ -25,7 +25,7 @@
     enableZshIntegration = true;
   };
 
-  home.persistence."/home-persist" = {
+  home.persistence."/nix/persist/hom/hazel" = {
     files = [
       ".zsh_history"
     ];

@@ -5,8 +5,10 @@
   ...
 }: {
   imports = [
-    ./packages.nix
-    ./cli
+    #./packages.nix
+    #./cli
+    ./cli/git.nix
+    ./cli/zsh.nix
   ];
 
   home = {
