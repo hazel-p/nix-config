@@ -52,6 +52,7 @@ echo -e "\033[32mFilesystems created successfully.\033[0m"
 # Mounting filesystems
 echo -e "\n\033[1mMounting filesystems...\033[0m"
 mount -t tmpfs none /mnt
+mount -t tmpfs none /mnt/home/hazel
 mkdir -pv /mnt/{boot,nix,etc/ssh,var/{lib,log}}
 mount /dev/disk/by-label/boot /mnt/boot
 mount /dev/disk/by-label/nix /mnt/nix
