@@ -8,9 +8,5 @@
     useRoutingFeatures = "both";
   };
 
-  environment.persistence."/nix/persist" = {
-    directories = [
-      "/var/lib/tailscale"
-    ];
-  };
+        #environment.persistence."/nix/persist".directories = ["/var/lib/tailscale"];
 }
