@@ -34,6 +34,7 @@
         ".config"
         ".cache"
         ".local"
+        ".ssh"
       ];
 
       files = [".zsh_history"];

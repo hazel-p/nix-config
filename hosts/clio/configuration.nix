@@ -16,11 +16,11 @@
     #./../../nixos/intelgpu.nix
 
     # Services
-    #./../../services/minecraft_server.nix
-    # ./../../services/immich.nix
+    ./../../services/minecraft_server.nix
+    ./../../services/immich.nix
     #./../../services/samba-server.nix
-    #./../../services/blocky.nix
-    #./../../services/jellyfin.nix
+    ./../../services/blocky.nix
+    ./../../services/jellyfin.nix
   ];
 
   # Bootloader.

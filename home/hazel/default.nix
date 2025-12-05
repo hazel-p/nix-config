@@ -6,9 +6,7 @@
 }: {
   imports = [
     ./packages.nix
-    #./cli
-    ./cli/git.nix
-    ./cli/zsh.nix
+    ./cli
   ];
 
   home = {
