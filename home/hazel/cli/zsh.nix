@@ -18,8 +18,9 @@
       cat = "bat --style=plain --theme=base16 --paging=never ";
       nf = "fastfetch";
       nv = "nvim";
-      nrs-local = "sudo nixos-rebuild switch --flake ~/nix-config &>nixos-switch.log || (cat nixos-switch.log | grep --color error && false)";
-      nrs = "sudo nixos-rebuild switch --flake github:hazel-p/nix-config &>nixos-switch.log || (cat nixos-switch.log | grep --color error && false)";
+      nrs-local = "sudo nixos-rebuild switch --flake ~/nix-config";
+      nrs = "sudo nixos-rebuild switch --flake github:hazel-p/nix-config";
+      nbuild = "nix build ~/nix-config --pretty";
     };
     initContent = "fortune";
   };
