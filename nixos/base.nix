@@ -61,7 +61,7 @@
   # Configure Sops
   sops = {
     defaultSopsFile = ./../secrets/secrets.yaml;
-    age.sshKeyPaths = ["/nix/secret/initrd/ssh_host_ed25519_key"];
+    age.keyFile = lib.mkDefault "/home/hazel/.config/sops/age/keys.txt"; # FOR NON-PERSIST
     secrets."user-password".neededForUsers = true;
     secrets."user-password" = {};
     # inspo: https://github.com/Mic92/sops-nix/issues/427

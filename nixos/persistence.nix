@@ -8,6 +8,9 @@
   imports = [
     inputs.impermanence.nixosModules.impermanence
   ];
+  
+  sops.age.sshKeyPaths = ["/nix/secret/initrd/ssh_host_ed25519_key"];
+  sops.age.keyFile = lib.mkForce "";
 
   # Using persistence within the /nix partition - removes need for reformatting
   environment.persistence."/nix/persist" = {
