@@ -7,7 +7,13 @@
   programs.btop = {
     enable = true;
     package = pkgs.btop-rocm; #Built with ROCM for AMD GPU compatibility
-    #settings.color_theme = "gruvbox_dark";
-    #settings.theme_background = false;
+
+    # If this section causes errors, remove ~/.config/btop/btop.conf
+    settings = {
+      vim_keys = false;
+      update_ms = 200;
+      color_theme = "TTY";
+      theme_background = false;
+    };
   };
 }

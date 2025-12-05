@@ -16,7 +16,6 @@
 
     # Multimedia
     discord
-    stremio
     prismlauncher
 
     # UI Productivity

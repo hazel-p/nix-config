@@ -8,15 +8,14 @@ Configurations are for:
 
 Featuring:
 - Unique flakes for each individual host
-- Daily automated flake updates
+- Daily automated flake bumps
 - User packages and settings managed by [home-manager](https://github.com/nix-community/home-manager)
-- Secrets encrypted using [sops-nix](https://github.com/Mic92/sops-nix)
-- Logins managed by greetd-tuigreet
-- GNOME desktop environment with declarative GNOME-Apps
+- Secrets fully encrypted using [sops-nix](https://github.com/Mic92/sops-nix)
+- Logins managed by tuigreet
 - Hyprland window manager with waybar, rofi, swww, and others
 - Neovim managed by [nvf](https://github.com/NotAShelf/nvf)
-- Basic self-hosted home server with configurable services
-- Tailscale network
+- Basic self-hosted home servers, each with configurable services
+- Tailscale VPN network
 - Modded Minecraft servers using [nix-minecraft](https://github.com/Infinidoge/nix-minecraft)
 
 Inspiration from:
@@ -24,12 +23,17 @@ Inspiration from:
 - [Eric Cheng](https://github.com/eh8/chenglab)
 - [Misterio77](https://github.com/Misterio77/nix-config)
 
-Planned improvements:
+Desktop To-Do List:
+- Include Niri using current waybar and other Wayland WM accessories
+- Configure Waybar using CSS snippets
+- Add and configure SwayNC
+- Improve Neovim workflow
+- Possibly centralise colour schemes?
+
+Server To-Do List:
 - [Impermanence](https://grahamc.com/blog/erase-your-darlings/) via tmpfs - Will develop on branch & prototype on laptop
-- Server backup system using Borg backup - Need better physical infrastructure (another drive/device maybe)
+- Server backup system using Borg backup - Need to set up full server architecture on Clio and Melpomene
 - Samba fileshare mounted to hosts through VPN - Almost there, might remove all security as on private network anyway
 - Host simple HTML server using NginX - Need to buy domain name
 - Implement Headscale or Wireguard - Zero trust systems
-- Include Niri using current waybar and other Wayland WM accessories
-- Migrate from Home manager-based Neovim to classic dotfile style for improved portability & support - Find way to import as a flake
 - Integrate more game servers - UT2004, Quake 3, Satisfactory

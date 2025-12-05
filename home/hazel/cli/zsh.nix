@@ -9,6 +9,10 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+    oh-my-zsh = {
+      enable = true;
+      plugins = ["git" "sudo"];
+    };
     shellAliases = {
       ".." = "cd ..";
       cat = "bat --style=plain --theme=base16 --paging=never ";

@@ -6,6 +6,10 @@
 }: {
   programs.kitty = {
     enable = true;
+    enableGitIntegration = true;
+    shellIntegration.enableZshIntegration = true;
+    themeFile = "Twilight";
+
     settings = {
       confirm_os_window_close = 0;
       dynamic_background_opacity = true;
