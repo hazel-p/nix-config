@@ -12,8 +12,13 @@
     package = pkgs.immich;
   };
 
+  environment.persistence."/nix/persist" = {
+    directories = [
+      "/var/lib/immich"
+    ];
+  };
+
   # TODO:
-  # - Add /var/lib/immich to persist
   # - Consider burying behind Nginx once web domain is up
   # - Consider using unstable branch package
 }

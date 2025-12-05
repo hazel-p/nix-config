@@ -9,6 +9,7 @@
     inputs.home-manager.nixosModules.home-manager
 
     ./hardware-configuration.nix
+    ./../../nixos/persistence.nix
 
     ./../../nixos/base.nix
     ./../../nixos/powersave.nix
@@ -17,7 +18,7 @@
     # Services
     ./../../services/minecraft_server.nix
     ./../../services/immich.nix
-    ./../../services/samba-server.nix
+    #./../../services/samba-server.nix
     ./../../services/blocky.nix
     ./../../services/jellyfin.nix
   ];

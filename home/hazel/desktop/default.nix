@@ -15,4 +15,16 @@
     ./packages.nix
     ./../cli/extra-packages.nix
   ];
+
+  home.persistence."/nix/persist/home/hazel" = {
+    directories = [
+      "Desktop"
+      "Documents"
+      "Downloads"
+      "Music"
+      "Pictures"
+      "Videos"
+      ".mozilla"
+    ];
+  };
 }
