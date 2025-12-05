@@ -8,7 +8,7 @@
   imports = [
     inputs.impermanence.nixosModules.impermanence
   ];
-  
+
   sops.age.sshKeyPaths = ["/nix/secret/initrd/ssh_host_ed25519_key"];
   sops.age.keyFile = lib.mkForce "";
 
@@ -22,6 +22,7 @@
       # inspo: https://github.com/nix-community/impermanence/issues/178
       "/var/lib/nixos"
       "/etc/NetworkManager/system-connections"
+      "/var/lib/tailscale"
     ];
 
     files = [
@@ -32,7 +33,7 @@
       "/etc/ssh/ssh_host_rsa_key"
     ];
 
-    users.hazel =  {
+    users.hazel = {
       directories = [
         ".config"
         ".cache"
