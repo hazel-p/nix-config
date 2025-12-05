@@ -22,7 +22,10 @@
       # inspo: https://github.com/nix-community/impermanence/issues/178
       "/var/lib/nixos"
       "/etc/NetworkManager/system-connections"
+
+      # MOVE ASAP!!!
       "/var/lib/tailscale"
+      "/var/lib/immich"
     ];
 
     files = [
