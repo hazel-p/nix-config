@@ -3,7 +3,7 @@
   inputs,
   ...
 }: let
-  directory = "/var/lib/servers";
+  directory = "/var/lib/minecraft-servers";
 in {
   # Using nix-minecraft by Infinidoge
   # Featuring:
