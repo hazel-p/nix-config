@@ -12,4 +12,9 @@
     pkgs.jellyfin-web
     pkgs.jellyfin-ffmpeg
   ];
+  environment.persistence."/nix/persist" = {
+    directories = [
+      "/var/lib/jellyfin"
+    ];
+  };
 }
