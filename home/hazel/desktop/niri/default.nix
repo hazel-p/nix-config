@@ -57,7 +57,7 @@
       };
 
       input = {
-        keyboard.xkb.layout = "de";
+        keyboard.xkb.layout = "gb";
         touchpad = {
           click-method = "button-areas";
           dwt = true;
@@ -71,21 +71,6 @@
         };
         focus-follows-mouse.enable = true;
         warp-mouse-to-focus.enable = false;
-      };
-
-      outputs = {
-        "DP-1" = {
-          mode = {
-            width = 2560;
-            height = 1440;
-            refresh = 359.97900;
-          };
-          scale = 1.0;
-          position = {
-            x = 0;
-            y = 0;
-          };
-        };
       };
 
       cursor = {

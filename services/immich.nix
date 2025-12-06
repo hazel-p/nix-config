@@ -12,7 +12,7 @@
     package = pkgs.immich;
   };
 
-        #environment.persistence."/nix/persist".directories = ["/var/lib/immich"];
+  #environment.persistence."/nix/persist".directories = ["/var/lib/immich"];
 
   # TODO:
   # - Consider burying behind Nginx once web domain is up

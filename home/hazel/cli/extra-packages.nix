@@ -10,6 +10,9 @@
 
       # Games
       dwarf-fortress
+
+      # Utility
+      ttyper
     ];
   };
 }
