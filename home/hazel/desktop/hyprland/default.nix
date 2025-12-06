@@ -27,15 +27,6 @@
     hyprland-qtutils # small bunch of utility applications that hyprland might invoke (stuffs like dialogs and popups)
   ];
 
-  # Environment Variables
-  home.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    QT_QPA_PLATFORM = "wayland";
-    SDL_VIDEODRIVER = "wayland";
-    XDG_SESSION_TYPE = "wayland";
-    XCURSOR_SIZE = "24";
-  };
-
   # Enable Hyprland
   wayland.windowManager.hyprland = {
     enable = true;
@@ -44,7 +35,7 @@
     systemd.enable = true;
     settings = {
       exec-once = [
-        "swww img ~/Pictures/hyprland-wallpapers/dreamscape.png"
+        "swww img ~/Pictures/hyprland-wallpapers/berries.jpg"
         "waybar"
         "hypridle"
         "systemctl --user start hyprpolkitagent"
@@ -65,8 +56,12 @@
       decoration = {
         rounding = "6";
         rounding_power = "4.0";
-        active_opacity = "0.95";
+        active_opacity = "1.0";
         inactive_opacity = "0.9";
+        blur = {
+          size = 15;
+          passes = 2;
+        };
       };
 
       input = {

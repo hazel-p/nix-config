@@ -46,7 +46,7 @@
       '';
     };
 
-  hyprlandCfg = config.wayland.windowManager.hyprland;
+  hyprland-enabled = config.wayland.windowManager.hyprland.enable;
 
 in {
   imports = [ ./waybar-style.nix ];
@@ -61,7 +61,7 @@ in {
       exclusive = false;
       passthrough = false;
       height = 30;
-      margin = "6";
+      margin = "8";
       position = "top";
  
       # Module Positions
@@ -71,7 +71,7 @@ in {
         "custom/player"
       ];
 
-      modules-center = lib.optionals hyprlandCfg.enable ["hyprland/workspaces"];
+      modules-center = lib.optionals hyprland-enabled ["hyprland/workspaces"];
 
       modules-right = [
         "tray"
@@ -83,9 +83,9 @@ in {
 
       # Right Side
       clock = {
-        format = "{:%H:%M %y-%m-%d}";
-        on-click-left = "mode";
-        tooltip-format = "<tt><small>{calendar}</small></tt>";
+        format = "{:%H:%M:%S %y-%m-%d}";
+        interval = 1;
+        tooltip-format = "<tt>{calendar}</tt>";
       };
       "pulseaudio" = {
         format = "{icon}{format_source}";
@@ -136,15 +136,15 @@ in {
       };
 
       # Center
-      hyprland-workspaces = {
+      "hyprland-workspaces" = {
         format = "{icon}";
         interval = 1;
         format-icons = {
-          "active" = "";
-          "default" = "";
-          "empty" = "";
+          "active" = "";
+          "default" = "";
+          "empty" = "";
          };
-       persistent-workspaces."*" = 5;
+                                #persistent-workspaces."*" = "5";
       };
 
       # Left Side
