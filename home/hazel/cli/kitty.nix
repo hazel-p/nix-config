@@ -9,7 +9,7 @@
     enableGitIntegration = true;
     shellIntegration.enableZshIntegration = true;
     themeFile = "GruvboxMaterialDarkHard";
-                #themeFile = "gruvbox-dark-hard";
+    #themeFile = "gruvbox-dark-hard";
 
     settings = {
       confirm_os_window_close = 0;

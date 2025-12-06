@@ -36,7 +36,7 @@
     systemd.enable = true;
     settings = {
       exec-once = [
-        "swww img ~/Pictures/hyprland-wallpapers/berries.jpg"
+        "swww img ~/Pictures/hyprland-wallpapers/cactus.jpg"
         "waybar"
         "hypridle"
         "systemctl --user start hyprpolkitagent"
@@ -52,6 +52,8 @@
         no_focus_fallback = true;
         resize_on_border = true;
         allow_tearing = true;
+        "col.inactive_border" = "0xff282828";
+        "col.active_border" = "0xffd4be98";
       };
 
       decoration = {
@@ -60,7 +62,7 @@
         active_opacity = "1.0";
         inactive_opacity = "0.9";
         blur = {
-          size = 15;
+          size = 10;
           passes = 2;
         };
       };
@@ -85,7 +87,7 @@
         sync_gsettings_theme = true;
         inactive_timeout = "5.0";
         warp_on_change_workspace = "1";
-        enable_hyprcursor = true;
+        enable_hyprcursor = false;
       };
 
       workspace = [

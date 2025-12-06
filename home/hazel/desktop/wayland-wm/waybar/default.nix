@@ -204,7 +204,7 @@ in {
         };
         exec = mkScript {
           deps = [pkgs.playerctl];
-          # https://docs.gtk.org/gtk4/class.Label.html#markup-styled-text 
+          # https://docs.gtk.org/gtk4/class.Label.html#markup-styled-text
           script = ''
             selected_player="$(playerctl status -f "{{playerName}}" 2>/dev/null || true)"
             playerctl metadata -p "$selected_player" --format '{"text": "{{artist}} - {{title}}", "alt": "{{status}}", "tooltip": "{{artist}} - {{title}} ({{album}})"}' | sed 's/&/&amp;/g' | sed 's/</&lt;/g' | sed 's/>/&rt;/g' 2>/dev/null

@@ -22,6 +22,7 @@
 
   # Import wayland apps
   home.packages = with pkgs; [
+    grimblast # screenshots!
     swaynotificationcenter # must have notification daemon for smooth hyprland experience (includes pipewire, XDG desktop portal, Authentication agent, Qt wayland support)
     eww # compositor independent to create widgets (alternative:fabric) , I prefer over waybar
     clipse # clipboard manager, stores both text and images, can display in a box (alternative:cliphist)
