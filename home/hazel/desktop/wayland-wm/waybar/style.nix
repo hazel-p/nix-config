@@ -5,10 +5,10 @@
   pkgs,
   inputs,
   ...
-}:{
+}: {
   programs.waybar = {
     style = let
-      tra = "rgba(40,40,40,0.3)"; # transparent bg1
+      bgt = "rgba(40,40,40,0.3)"; # transparent background1
       bg0 = "#1d2021"; # black
       bg1 = "#282828"; # background grey
       bg2 = "#3c3836"; # lighter background
@@ -29,15 +29,15 @@
         window#waybar {
           padding: 0;
           border-radius: 0.5em;
-          background-color: ${tra};
-          color: ${bg1};
+          background-color: ${bgt};
+          color: ${fg0};
         }
         .modules-left {
-          background-color: ${tra};
+          background-color: ${bg1};
           margin-left: 0;
           border-radius: 0.5em;
-          border-right: solid 0.4em ${bg1};
         }
+
 
         #workspaces button {
           color: ${bg1};
@@ -59,7 +59,7 @@
         }
 
         #custom-menu {
-          background-color: ${bg1};
+          background-color: ${bg2};
           color: ${acc};
           padding-right: 1.5em;
           padding-left: 1em;
@@ -85,7 +85,7 @@
           margin-left: 1em;
         }
         #tray {
-          color: ${bg1};
+          color: ${fg0};
         }
       '';
   };

@@ -47,9 +47,8 @@
     };
 
   hyprland-enabled = config.wayland.windowManager.hyprland.enable;
-
 in {
-  imports = [ ./waybar-style.nix ];
+  imports = [./style.nix];
 
   programs.waybar = {
     enable = true;
@@ -63,7 +62,7 @@ in {
       height = 30;
       margin = "8";
       position = "top";
- 
+
       # Module Positions
       modules-left = [
         "custom/menu"
@@ -119,7 +118,7 @@ in {
 
       battery = {
         interval = 10;
-        format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
+        format-icons = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
         format = "{icon}";
         format-charging = "󰂄";
         tooltip-format = "{capacity}% ({time})";
@@ -138,7 +137,7 @@ in {
           Up: {bandwidthUpBits}
           Down: {bandwidthDownBits}'';
       };
-      
+
       "custom/rfkill" = {
         interval = 3;
         exec-if = mkScript {
@@ -156,8 +155,8 @@ in {
           "active" = "";
           "default" = "";
           "empty" = "";
-         };
-                                #persistent-workspaces."*" = "5";
+        };
+        #persistent-workspaces."*" = "5";
       };
 
       # Left Side
@@ -225,7 +224,6 @@ in {
           script = "playerctl play-pause";
         };
       };
-
     };
   };
 }
