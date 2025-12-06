@@ -75,9 +75,9 @@ in {
 
       modules-right = [
         "tray"
+        "pulseaudio"
         "network"
         "battery"
-        "pulseaudio"
         "clock"
       ];
 
@@ -87,6 +87,7 @@ in {
         interval = 1;
         tooltip-format = "<tt>{calendar}</tt>";
       };
+
       "pulseaudio" = {
         format = "{icon}{format_source}";
         format-bluetooth = "{icon} 󰂯{format_source}";
@@ -107,6 +108,7 @@ in {
         };
         on-click = lib.getExe pkgs.pavucontrol;
       };
+
       idle_inhibitor = {
         format = "{icon}";
         format-icons = {
@@ -114,6 +116,7 @@ in {
           deactivated = "󰒲";
         };
       };
+
       battery = {
         interval = 10;
         format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
@@ -122,6 +125,7 @@ in {
         tooltip-format = "{capacity}% ({time})";
         onclick = "";
       };
+
       network = {
         interval = 3;
         format-wifi = "󰖩";
@@ -133,6 +137,15 @@ in {
           {ipaddr}/{cidr}
           Up: {bandwidthUpBits}
           Down: {bandwidthDownBits}'';
+      };
+      
+      "custom/rfkill" = {
+        interval = 3;
+        exec-if = mkScript {
+          deps = [pkgs.util-linux];
+          script = "rfkill list wifi | grep yes -q";
+        };
+        exec = "echo 󰀝";
       };
 
       # Center
@@ -159,6 +172,7 @@ in {
           "nix-snowflake" = "";
         };
       };
+
       "custom/currentplayer" = {
         interval = 2;
         return-type = "json";
@@ -180,6 +194,7 @@ in {
           "discord" = " 󰙯 ";
         };
       };
+
       "custom/player" = {
         exec-if = mkScript {
           deps = [pkgs.playerctl];
@@ -210,14 +225,7 @@ in {
           script = "playerctl play-pause";
         };
       };
-      "custom/rfkill" = {
-        interval = 3;
-        exec-if = mkScript {
-          deps = [pkgs.util-linux];
-          script = "rfkill list wifi | grep yes -q";
-        };
-        exec = "echo 󰀝";
-      };
+
     };
   };
 }

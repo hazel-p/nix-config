@@ -6,7 +6,7 @@
 }: {
   # Import used desktop configuration
   imports = [
-    ./waybar.nix
+    ./waybar
     ./rofi.nix
     ./swww.nix
   ];

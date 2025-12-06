@@ -20,22 +20,22 @@ in {
       # Inside coloured boxes
       username = {
         show_always = true;
-        format = "[$user](bg:${colour_bg1} fg:${colour_text_dark})";
+        format = "[$user](bold bg:${colour_bg1} fg:${colour_text_dark})";
         disabled = false;
       };
       hostname = {
         ssh_only = false;
-        format = "[@$hostname ](bg:${colour_bg1} fg:${colour_text_dark})";
+        format = "[@$hostname ](bold bg:${colour_bg1} fg:${colour_text_dark})";
       };
       directory = {
-        format = "[ $path ](bg:${colour_bg2} fg:${colour_text_dark})";
+        format = "[ $path ](bold bg:${colour_bg2} fg:${colour_text_dark})";
         truncate_to_repo = true;
         truncation_length = 4;
         truncation_symbol = "…/";
       };
       git_branch = {
         symbol = "branch:"; #Use actual symbol later!
-        format = "[ $symbol$branch(:$remote_branch) ](bg:${colour_bg3} fg:${colour_text_dark})";
+        format = "[ $symbol$branch(:$remote_branch) ](bold bg:${colour_bg3} fg:${colour_text_dark})";
       };
 
       # Post-box git metrics
