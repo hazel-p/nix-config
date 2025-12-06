@@ -33,7 +33,6 @@
     playerctl # cli tool to control media players
     wldash # a wayland native launcher
     wlogout # manages logout options, exists independently of hyprlock
-    fira-code # font to be used
     nwg-look # GTK settings editor, designed to work properly in wlroots-based Wayland environment
   ];
 }

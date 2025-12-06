@@ -28,8 +28,8 @@
       # Move focus with mainMod + arrow keys
       "$mod, M, movefocus, l"
       "$mod, I, movefocus, r"
-      "$mod, N, movefocus, u"
-      "$mod, E, movefocus, d"
+      "$mod, N, movefocus, d"
+      "$mod, E, movefocus, u"
 
       # Switch workspaces with mainMod + [0-9]
       "$mod, K, workspace, 1"
