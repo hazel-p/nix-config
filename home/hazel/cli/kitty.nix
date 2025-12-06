@@ -8,7 +8,8 @@
     enable = true;
     enableGitIntegration = true;
     shellIntegration.enableZshIntegration = true;
-    themeFile = "gruvbox-dark-hard";
+    themeFile = "GruvboxMaterialDarkHard";
+                #themeFile = "gruvbox-dark-hard";
 
     settings = {
       confirm_os_window_close = 0;

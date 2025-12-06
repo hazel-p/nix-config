@@ -148,7 +148,7 @@ in {
       };
 
       # Center
-      "hyprland-workspaces" = {
+      "hyprland/workspaces" = {
         format = "{icon}";
         interval = 1;
         format-icons = {
@@ -156,7 +156,6 @@ in {
           "default" = "";
           "empty" = "";
         };
-        #persistent-workspaces."*" = "5";
       };
 
       # Left Side

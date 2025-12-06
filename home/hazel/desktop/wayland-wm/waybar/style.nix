@@ -8,12 +8,14 @@
 }: {
   programs.waybar = {
     style = let
+      # Gruvbox
       bgt = "rgba(40,40,40,0.3)"; # transparent background1
-      bg0 = "#1d2021"; # black
       bg1 = "#282828"; # background grey
       bg2 = "#3c3836"; # lighter background
       fg0 = "#ebdbb2"; # light grey
-      acc = "#fb4934"; # bright red
+      
+      # Gruvbox Material
+      acc = "#e78a4e"; # bright orange
     in
       /*
       css
@@ -32,6 +34,10 @@
           background-color: ${bgt};
           color: ${fg0};
         }
+        .modules-center {
+          background-color: ${bg1};
+          border-radius: 0.5em;
+        }
         .modules-left {
           background-color: ${bg1};
           margin-left: 0;
@@ -39,8 +45,9 @@
         }
 
 
+
         #workspaces button {
-          color: ${bg1};
+          color: ${fg0};
           padding-left: 0.2em;
           padding-right: 0.2em;
           margin-top: 0.15em;
@@ -49,12 +56,10 @@
           margin-right: 0.1em;
         }
         #workspaces button.hidden {
-          background-color: ${bg1};
           color: ${fg0};
         }
         #workspaces button.focused,
         #workspaces button.active {
-          background-color: ${bg1};
           color: ${acc};
         }
 

@@ -7,7 +7,7 @@
   colour_bg1 = "cyan";
   colour_bg2 = "green";
   colour_bg3 = "yellow";
-  colour_text_dark = "black";
+  colour_text_dark = "#000000";
 in {
   programs.starship = {
     enable = true;

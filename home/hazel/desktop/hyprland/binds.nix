@@ -3,7 +3,7 @@
   config,
   ...
 }: {
-  wayland.windowManager.hyprland = {
+  wayland.windowManager.hyprland.settings = {
     # Keybindings
     "$mod" = "SUPER";
     bind = [
