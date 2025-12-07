@@ -9,6 +9,7 @@
   ];
   programs.nvf = {
     enable = true;
+    defaultEditor = true;
     settings.vim = {
       # Visual Theming
       theme = {

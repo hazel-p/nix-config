@@ -16,13 +16,13 @@
     shellAliases = {
       ".." = "cd ..";
       cat = "bat --style=plain --theme=base16 --paging=never ";
-      nf = "fastfetch";
+      ff = "fastfetch";
       nv = "nvim";
       nrs-local = "sudo nixos-rebuild switch --flake ~/nix-config";
       nrs = "sudo nixos-rebuild switch --flake github:hazel-p/nix-config";
       nbuild = "nix build ~/nix-config --pretty";
     };
-    initContent = "fortune";
+    initContent = "fortune-kind";
   };
 
   programs.fzf = {

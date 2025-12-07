@@ -5,20 +5,22 @@
   ...
 }: {
   imports = [
-    ./git.nix
+    # Essentials
     ./kitty.nix
     ./zsh.nix
-    ./helix.nix
     ./neovim.nix
+    ./git.nix
+ 
+    # Useful Applets
+    ./starship.nix
+    ./fastfetch.nix
     ./btop.nix
     ./yazi.nix
-    ./starship.nix
   ];
 
   home.packages = with pkgs; [
     # Command line tools
-    fortune
-    fastfetch
+    fortune-kind
     bat
     tree
     net-tools
