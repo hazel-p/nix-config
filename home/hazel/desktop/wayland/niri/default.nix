@@ -6,7 +6,6 @@
 }: {
   imports = [
     inputs.niri.homeModules.niri
-    ./../wayland-wm
   ];
 
   programs.niri = {

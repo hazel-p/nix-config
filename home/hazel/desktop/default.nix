@@ -7,9 +7,8 @@
   # Import used desktop configuration
   imports = [
     # Display Settings
-    #./gnome
-    ./hyprland
-                #./niri
+    #./gnome 
+    ./wayland
 
     # Additional packages for desktop & cli
     ./packages.nix

@@ -4,7 +4,6 @@
   ...
 }: {
   imports = [
-    ./../wayland-wm
     ./binds.nix
   ];
   # Initial inspiration from github.com/weatflac505/hyprland-config-with-home-manager

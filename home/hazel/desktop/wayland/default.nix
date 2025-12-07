@@ -6,8 +6,10 @@
 }: {
   # Import used desktop configuration
   imports = [
+    ./hypr
+
     ./waybar
-    ./ashell.nix
+    #./ashell.nix
     ./rofi.nix
     ./swww.nix
   ];
