@@ -26,8 +26,8 @@
     useUserPackages = true;
     extraSpecialArgs = {inherit inputs outputs;};
     users.hazel.imports = [
-      ./../../home/hazel
-      ./../../home/hazel/desktop
+      ./../../hazel-home
+      ./../../hazel-home/desktop
     ];
   };
 
