@@ -9,14 +9,16 @@ Configurations are for:
 Featuring:
 - Unique flakes for each individual host
 - Daily automated flake bumps
-- User packages and settings managed by [home-manager](https://github.com/nix-community/home-manager)
-- Secrets fully encrypted using [sops-nix](https://github.com/Mic92/sops-nix)
+- User packages, dotfiles, and settings managed by [home-manager](https://github.com/nix-community/home-manager)
+- Public secrets fully encrypted using [sops-nix](https://github.com/Mic92/sops-nix) (password, VPN authkey)
 - Logins managed by tuigreet
 - Hyprland window manager with waybar, rofi, swww, and others
 - Neovim managed by [nvf](https://github.com/NotAShelf/nvf)
 - Basic self-hosted home servers, each with configurable services
 - Tailscale VPN network
 - Modded Minecraft servers using [nix-minecraft](https://github.com/Infinidoge/nix-minecraft)
+- Option to use #environment.persistence."/nix/persist".directories = ["/var/lib/tailscale"];
+- [Impermanence](https://grahamc.com/blog/erase-your-darlings/) via tmpfs and encrypted root
 
 Inspiration from:
 - [NixOS Wiki](https://wiki.nixos.org)
@@ -31,7 +33,6 @@ Desktop To-Do List:
 - Possibly centralise colour schemes?
 
 Server To-Do List:
-- [Impermanence](https://grahamc.com/blog/erase-your-darlings/) via tmpfs - Will develop on branch & prototype on laptop
 - Server backup system using Borg backup - Need to set up full server architecture on Clio and Melpomene
 - Samba fileshare mounted to hosts through VPN - Almost there, might remove all security as on private network anyway
 - Host simple HTML server using NginX - Need to buy domain name
