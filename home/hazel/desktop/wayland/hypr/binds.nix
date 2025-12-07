@@ -9,8 +9,9 @@
     bind = [
       "$mod, return, exec, kitty"
       "$mod, F, exec, firefox"
-      "$mod, TAB, exec, nautilus"
       "$mod, D, exec, rofi -show drun"
+      "$mod, A, exec, kitty --class musikcube -e musikcube"
+      "$mod, Y, exec, kitty --class yazi -e yazi"
       "$mod, V, exec, kitty --class clipse -e clipse"
       "$mod, G, exec, grimblast copy area"
 
@@ -18,7 +19,7 @@
       "$mod, C, killactive,"
       "$mod, P, pseudo"
       "$mod, B, togglesplit,"
-      "$mod, backspace, exit,"
+      "$mod, backspace, exec, wlogout"
 
       "$mod, mouse_down, exec, hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 * 1.1}')" # for zooming
       "$mod, mouse_up, exec, hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 * 0.9}')" # for zooming

@@ -11,6 +11,7 @@
     ./helix.nix
     ./neovim.nix
     ./btop.nix
+    ./yazi.nix
     ./starship.nix
   ];
 

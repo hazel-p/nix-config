@@ -51,6 +51,7 @@
         no_focus_fallback = true;
         resize_on_border = true;
         allow_tearing = true;
+        # Gruvbox Material
         "col.inactive_border" = "0xff282828";
         "col.active_border" = "0xffd4be98";
       };

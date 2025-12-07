@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  # Non-essential or bulky packages
+  # Non-essential or bulky command-line packages
   # Intended to be imported with ./desktop, but can run headless
   home = {
     packages = with pkgs; [
@@ -13,6 +13,10 @@
 
       # Utility
       ttyper
+     
+      # Music
+      musikcube
+      ncspot
     ];
   };
 }
