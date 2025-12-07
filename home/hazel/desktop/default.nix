@@ -9,7 +9,7 @@
     # Display Settings
     #./gnome
     ./hyprland
-    ./niri
+                #./niri
 
     # Additional packages for desktop & cli
     ./packages.nix

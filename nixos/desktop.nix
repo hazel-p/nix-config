@@ -27,6 +27,8 @@
     jack.enable = true;
     wireplumber.enable = true;
   };
+ 
+  programs.dconf.enable = true;
 
   # Enable sharing with home-manager modules
   environment.pathsToLink = ["/share/applications" "/share/xdg-desktop-portal"];

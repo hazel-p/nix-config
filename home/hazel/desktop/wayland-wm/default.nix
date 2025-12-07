@@ -7,6 +7,7 @@
   # Import used desktop configuration
   imports = [
     ./waybar
+    ./ashell.nix
     ./rofi.nix
     ./swww.nix
   ];
@@ -20,6 +21,11 @@
     XCURSOR_SIZE = "24";
   };
 
+  dconf = {
+    enable = true;
+    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+  };
+
   # Import wayland apps
   home.packages = with pkgs; [
     grimblast # screenshots!
@@ -30,7 +36,6 @@
     wl-clipboard # required for clipboards in wayland , cli utility for wayland
     udiskie # mounts mass storage devices automatically
     overskride # powerful bluetoothclient in gtk4
-    ashell # minimal alternative to nm-applet(wayland native), simple independent window popup, doesn't require a tray
     playerctl # cli tool to control media players
     wldash # a wayland native launcher
     wlogout # manages logout options, exists independently of hyprlock
