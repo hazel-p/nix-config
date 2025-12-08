@@ -6,8 +6,9 @@
 }: {
   programs.helix = {
     enable = true;
+    package = pkgs.evil-helix;
     settings = {
-      theme = "gruvbox";
+      theme = "amberwood";
     };
     languages.language = [
       {
