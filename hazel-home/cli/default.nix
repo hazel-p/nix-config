@@ -16,6 +16,7 @@
     ./fastfetch.nix
     ./btop.nix
     ./yazi.nix
+    ./helix.nix
   ];
 
   home.packages = with pkgs; [
