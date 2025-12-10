@@ -10,21 +10,10 @@
       logo.source = "nixos-small";
       modules = [
         "title"
-        "break"
-
-        "os"
-        "kernel"
-        "packages"
-
-        "break"
-
-        "uptime"
-        "datetime"
-        "localip"
-        "locale"
-
-        "break"
-
+        {
+          type = "custom";
+          format = "┌───────────────────── Hardware ─────────────────────┐";
+        }
         "host"
         "cpu"
         "gpu"
@@ -32,8 +21,20 @@
         "disk"
         "battery"
         "poweradapter"
+        {
+          type = "custom";
+          format = "└────────────────────────────────────────────────────┘";
+        }
 
         "break"
+
+        {
+          type = "custom";
+          format = "┌───────────────────── Software ─────────────────────┐";
+        }
+        "os"
+        "kernel"
+        "packages"
 
         "monitor"
         "de"
@@ -43,12 +44,24 @@
         "icons"
         "font"
         "cursor"
+        {
+          type = "custom";
+          format = "└────────────────────────────────────────────────────┘";
+        }
         "break"
-
-        "terminal"
-        "terminalfont"
-        "shell"
-        "editor"
+        {
+          type = "custom";
+          format = "┌─────────────── Configuration & Info ───────────────┐";
+        }
+        "uptime"
+        "datetime"
+        "localip"
+        "locale"
+        {
+          type = "custom";
+          format = "└────────────────────────────────────────────────────┘";
+        }
+        "break"
         "colors"
       ];
     };
