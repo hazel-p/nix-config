@@ -10,7 +10,7 @@
     ./zsh.nix
     ./neovim.nix
     ./git.nix
- 
+
     # Useful Applets
     ./starship.nix
     ./fastfetch.nix

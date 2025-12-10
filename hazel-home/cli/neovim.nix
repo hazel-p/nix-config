@@ -10,8 +10,12 @@
   programs.nvf = {
     enable = true;
     defaultEditor = true;
-    
+
     settings.vim = {
+      options = {
+        tabstop = 2;
+        shiftwidth = 2;
+      };
       # Visual Theming
       theme = {
         enable = true;

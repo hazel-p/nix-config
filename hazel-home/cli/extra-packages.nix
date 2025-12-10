@@ -13,7 +13,7 @@
 
       # Utility
       ttyper
-     
+
       # Music
       musikcube
       ncspot
