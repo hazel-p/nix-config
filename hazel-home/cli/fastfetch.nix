@@ -9,14 +9,21 @@
     settings = {
       logo.source = "nixos-small";
       modules = [
-        "title"
         {
           type = "custom";
           format = "┌───────────────────── Hardware ─────────────────────┐";
         }
         "host"
-        "cpu"
-        "gpu"
+        {
+          type = "cpu";
+          temp = true;
+          format = "{name} ({cores-physical}/{cores-logical} @{freq-max:4}) {temperature}";
+        }
+        {
+          type = "gpu";
+          temp = true;
+          format = "{vendor} {name} ({12}) {temperature}";
+        }
         "memory"
         "disk"
         "battery"
@@ -35,9 +42,10 @@
         "os"
         "kernel"
         "packages"
+        "shell"
 
-        "monitor"
         "de"
+        "monitor"
         "wm"
         "wmtheme"
         "theme"
