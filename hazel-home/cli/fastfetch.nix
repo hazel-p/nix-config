@@ -23,14 +23,14 @@
           key = "  cpu";
           keyColor = "red";
           temp = true;
-          format = "{name} ({cores-physical}/{cores-logical} @{freq-max:4}) {temperature}";
+          format = "{name} ({cores-physical}/{cores-logical}C {freq-max:4}GHz) {temperature}";
         }
         {
           type = "gpu";
           key = "  gpu";
           keyColor = "red";
           temp = true;
-          format = "{vendor} {name} ({12}) {temperature}";
+          format = "{vendor} {name} {temperature}";
         }
         {
           type = "memory";
@@ -40,6 +40,12 @@
         {
           type = "disk";
           key = "  disk [/{name}]";
+          keyColor = "red";
+        }
+         {
+          type = "monitor";
+          key = "  monitor";
+          format = "{1} {2}x{3} @ {11}Hz - {6}inch";
           keyColor = "red";
         }
         {
@@ -84,42 +90,12 @@
         {
           type = "de";
           key = "  de";
-          keyColor = "blue";
+          keyColor = "yellow";
         }
-        {
-          type = "monitor";
-          key = "  monitor";
-          keyColor = "blue";
-        }
-        {
+       {
           type = "wm";
           key = "  wm";
-          keyColor = "blue";
-        }
-        {
-          type = "wmtheme";
-          key = "  wmtheme";
-          keyColor = "blue";
-        }
-        {
-          type = "theme";
-          key = "  theme";
-          keyColor = "blue";
-        }
-        {
-          type = "icons";
-          key = "  icons";
-          keyColor = "blue";
-        }
-        {
-          type = "font";
-          key = "  font";
-          keyColor = "blue";
-        }
-        {
-          type = "cursor";
-          key = "  cursor";
-          keyColor = "blue";
+          keyColor = "yellow";
         }
         {
           type = "custom";
@@ -139,6 +115,12 @@
           type = "datetime";
           key = "  date & time";
           keyColor = "green";
+        }
+        {
+          type = "command";
+          key = "  last rebuilt";
+          keyColor = "green";
+          text = "stat -c %Y /run/current-system | sed 's/^/@/' | date --file=- +'%A %e %b %R'";
         }
         {
           type = "localip";
