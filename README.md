@@ -1,6 +1,8 @@
 # NixOS Configuration
 
 ## What is NixOS?
+
+![NixOS Logo](https://github.com/NixOS/nixos-artwork/blob/9d2cdedd73d64a068214482902adea3d02783ba8/logo/nixos.svg)
 [NixOS](https://wiki.nixos.org/wiki/NixOS_Wiki) is a declarative operating system built around the [Linux](https://github.com/torvalds/linux) kernel, and using the [Nix ecosystem](https://wiki.nixos.org/wiki/Nix_ecosystem). Declarative in this sense means that the entire system, from the deepest kernel patches and modules to each app installed and even colour scheme, and the exact version for each, is *declared* in code. This is different compared to an *imperative* system, where the user installs new software as and when needed, and configures each manually each time. This approach makes backups, changing settings, and remembering what software is installed very difficult, and can result in systems being bloated over time. This particular approach is best suited for servers, but is also very streamlined for clean and organised desktop use.
 
 The language used by NixOS and extended Nix ecosystem is also called [Nix](https://nix.dev/tutorials/nix-language.html), which is what this repository is written in. This is a necessity for this operating system, but is very simple and easy to learn.
