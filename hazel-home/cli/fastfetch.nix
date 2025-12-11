@@ -7,7 +7,7 @@
   programs.fastfetch = {
     enable = true;
     settings = {
-      logo.source = "nixos-small";
+      logo.source = "nixos-old";
       modules = [
         {
           type = "custom";
