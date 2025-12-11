@@ -30,7 +30,7 @@
           key = "  gpu";
           keyColor = "red";
           temp = true;
-          format = "{vendor} {name} {temperature}";
+          format = "{vendor} {name} - {12} {temperature}";
         }
         {
           type = "memory";
