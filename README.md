@@ -1,38 +1,43 @@
 # NixOS Configuration
+## What is in this repository?
+This repository contains a set of files which together describe the configuration for my entire computing setup, including servers and desktop. All these computers run NixOS, which allows me to run a single command which builds the system according only to the configuration laid out above.
+
+`sudo nixos-rebuild --flake github:hazel-p/nix-config`
 
 ## What is NixOS?
-
 ![NixOS Logo](https://github.com/NixOS/nixos-artwork/blob/9d2cdedd73d64a068214482902adea3d02783ba8/logo/nixos.svg)
-[NixOS](https://wiki.nixos.org/wiki/NixOS_Wiki) is a declarative operating system built around the [Linux](https://github.com/torvalds/linux) kernel, and using the [Nix ecosystem](https://wiki.nixos.org/wiki/Nix_ecosystem). Declarative in this sense means that the entire system, from the deepest kernel patches and modules to each app installed and even colour scheme, and the exact version for each, is *declared* in code. This is different compared to an *imperative* system, where the user installs new software as and when needed, and configures each manually each time. This approach makes backups, changing settings, and remembering what software is installed very difficult, and can result in systems being bloated over time. This particular approach is best suited for servers, but is also very streamlined for clean and organised desktop use.
+[NixOS](https://wiki.nixos.org/wiki/NixOS_Wiki) is a declarative operating system built around the [Linux](https://github.com/torvalds/linux) kernel, and using the [Nix ecosystem](https://wiki.nixos.org/wiki/Nix_ecosystem).
 
-The language used by NixOS and extended Nix ecosystem is also called [Nix](https://nix.dev/tutorials/nix-language.html), which is what this repository is written in. This is a necessity for this operating system, but is very simple and easy to learn.
+Declarative in this sense means that the entire system, from the deepest kernel patches and modules to each app installed and even colour scheme, and the exact version for each, is *declared* in code. This is different from an *imperative* system, where the user installs new software as and when needed, and configures each manually each time in config files strewn around the computer. This common approach makes backups, changing settings, and remembering what software is installed very difficult, and can result in systems being bloated over time. Declarative approaches such as Nix and [Docker Compose](https://github.com/docker/compose) are incredibly well suited for servers, but Nix streamlines the process for clean and organised desktop use as well.
+
+The language used by NixOS and extended Nix ecosystem is also called [Nix](https://nix.dev/tutorials/nix-language.html), which this repository is written in. This is a necessity for this operating system, but is very simple and easy to learn - this respository is my first Nix project!
 
 Each package is installed from [nixpkgs](https://search.nixos.org/packages), a git repository with over 100,000 programs packaged up and explicitly versioned using Nix's declarative language.
 
-This repository uses a mature experimental feature of Nix called [Flakes](https://wiki.nixos.org/wiki/Flakes), which allows other flakes to be imported and versioned, including nixpkgs itself. It also allows several permutaions to deployed using the same flake, with each output depending on a certain input. In the case of this repository, this input is the hostname of the machine, and the output is the specific configuration relevant to that specific hostname. This allows this repository to contain my personal configurations for each of my computers.
+This project uses a mature experimental feature of Nix called [Flakes](https://wiki.nixos.org/wiki/Flakes), which defines this repository as a flake and allows other flakes to be imported and versioned, including nixpkgs itself, as well as other projects not defined in nixpkgs like [nvf](https://github.com/NotAShelf/nvf). The exact versions of every input flake are defined in [flake.lock](flake.lock), and the flake for this repository is defined in [flake.nix](flake.nix). In my configuration, the flake takes the hostname of the machine it is run on and builds the system from its corresponding configuration file in [./hosts/](hosts/). This allows this repository to contain my personal configurations for each of my computers.
 
-## What does this repository feature?
-- Unique flakes for each individual host
-- Daily automated flake bumps
-- User packages, dotfiles, and settings managed by [home-manager](https://github.com/nix-community/home-manager)
-- Public secrets fully encrypted using [sops-nix](https://github.com/Mic92/sops-nix) (password, VPN authkey)
-- Logins managed by tuigreet
-- Hyprland window manager with waybar, rofi, swww, and others
+## What are the features of my configuration?
+- Unique flakes for multiple machines, including desktop and servers
+- Daily automated flake bumps (Updating [flake.lock](flake.lock))
+- User-specific packages, dotfiles, and settings managed by [home-manager](https://github.com/nix-community/home-manager)
+- Public secrets fully encrypted using [sops-nix](https://github.com/Mic92/sops-nix) (user password, VPN authkey)
+- Logins managed by [tuigreet](https://github.com/apognu/tuigreet)
+- [Hyprland](https://wiki.hypr.land/) tiling window manager with waybar, rofi, swww, and more!
 - Neovim managed by [nvf](https://github.com/NotAShelf/nvf)
 - Basic self-hosted home servers, each with configurable services
-- Tailscale VPN network
+- [Tailscale](https://tailscale.com/) VPN network
 - Modded Minecraft servers using [nix-minecraft](https://github.com/Infinidoge/nix-minecraft)
-- [Impermanence](https://grahamc.com/blog/erase-your-darlings/) via tmpfs and encrypted root
+- Opt-in [Impermanence](https://grahamc.com/blog/erase-your-darlings/) via tmpfs with encrypted root
 
 ## Deployed Systems
 ### Calliope
-This is my main desktop, featuring a Ryzen 7745HX CPU, 32GB of RAM, and an RX7600 GPU. It is primarily for gaming and development.
+This is my main desktop, featuring a Ryzen 7745HX CPU, 32GB RAM, and an RX7600 GPU. It is primarily for gaming and development.
 
 ### Clio
-This is my main server, a Lenovo M920q, with 32GB of RAM. It will host all of my services, including a Samba NAS, Immich photos management, Jellyfin media server, and game servers.
+This is my main server, a Lenovo M920q, with 32GB RAM. It will host all of my services, including a Samba NAS, Immich photos management, Jellyfin media server, and game servers. It is currently configured using Impermanence.
 
 ### Melpomene
-THis is my secondary server, an Optiplex 3070 Micro. It will host my Borg backups from Clio, as well as lighter services which do not create large amounts of critical data, such as Headscale.
+This is my secondary server, an Optiplex 3070 Micro with 16GB RAM. It will host my Borg backups from Clio, as well as lighter services which do not create large amounts of critical data, such as Headscale or Blocky.
 
 ### Erato
 This is my laptop, a HP Elitebook 745 G2. It has been 8 and a half years since I bought it second hand so it is very unreliable. Currently not switching on.
