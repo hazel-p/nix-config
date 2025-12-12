@@ -14,17 +14,17 @@ The language used by NixOS and extended Nix ecosystem is also called [Nix](https
 
 Each package is installed from [nixpkgs](https://search.nixos.org/packages), a git repository with over 100,000 programs packaged up and explicitly versioned using Nix's declarative language.
 
-This project uses a mature experimental feature of Nix called [Flakes](https://wiki.nixos.org/wiki/Flakes), which defines this repository as a flake and allows other flakes to be imported and versioned, including nixpkgs itself, as well as other projects not defined in nixpkgs like [nvf](https://github.com/NotAShelf/nvf). The exact versions of every input flake are defined in [flake.lock](flake.lock), and the flake for this repository is defined in [flake.nix](flake.nix). In my configuration, the flake takes the hostname of the machine it is run on and builds the system from its corresponding configuration file in [./hosts/](hosts/). This allows this repository to contain my personal configurations for each of my computers.
+This project uses a mature experimental feature of Nix called [Flakes](https://wiki.nixos.org/wiki/Flakes), which defines this repository as a flake and allows other flakes to be imported and versioned, including nixpkgs itself, as well as other projects not defined in nixpkgs like [nvf](https://github.com/NotAShelf/nvf). The exact versions of every input flake are defined in [flake.lock](flake.lock), and the flake for this repository is defined in [flake.nix](flake.nix). In my configuration, the flake takes the hostname of the machine it is run on and builds the system from its corresponding configuration file in [hosts](hosts/). This allows this repository to contain my personal configurations for each of my computers.
 
 ## What are the features of my configuration?
-- Unique flakes for multiple machines, including desktop and servers
+- Unique and atomic configurations for multiple machines, including desktop and servers
 - Daily automated flake bumps (Updating [flake.lock](flake.lock))
 - User-specific packages, dotfiles, and settings managed by [home-manager](https://github.com/nix-community/home-manager)
 - Public secrets fully encrypted using [sops-nix](https://github.com/Mic92/sops-nix) (user password, VPN authkey)
 - Logins managed by [tuigreet](https://github.com/apognu/tuigreet)
-- [Hyprland](https://wiki.hypr.land/) tiling window manager with waybar, rofi, swww, and more!
+- [Hyprland](https://wiki.hypr.land/) tiling window manager with [waybar](https://github.com/Alexays/Waybar), [rofi](https://github.com/davatorium/rofi), [awww](https://codeberg.org/LGFae/awww), and [more](hazel-home/desktop/wayland)!
 - Neovim managed by [nvf](https://github.com/NotAShelf/nvf)
-- Basic self-hosted home servers, each with configurable services
+- Basic self-hosted home servers, each with configurable [services](services/)
 - [Tailscale](https://tailscale.com/) VPN network
 - Modded Minecraft servers using [nix-minecraft](https://github.com/Infinidoge/nix-minecraft)
 - Opt-in [Impermanence](https://grahamc.com/blog/erase-your-darlings/) via tmpfs with encrypted root
