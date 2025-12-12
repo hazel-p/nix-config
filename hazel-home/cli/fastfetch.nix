@@ -113,8 +113,9 @@
         }
         {
           type = "datetime";
-          key = "  date & time";
+          key = "  current time";
           keyColor = "green";
+          format = "{weekday} {day-in-month} {month-name-short} {hour-pretty}:{minute-pretty}";
         }
         {
           type = "command";
