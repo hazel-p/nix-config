@@ -1,4 +1,4 @@
-# NixOS Configuration
+# Hazel's NixOS Configuration
 ## What is in this repository?
 This repository contains a set of files which together describe the configuration for my entire computing setup, including servers and desktop. All these computers run NixOS, which allows me to run a single command which builds the system according only to the configuration laid out above.
 
