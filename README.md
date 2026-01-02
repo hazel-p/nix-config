@@ -1,26 +1,30 @@
 # My NixOS Configuration
-## What is in this repository?
-This repository contains a set of files which together describe the configuration for my entire computing setup, including servers and desktop. All these computers run NixOS, which allows me to run a single command which builds the system according only to the configuration laid out above.
-
-`sudo nixos-rebuild --flake github:hazel-p/nix-config`
+## What is in this website?
+The code above is the contents of a [git repository](https://www.geeksforgeeks.org/git/what-is-a-git-repository/) hosted by [GitHub](https://github.com/) containing a set of Nix files which together describe the configuration for almost my entire computing setup, including servers and desktop, which all run NixOS.
 
 ## What is NixOS?
 ![NixOS Logo](https://github.com/NixOS/nixos-artwork/blob/9d2cdedd73d64a068214482902adea3d02783ba8/logo/nixos.svg)
-[NixOS](https://wiki.nixos.org/wiki/NixOS_Wiki) is a declarative operating system built around the [Linux](https://github.com/torvalds/linux) kernel, and using the [Nix ecosystem](https://wiki.nixos.org/wiki/Nix_ecosystem).
+[NixOS](https://wiki.nixos.org/wiki/NixOS_Wiki) is a specialised [Linux Distro](https://en.wikipedia.org/wiki/Linux_distribution), a full operating system built around the [Linux](https://github.com/torvalds/linux) kernel. It is characterised by being entirely declarative, using the [Nix ecosystem](https://wiki.nixos.org/wiki/Nix_ecosystem).
 
-Declarative in this sense means that the entire system, from the deepest kernel patches and modules to each app installed and even colour scheme, and the exact version for each, is *declared* in code. This is different from an *imperative* system, where the user installs new software as and when needed, and configures each manually each time in config files strewn around the computer. This common approach makes backups, changing settings, and remembering what software is installed very difficult, and can result in systems being bloated over time. Declarative approaches such as Nix and [Docker Compose](https://github.com/docker/compose) are incredibly well suited for servers, but Nix streamlines the process for clean and organised desktop use as well.
+A declarative OS in this sense means that the entire computer, from the deepest kernel patches and modules to each app installed and even colour scheme, and the exact version for each, is *declared* in code. This is different from an *imperative* OS (Windows, MacOS, most Linux Distros), where the user installs new software as and when needed, and configures each manually each time. While convenient, this common approach makes backups, changing settings, and remembering what software is installed very difficult, and can result in systems being bloated over time, with software lying around unused and forgotten. A common declarative approach, [Docker Compose](https://github.com/docker/compose), is already widely used in servers, but Nix and NixOS allows this approach to apply to the entire computer, allowing for clean and organised desktop use as well.
 
 The language used by NixOS and extended Nix ecosystem is also called [Nix](https://nix.dev/tutorials/nix-language.html), which this repository is written in. This is a necessity for this operating system, but is very simple and easy to learn - this is my first Nix project!
 
-Each package is installed from [nixpkgs](https://search.nixos.org/packages), a git repository with over 100,000 programs packaged up and explicitly versioned using Nix's declarative language. Nixpkgs also comes with over 20,000 options for defining and configuring certain behaviour.
+Each package is installed from [nixpkgs](https://search.nixos.org/packages), an online repository with over 100,000 programs packaged up and explicitly versioned using Nix's declarative language. Nixpkgs also comes with over 20,000 options for defining and configuring certain behaviour.
 
 ### Advanced Features
-
 This project uses a mature experimental feature of Nix called [Flakes](https://wiki.nixos.org/wiki/Flakes), which defines this repository as a flake and allows other flakes, including nixpkgs and other projects not defined in nixpkgs like [nvf](https://github.com/NotAShelf/nvf), to be imported and explicitly versioned. The exact versions of every input flake are defined in [flake.lock](flake.lock), and the file defining this respository as a flake is [flake.nix](flake.nix). In my configuration, rebuilding using the flake takes the hostname of the machine it is run on and builds the system from its corresponding configuration file in [hosts](hosts/). This allows this repository to contain my personal configurations for each of my computers simultaneously. The hostname can also be explicitly mentioned: `sudo nixos-rebuild --flake github:hazel-p/nix-config#calliope`.
 
 My user-specific packages, dotfiles, and settings are managed by [home-manager](https://github.com/nix-community/home-manager), a Nix project for managing user-level declarations. While home-manager also can import programs from nixpkgs, it also has many unique options for [programs](https://mynixos.com/home-manager/options/programs) or [services](https://mynixos.com/home-manager/options/services).
 
 As all programs, files, and configs in NixOS are installed into /nix/store and linked to from around the system, theoretically all NixOS needs to boot are the /boot and /nix directories, with the bootloader rebuilding the rest of the filesystem from scratch. Therefore, root can be mounted to anywhere that gets wiped on shutdown, including memory. [Impermanence](https://grahamc.com/blog/erase-your-darlings/) is a Nix project which implements this, allowing me to "persist" certain directories and keep the rest of root stored on [tmpfs](https://en.wikipedia.org/wiki/Tmpfs), a filesystem entirely in RAM. Other options exist to use a [btrfs](https://en.wikipedia.org/wiki/Btrfs) volume which gets manually swapped out on reboot, allowing me to mount previous boots, but this is slower, bulkier, and may be unnecessary for servers.
+
+## How I use this website
+I am able to rebuild all my computers from scratch according to the configurations laid out above, using a single command:
+
+`sudo nixos-rebuild --flake github:hazel-p/nix-config`
+
+To install new software or change settings, I add the relevant Nix expression to a file in this repository, then run this command in order to rebuild the entire system.
 
 ## About my configuration
 - Unique and atomic configurations for multiple machines, including desktop and servers
@@ -51,11 +55,11 @@ This is my laptop, a HP Elitebook 745 G2. It has been 8 and a half years since I
 This will be my Steam Deck OLED, when I get round to changing the OS over to use Jovian rather than SteamOS. 
 
 ## Layout
-I have stuck to a rigid file heriarchy for this repository, seperating NixOS files by purpose and scope.
+I have stuck to a set file heriarchy for this repository, seperating NixOS files by purpose and scope.
 - [hosts/](hosts/) - NixOS files defining the hardware each host has, as well as links to the software it should have.
 - [nixos/](nixos/) - NixOS files defining the system-level software that should be installed on each device.
 - [services/](services/) - NixOS files defining the services the servers will run. Kept seperate from nixos/ for extensibility.
-- [hazel-home/](hazel-home/) - home-manager files defining the user-level software and configurations used.
+- [hazel-home/](hazel-home/) - home-manager files defining my personal user-level software and configurations.
 
 ## Inspiration:
 - [NixOS Wiki](https://wiki.nixos.org)

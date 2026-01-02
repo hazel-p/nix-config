@@ -115,6 +115,7 @@
         "HYPRSHOT_DIR, $HOME/Pictures/Screenshots"
       ];
 
+      #monitor = "DP-1, 1920x1080@143.85";
       monitor = let
         waybarSpace = let
           inherit (config.wayland.windowManager.hyprland.settings.general) gaps_in gaps_out;

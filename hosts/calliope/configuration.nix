@@ -19,7 +19,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Monitor Settings
-  boot.kernelParams = ["video=HDMI-1:2560x1440@60"]; # Home PC
+  boot.kernelParams = ["video=DP-1:1920x1080@143.85"]; # Home PC
 
   home-manager = {
     useGlobalPkgs = true;
