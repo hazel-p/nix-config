@@ -12,6 +12,7 @@
     #./ashell.nix
     ./rofi.nix
     ./swww.nix
+    ./wlogout.nix
   ];
 
   # Environment Variables
@@ -40,7 +41,6 @@
     overskride # powerful bluetoothclient in gtk4
     playerctl # cli tool to control media players
     wldash # a wayland native launcher
-    wlogout # manages logout options, exists independently of hyprlock
     nwg-look # GTK settings editor, designed to work properly in wlroots-based Wayland environment
   ];
 }

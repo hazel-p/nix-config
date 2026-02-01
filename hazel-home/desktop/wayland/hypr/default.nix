@@ -36,13 +36,13 @@
     settings = {
       exec-once = [
         "swww img ~/Pictures/hyprland-wallpapers/cactus.jpg"
-        "waybar"
         "hypridle"
         "systemctl --user start hyprpolkitagent"
         "swaynotificationcenter"
         "clipse -listen"
         "udiskie"
         "hyprpm reload -n"
+        "waybar"
       ];
 
       general = {
@@ -140,7 +140,7 @@
             else 0;
         };
       in [
-        ",addreserved,${toString waybarSpace.top},${toString waybarSpace.bottom},${toString waybarSpace.left},${toString waybarSpace.right}"
+        "DP-1, highres, highrr, 0x0" ",addreserved,${toString waybarSpace.top},${toString waybarSpace.bottom},${toString waybarSpace.left},${toString waybarSpace.right}"
       ];
     };
   };
