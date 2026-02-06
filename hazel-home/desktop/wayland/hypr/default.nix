@@ -117,7 +117,7 @@
 
       #monitor = "DP-1, 1920x1080@143.85";
       monitor = let
-        waybarSpace = let
+        wayb = let
           inherit (config.wayland.windowManager.hyprland.settings.general) gaps_in gaps_out;
           inherit (config.programs.waybar.settings.primary) position height width;
           gap = gaps_out - gaps_in;
@@ -140,7 +140,8 @@
             else 0;
         };
       in [
-        "DP-1, highres, highrr, 0x0" ",addreserved,${toString waybarSpace.top},${toString waybarSpace.bottom},${toString waybarSpace.left},${toString waybarSpace.right}"
+        ",highrr,0x0,1" # Main monitor
+        ",addreserved,${toString wayb.top},${toString wayb.bottom},${toString wayb.left},${toString wayb.right}"
       ];
     };
   };
