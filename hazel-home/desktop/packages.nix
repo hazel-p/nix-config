@@ -13,7 +13,7 @@
     krita
 
     # Multimedia
-    discord
+    webcord-vencord
     prismlauncher
 
     # UI Productivity
