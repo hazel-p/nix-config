@@ -25,7 +25,7 @@
     bat
     tree
     net-tools
-    busybox
+    # busybox
     nmap
 
     # Nix-specific tools

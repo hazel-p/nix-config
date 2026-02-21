@@ -5,7 +5,6 @@
 }: {
   imports = [
     ./binds.nix
-    ./hyprcursor.nix
   ];
   # Initial inspiration from github.com/weatflac505/hyprland-config-with-home-manager
   # Functional inspiration from github.com/Misterio77/nix-config
@@ -98,7 +97,6 @@
         "HYPRSHOT_DIR, $HOME/Pictures/Screenshots"
       ];
 
-      #monitor = "DP-1, 1920x1080@143.85";
       monitor = let
         wayb = let
           inherit (config.wayland.windowManager.hyprland.settings.general) gaps_in gaps_out;

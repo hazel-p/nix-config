@@ -6,10 +6,10 @@
 }: {
   # Import used desktop configuration
   imports = [
-    ./hypr
+    ./hyprland
 
     ./waybar
-    #./ashell.nix
+    ./cursor.nix
     ./rofi.nix
     ./swww.nix
     ./wlogout.nix
