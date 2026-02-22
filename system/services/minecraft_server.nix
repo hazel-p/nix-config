@@ -17,7 +17,7 @@ in {
     pkgs.lazymc
   ];
 
-  #environment.persistence."/nix/persist".directories = [ directory ];
+  environment.persistence."/nix/persist".directories = [ directory ];
 
   services.minecraft-servers = {
     enable = true;
