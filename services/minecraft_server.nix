@@ -36,12 +36,12 @@ in {
           difficulty = "normal";
           view-distance = 32;
           simulation-distance = 16;
-          level-seed = "-lesbian";
+          level-seed = "-estrogen";
           motd = "Hazel's Personal Server";
           white-list = true;
         };
         whitelist = {
-          hzl4 = "a7bbac4b-d6f2-425e-a984-82f092b13da3";
+          _hzl = "a7bbac4b-d6f2-425e-a984-82f092b13da3";
           Carpengizmat = "5aff9fb9-f278-4921-a2f8-bab1ab8f3af9";
         };
 
@@ -70,8 +70,8 @@ in {
             sha512 = "sha512-cpUVwedc+NnNcE8Ss0h925Zkz5ko57hbEiicj7vH7YLQIR4YUTdcvVs4WCC0/tvD9hcDj/9eMLMCBHsJNwQq5w==";
           };
           Noisium = pkgs.fetchurl {
-            url = "https://cdn.modrinth.com/data/hasdd01q/versions/bQdp8Lez/noisium-fabric-2.7.0%2Bmc1.21-1.21.1.jar";
-            sha512 = "sha512-UBzucejzeV2AOKvIM3K1CVvUan+jMrOCfWuMA117NASc6Qi0PWckQX+OPIWie35i9bKWgTavG4QlAwoETFiDDg==";
+            url = "https://cdn.modrinth.com/data/hasdd01q/versions/VyMvRQKq/noisium-fabric-2.8.3%2Bmc1.21.11.jar";
+            sha512 = "sha512-A9TBFiBO6MtPlbZoV2yejAme2TnBUP8M9P8JSuUrDF9iFMEpLJTyXqf2FCVBUdH/LbaOyt3J9WSGGJ0p+jok6w==";
           };
           DistantHorizons = pkgs.fetchurl {
             url = "https://cdn.modrinth.com/data/uCdwusMi/versions/GT3Bm3GN/DistantHorizons-2.4.5-b-1.21.11-fabric-neoforge.jar";
@@ -106,7 +106,6 @@ in {
             sha512 = "sha512-Kue9/qBuJ6Tp2W+7/WQnHEaECsBMzfTE5EBxM8Lj5cIPa1b8yuh6/itbxMnjeiGd4Fyjf9hZYmltsY0YJV5LDA==";
           };
         });
-
       };
     };
   };
