@@ -9,10 +9,10 @@
     inputs.home-manager.nixosModules.home-manager
 
     ./hardware-configuration.nix
-    ./../../nixos/amdgpu.nix
+    ./../../system/hardware/amdgpu.nix
 
-    ./../../nixos/base.nix
-    ./../../nixos/desktop.nix
+    ./../../system
+    ./../../system/desktop
   ];
 
   boot.loader.systemd-boot.enable = true;

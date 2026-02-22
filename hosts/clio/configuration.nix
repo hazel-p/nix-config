@@ -9,18 +9,18 @@
     inputs.home-manager.nixosModules.home-manager
 
     ./hardware-configuration.nix
-    ./../../nixos/persistence.nix
+    ./../../system/persistence.nix
 
-    ./../../nixos/base.nix
-    ./../../nixos/powersave.nix
-    #./../../nixos/intelgpu.nix
+    ./../../system
+    ./../../system/hardware/powersave.nix
+    #./../../system/hardware/intelgpu.nix
 
     # Services
-    ./../../services/minecraft_server.nix
-    ./../../services/immich.nix
-    #./../../services/samba-server.nix
-    ./../../services/blocky.nix
-    ./../../services/jellyfin.nix
+    ./../../system/services/minecraft_server.nix
+    ./../../system/services/immich.nix
+    #./../../system/services/samba-server.nix
+    ./../../system/services/blocky.nix
+    ./../../system/services/jellyfin.nix
   ];
 
   # Bootloader.

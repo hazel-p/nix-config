@@ -7,8 +7,8 @@
 }: {
   imports = [
     inputs.sops-nix.nixosModules.sops
-    ./../services/tailscale.nix
-    #./../services/samba-client.nix
+    ./services/tailscale.nix
+    #./services/samba-client.nix
   ];
 
   # Essential System-wide Packages

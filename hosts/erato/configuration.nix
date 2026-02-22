@@ -11,10 +11,10 @@
 
     ./hardware-configuration.nix
 
-    ./../../nixos/base.nix
-    ./../../nixos/desktop.nix
-    ./../../nixos/powersave.nix
-    ./../../nixos/amdgpu.nix
+    ./../../system
+    ./../../system/desktop
+    ./../../hardware/powersave.nix
+    ./../../hardware/amdgpu.nix
   ];
 
   nixpkgs.config.allowInsecurePredicate = pkg: builtins.elem (lib.getName pkg) ["broadcom-sta"];

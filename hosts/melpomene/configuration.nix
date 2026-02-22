@@ -10,12 +10,10 @@
 
     ./hardware-configuration.nix
 
-    ./../../nixos/base.nix
-    ./../../nixos/powersave.nix
-    #./../../nixos/intelgpu.nix
+    ./../../system
+    ./../../system/hardware/powersave.nix
+    #./../../system/hardware/intelgpu.nix
 
-    # Services
-    ./../../services/minecraft_server.nix
     ./../../services/immich.nix
   ];
 
