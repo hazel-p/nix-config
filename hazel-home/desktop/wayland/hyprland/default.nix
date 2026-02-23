@@ -18,7 +18,7 @@
     hyprpolkitagent # polkit authentication daemon, allows GUI applications for elevated permissions
     hyprsysteminfo # GUI application that displays system information
     hyprland-qt-support # provides QML style for hypr*qt6 apps
-#hyprcursor # new cursor theme format
+    #hyprcursor # new cursor theme format
     hyprutils # library providing shared implementations of commonly used types across the hypr* ecosystem
     hyprlang # library provides parsing of the hypr configuration language
     hyprwayland-scanner # hw-s,is a utility to generate sources and headers for wayalnd protocol specifications (generates c++ implementations)

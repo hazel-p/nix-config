@@ -8,7 +8,7 @@
 }: {
   programs.ashell = {
     enable = true;
-    
+
     settings = {
       modules.center = [];
       appearance = {

@@ -51,7 +51,7 @@ in {
   imports = [./style.nix];
 
   systemd.user.services.waybar.Unit = {
-    StartLimitBurst = 10;  
+    StartLimitBurst = 10;
     X-Restart-Triggers = lib.mkForce [];
     X-SwitchMethod = "reload";
   };

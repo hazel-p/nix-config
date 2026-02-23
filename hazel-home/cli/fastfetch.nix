@@ -42,7 +42,7 @@
           key = "  disk [/{name}]";
           keyColor = "red";
         }
-         {
+        {
           type = "monitor";
           key = "  monitor";
           format = "{1} {2}x{3} @ {11}Hz - {6}inch";
@@ -84,7 +84,7 @@
         }
         {
           type = "shell";
-          key =  "  shell";
+          key = "  shell";
           keyColor = "yellow";
         }
         {
@@ -92,7 +92,7 @@
           key = "  de";
           keyColor = "yellow";
         }
-       {
+        {
           type = "wm";
           key = "  wm";
           keyColor = "yellow";

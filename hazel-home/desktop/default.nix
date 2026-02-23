@@ -7,7 +7,7 @@
   # Import used desktop configuration
   imports = [
     # Display Settings
-    #./gnome 
+    #./gnome
     ./wayland
 
     # Additional packages for desktop & cli
