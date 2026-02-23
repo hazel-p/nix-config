@@ -26,7 +26,6 @@
       # MOVE ASAP!!!
       "/var/lib/tailscale"
       "/var/lib/immich"
-      "/var/lib/minecraft-servers"
     ];
 
     files = [

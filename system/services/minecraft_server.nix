@@ -17,7 +17,7 @@ in {
     pkgs.lazymc
   ];
 
-  #environment.persistence."/nix/persist".directories = [ directory ];
+  environment.persistence."/nix/persist".directories = [ directory ];
 
   services.minecraft-servers = {
     enable = true;
@@ -37,6 +37,7 @@ in {
           view-distance = 32;
           simulation-distance = 16;
           level-seed = "-estrogen";
+          max-players = 2;
           motd = "Hazel's Personal Server";
           white-list = true;
         };
