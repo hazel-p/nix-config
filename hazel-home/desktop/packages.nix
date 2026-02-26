@@ -5,7 +5,7 @@
   ...
 }: {
   # Desktop and GUI Packages
-  programs.firefox.enable = true;
+  programs.librewolf.enable = true;
   home.packages = with pkgs; [
     # Art & Music
     audacity

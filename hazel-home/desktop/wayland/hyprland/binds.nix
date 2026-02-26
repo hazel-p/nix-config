@@ -8,7 +8,7 @@
     "$mod" = "SUPER";
     bind = [
       "$mod, return, exec, kitty"
-      "$mod, F, exec, firefox"
+      "$mod, F, exec, librewolf"
       "$mod, D, exec, rofi -show drun"
       "$mod, A, exec, kitty --class musikcube -e musikcube"
       "$mod, Y, exec, kitty --class yazi -e yazi"
