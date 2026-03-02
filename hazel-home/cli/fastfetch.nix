@@ -121,7 +121,7 @@
           type = "command";
           key = "  last rebuilt";
           keyColor = "green";
-          text = "stat -c %Y /run/current-system | sed 's/^/@/' | date --file=- +'%A %e %b %R'";
+          text = "stat -c %Y /run/current-system | sed 's/^/@/' | date --file=- +'%A %-d %b %R'";
         }
         {
           type = "localip";
