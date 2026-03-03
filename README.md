@@ -55,10 +55,10 @@ This will be my Steam Deck OLED, when I get round to changing the OS over to use
 
 ## Layout
 I have stuck to a set file heriarchy for this repository, seperating NixOS files by purpose and scope.
-- [hosts/](hosts/) - NixOS files defining the hardware each host has, as well as links to the software it should have.
-- [nixos/](nixos/) - NixOS files defining the system-level software that should be installed on each device.
-- [services/](services/) - NixOS files defining the services the servers will run. Kept seperate from nixos/ for extensibility.
-- [hazel-home/](hazel-home/) - home-manager files defining my personal user-level software and configurations.
+- [hosts/](hosts/) - NixOS files defining the hardware each __host__ has, as well as links to the software it should have.
+- [system/](system/) - Set of .nix files defining the __system-level__ software and configurations.
+- [hazel-home/](hazel-home/) - home-manager files defining my personal __user-level__ software and configurations.
+- [secrets/](secrets/) - SOPs file containing fuly encrypted secrets for my system, including user password and tailscale authkey.
 
 ## Inspiration:
 - [NixOS Wiki](https://wiki.nixos.org)
