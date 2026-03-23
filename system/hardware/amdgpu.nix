@@ -7,11 +7,10 @@
   # AMD GPU settings
   hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
-  environment.systemPackages = with pkgs; [lact];
-  systemd.packages = with pkgs; [lact];
-  systemd.services.lactd.wantedBy = ["multi-user.target"];
+  services.lact.enable = true;
+  hardware.amdgpu.overdrive.enable = true;
 
   # Currently using Liqorix kernel, which may help with crashes
-  # Using downgraded LTS kernel mitigate crashing, but will also disable undervolting
+  # Using downgraded LTS kernel makes crashing less common, but also disables undervolting
   boot.kernelPackages = lib.mkForce pkgs.linuxPackages_6_6;
 }
