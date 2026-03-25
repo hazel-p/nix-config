@@ -14,7 +14,7 @@
     ./../../system/hardware/powersave.nix
     #./../../system/hardware/intelgpu.nix
 
-    ./../../services/immich.nix
+    ./../../system/services/immich.nix
   ];
 
   # Bootloader.
