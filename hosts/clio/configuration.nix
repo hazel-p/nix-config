@@ -16,6 +16,7 @@
     #./../../system/hardware/intelgpu.nix
 
     # Services
+    ./../../system/services/borg.nix
     ./../../system/services/minecraft_server.nix
     ./../../system/services/immich.nix
     #./../../system/services/samba-server.nix
