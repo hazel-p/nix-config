@@ -163,11 +163,11 @@
         "scenefx": "scenefx"
       },
       "locked": {
-        "lastModified": 1778729938,
-        "narHash": "sha256-21SSDZMAU4ws1Mah+WJ/Yvg4deZxlsyICDqUfr51W3o=",
+        "lastModified": 1778813569,
+        "narHash": "sha256-RBQfeTM8J0AWE+A7vYSIYt0fuLS1kNYZYoocNjKDAeo=",
         "owner": "mangowm",
         "repo": "mango",
-        "rev": "de694264a0eac5ccee827a5bba148fb711e3d6e8",
+        "rev": "1ce245af5cff99f8c66eb73a6c599ff77e90dada",
         "type": "github"
       },
       "original": {
@@ -368,11 +368,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1778697893,
-        "narHash": "sha256-FRDDot0l7uTmZKzU1WLKbaY16idh9xBwcM3Ft8rzZYE=",
+        "lastModified": 1778819658,
+        "narHash": "sha256-463Qu9gNz/fUjo9bvdReGrMAo8M8CGfAFkY6v9Kaz9k=",
         "owner": "notashelf",
         "repo": "nvf",
-        "rev": "ab459445197cf957498111bec530f58e7049df4b",
+        "rev": "15fd3580c049a308e6720494f732dbc4243c5490",
         "type": "github"
       },
       "original": {
