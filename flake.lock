@@ -163,11 +163,11 @@
         "scenefx": "scenefx"
       },
       "locked": {
-        "lastModified": 1778910678,
-        "narHash": "sha256-MguSbguMUFSdrVXQ0EZcjyeu5eF2D1knDmxDVlhNjzI=",
+        "lastModified": 1778982965,
+        "narHash": "sha256-TUc2+pmqQVUaVczBK0YPa2zbLWGSZKmVfQLjYRwOD+Y=",
         "owner": "mangowm",
         "repo": "mango",
-        "rev": "4ca7439575814b3b9d975c36a1c7f59e65dc61b1",
+        "rev": "26f5e232364ef071c5e32621b097f8d303471803",
         "type": "github"
       },
       "original": {
@@ -225,11 +225,11 @@
         "xwayland-satellite-unstable": "xwayland-satellite-unstable"
       },
       "locked": {
-        "lastModified": 1778862364,
-        "narHash": "sha256-O0qC3IOHRscJcGPuDlIS4cLboKJZq358KH3oVzBeQjo=",
+        "lastModified": 1778942403,
+        "narHash": "sha256-SPCWvqeVySTNUgX/shARpRl5fi/NnkObUgDGR/Aco4c=",
         "owner": "sodiboo",
         "repo": "niri-flake",
-        "rev": "9ab3f8b17e22ead80525c4572b74156acf870526",
+        "rev": "daefca3370581223fedc24d0101c4915a3689f9e",
         "type": "github"
       },
       "original": {
@@ -368,11 +368,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1778881785,
-        "narHash": "sha256-MMAhC3eRS8WV0TF2enKBVRYragTDA3kH9LSZU6tgy5U=",
+        "lastModified": 1778971390,
+        "narHash": "sha256-v8EUNkB9LwlbzokqnxiPpjcilbWDnWUO366GiQ9rvuw=",
         "owner": "notashelf",
         "repo": "nvf",
-        "rev": "c27e86f9adbb301fb59eb4666019396e4663c816",
+        "rev": "3997bd4db072d7388a2ce16e8a0684159ca8e037",
         "type": "github"
       },
       "original": {
