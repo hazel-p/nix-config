@@ -163,11 +163,11 @@
         "scenefx": "scenefx"
       },
       "locked": {
-        "lastModified": 1779777237,
-        "narHash": "sha256-VsImkEtxWnsjYXMRRPm1v+SttsWW2dL9gAjPFkaqqsQ=",
+        "lastModified": 1779855484,
+        "narHash": "sha256-1EFZWodhHFnoFBCm6KCwe0k8RwBSiycZRIPDJuFHqB4=",
         "owner": "mangowm",
         "repo": "mango",
-        "rev": "f7deb3d6992e5c1801fe697e3bb3395cc083453b",
+        "rev": "473550c62229ed7bbe9ce7c27fe5cbae79b654bb",
         "type": "github"
       },
       "original": {
@@ -280,11 +280,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1779768841,
-        "narHash": "sha256-lzDWYWg0s4Vvb7lJMdM7ySEHDuSOY8fXMUAXl2ReiAo=",
+        "lastModified": 1779856025,
+        "narHash": "sha256-ATcnQv0i/B54pZkGnORRIJO8N+Z+bC13ED4jGK43B5k=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "8996e4e811210fc7b51ead34a8c0ae5ba8df8eef",
+        "rev": "82585753a96d9e2161850541750127febb761497",
         "type": "github"
       },
       "original": {
