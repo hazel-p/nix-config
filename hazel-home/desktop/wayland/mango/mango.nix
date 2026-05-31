@@ -1,11 +1,21 @@
 {inputs, ...}: {
   imports = [
     inputs.mangowm.hmModules.mango
-    #./binds.nix
+    ./binds.nix
+    ./looks.nix
+    ./layouts.nix
   ];
 
   wayland.windowManager.mango = {
-#enable = true;
-#systemd.enable = true;
+    enable = true;
+    settings = {
+      exec-once = [
+        "awww img ~/Pictures/hyprland-wallpapers/cactus.jpg"
+        "swaynotificationcenter"
+        "clipse -listen"
+        "udiskie"
+        "waybar"
+      ];
+    };
   };
 }
