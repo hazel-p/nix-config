@@ -18,7 +18,6 @@
       "$mod, space, togglefloating,"
       "$mod, C, killactive,"
       "$mod, P, pseudo"
-      "$mod, B, togglesplit,"
       "$mod, backspace, exec, wlogout"
 
       "$mod, mouse_down, exec, hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 * 1.1}')" # for zooming

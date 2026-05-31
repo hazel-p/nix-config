@@ -7,6 +7,7 @@
   # Import used desktop configuration
   imports = [
     ./hyprland
+    ./mango
 
     ./waybar
     ./cursor.nix

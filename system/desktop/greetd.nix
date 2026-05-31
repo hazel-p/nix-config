@@ -7,6 +7,7 @@
   tuigreet = "${pkgs.tuigreet}/bin/tuigreet";
   hyprland-sessions = "${pkgs.hyprland}/share/wayland-sessions";
   niri-command = "niri-session";
+  mango-command = "mango";
   gnome-sessions = "${config.services.displayManager.sessionData.desktops}/share/wayland-sessions";
 in {
   # Huge thanks to these two:
@@ -17,7 +18,7 @@ in {
     enable = true;
     settings = {
       default_session = {
-        command = "${tuigreet} --time --remember --remember-user-session --cmd ${niri-command} --sessions ${hyprland-sessions}:${gnome-sessions}";
+        command = "${tuigreet} --time --remember --remember-user-session --cmd ${mango-command} ${niri-command} --sessions ${hyprland-sessions}:${gnome-sessions}";
         user = "greeter";
       };
     };

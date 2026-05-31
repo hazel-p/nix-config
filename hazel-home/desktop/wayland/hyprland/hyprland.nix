@@ -15,9 +15,10 @@
     package = pkgs.hyprland;
     xwayland.enable = true;
     systemd.enable = true;
+    configType = "hyprlang";
     settings = {
       exec-once = [
-        "swww img ~/Pictures/hyprland-wallpapers/cactus.jpg"
+        "awww img ~/Pictures/hyprland-wallpapers/cactus.jpg"
         "hypridle"
         "systemctl --user start hyprpolkitagent"
         "swaynotificationcenter"
