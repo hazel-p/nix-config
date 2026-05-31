@@ -11,7 +11,7 @@
     ./waybar
     ./cursor.nix
     ./rofi.nix
-    ./swww.nix
+    ./awww.nix
     ./wlogout.nix
   ];
 
