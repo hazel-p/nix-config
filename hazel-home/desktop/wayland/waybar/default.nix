@@ -47,6 +47,7 @@
     };
 
   hyprland-enabled = config.wayland.windowManager.hyprland.enable;
+  mango-enabled = config.wayland.windowManager.mango.enable;
 in {
   imports = [./style.nix];
 
@@ -76,7 +77,10 @@ in {
         "custom/player"
       ];
 
-      modules-center = lib.optionals hyprland-enabled ["hyprland/workspaces"];
+      modules-center =
+        []
+        ++ (lib.optionals hyprland-enabled ["hyprland/workspaces"])
+        ++ (lib.optionals mango-enabled ["ext/workspaces"]);
 
       modules-right = [
         "tray"

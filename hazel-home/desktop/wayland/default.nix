@@ -6,10 +6,11 @@
 }: {
   # Import used desktop configuration
   imports = [
-    ./hyprland
+    #./hyprland
     ./mango
 
-    ./waybar
+    #./waybar
+    ./noctalia.nix
     ./cursor.nix
     ./rofi.nix
     ./awww.nix

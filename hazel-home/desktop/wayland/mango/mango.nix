@@ -14,8 +14,10 @@
         "swaynotificationcenter"
         "clipse -listen"
         "udiskie"
-        "waybar"
+        "noctalia"
       ];
+      monitorrule = "name:MAG241C, refresh:143.85";
+      xkb_rules_layout = "gb";
     };
   };
 }
