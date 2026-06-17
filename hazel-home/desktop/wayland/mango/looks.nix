@@ -7,7 +7,7 @@
       radius = 5;
       num_passes = 2;
     };
-    border_radius = 6;
+    border_radius = 3;
     focused_opacity = 1.0;
 
     # Animations - use underscores for multi-part keys
