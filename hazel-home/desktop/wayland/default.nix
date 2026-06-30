@@ -10,7 +10,7 @@
     ./mango
 
     #./waybar
-    #./noctalia.nix
+    ./noctalia.nix
     ./cursor.nix
     ./rofi.nix
     ./awww.nix

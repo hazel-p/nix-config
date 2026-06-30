@@ -10,12 +10,15 @@
     enable = true;
     settings = {
       exec-once = [
-        "awww img ~/Pictures/hyprland-wallpapers/cactus.jpg"
         "swaynotificationcenter"
         "clipse -listen"
         "udiskie"
+        "awww-daemon"
+        "awww img ~/Pictures/hyprland-wallpapers/cactus.jpg"
+        "noctalia"
       ];
-      monitorrule = "name:MAG241C, refresh:143.85";
+      monitorrule = "name:^DP-3$, width:1920, height:1080, refresh:143.854996, x:0, y:0, scale:1.000000, rr:0";
+      allow_tearing = 1;
       xkb_rules_layout = "gb";
     };
   };

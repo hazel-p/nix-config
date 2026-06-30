@@ -100,7 +100,7 @@
     networkmanager.enable = true;
   };
 
-  #services.nohang.enable = true;
+  services.nohang.enable = true;
 
   system.stateVersion = "24.11"; #Don't change
 }

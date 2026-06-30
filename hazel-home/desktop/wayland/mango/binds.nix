@@ -6,6 +6,9 @@
       "SUPER, D, spawn, rofi -show drun"
       "SUPER, backspace, spawn, wlogout"
       "SUPER, C, killclient"
+      "SUPER, G, spawn, grimblast"
+
+      "SUPER, n, switch_layout"
     ];
   };
 }
