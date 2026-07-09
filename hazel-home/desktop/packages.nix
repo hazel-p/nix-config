@@ -15,6 +15,7 @@
     # Multimedia
     webcord-vencord
     prismlauncher
+    intiface-central
 
     # UI Productivity
     obsidian

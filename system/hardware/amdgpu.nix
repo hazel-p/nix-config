@@ -12,5 +12,5 @@
 
   # Currently using Liqorix kernel, which may help with crashes
   # Using downgraded LTS kernel makes crashing less common, but also disables undervolting
-  boot.kernelPackages = lib.mkForce pkgs.linuxPackages_6_6;
+  #boot.kernelPackages = lib.mkForce pkgs.linuxPackages_6_6;
 }
