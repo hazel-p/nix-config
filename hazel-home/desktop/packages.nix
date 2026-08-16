@@ -13,7 +13,7 @@
     krita
 
     # Multimedia
-    webcord-vencord
+    legcord
     prismlauncher
     intiface-central
 
