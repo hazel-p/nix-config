@@ -16,6 +16,7 @@
         "awww-daemon"
         "awww img ~/Pictures/hyprland-wallpapers/cactus.jpg"
         "noctalia"
+        "flameshot"
       ];
       monitorrule = "name:^DP-3$, width:1920, height:1080, refresh:143.854996, x:0, y:0, scale:1.000000, rr:0";
       allow_tearing = 1;

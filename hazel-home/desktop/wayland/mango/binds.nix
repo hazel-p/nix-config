@@ -6,7 +6,7 @@
       "SUPER, D, spawn, rofi -show drun"
       "SUPER, backspace, spawn, wlogout"
       "SUPER, C, killclient"
-      "SUPER, G, spawn, grimblast"
+      "SUPER, G, spawn, flameshot gui --clipboard --accept-on-select"
 
       "SUPER, n, switch_layout"
 

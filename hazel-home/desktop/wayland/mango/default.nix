@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./mango.nix
+    ../flameshot.nix
   ];
 
   home.packages = with pkgs; [
