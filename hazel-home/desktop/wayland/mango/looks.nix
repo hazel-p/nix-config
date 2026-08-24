@@ -22,5 +22,8 @@
       open = "0.46,1.0,0.29,1";
       close = "0.08,0.92,0,1";
     };
+
+    # Make it so tags move the screen down and up
+    tag_animation_direction = 0;
   };
 }
