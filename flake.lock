@@ -164,11 +164,11 @@
         "scenefx": "scenefx"
       },
       "locked": {
-        "lastModified": 1789633540,
-        "narHash": "sha256-MrGzpvPugFBp/3MU0pRKd1GWk6drDlwFiXh/pGQUTbA=",
+        "lastModified": 1789715214,
+        "narHash": "sha256-b4RrEEgCdVXyxQGMgtJzgNjgmNl2GRiMt6Gj/CsO6uQ=",
         "owner": "mangowm",
         "repo": "mango",
-        "rev": "bbd10bf243652ca6c6eb842e13f06d7d6de16262",
+        "rev": "51fab2ac912607ec503939b5273a308adf7a3c9c",
         "type": "github"
       },
       "original": {
@@ -259,11 +259,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1789619711,
-        "narHash": "sha256-Bf9+6h25eiMNa6IYHbFUXsBCT6qgWFeHdtNWD10cZt8=",
+        "lastModified": 1789705208,
+        "narHash": "sha256-D9FgdhidHPLASCLeTgTwgrk6QvRiRFiI+mcldlUHH0E=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "ec99d7ee14ad01f15347c228184a6805c143a4db",
+        "rev": "173284c7a7cd372ff6d6e296b57d53e35cf271a5",
         "type": "github"
       },
       "original": {
@@ -443,11 +443,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788914643,
-        "narHash": "sha256-4GuMPW90JSxXWDPUB9M+1m7fYbe3H0apOd86/zBQ2Kw=",
+        "lastModified": 1789691124,
+        "narHash": "sha256-k+I+R6uwHX3VcJ7326qLV6vCahZUgsVl+i8sSU/Stxk=",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "13616fff713a9f94055c66f15687ebdc17a335df",
+        "rev": "1e73e8f7176d65e1b55e324de099bbfff4b2c574",
         "type": "github"
       },
       "original": {
