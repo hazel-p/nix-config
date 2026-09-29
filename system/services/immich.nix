@@ -12,6 +12,11 @@
     package = pkgs.immich;
   };
 
+  #REMOVE UPON RELEASE OF 26.11 PLEASEEEEE
+  nixpkgs.config.permittedInsecurePackages = [
+    "immich-2.7.5"
+  ];
+
   #environment.persistence."/nix/persist".directories = ["/var/lib/immich"];
 
   # TODO:
