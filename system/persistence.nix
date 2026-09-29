@@ -26,6 +26,7 @@
       # MOVE ASAP!!!
       "/var/lib/tailscale"
       "/var/lib/immich"
+      config.services.immich.mediaLocation
     ];
 
     files = [
