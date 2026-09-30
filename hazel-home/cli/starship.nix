@@ -15,7 +15,7 @@ in {
       add_newline = true;
       command_timeout = 1300;
       scan_timeout = 50;
-      format = "[](fg:${colour_bg1})$username$hostname[](fg:${colour_bg1} bg:${colour_bg2})$directory$custom$symbol($git_branch[](fg:${colour_bg3}))$symbol( $git_commit$git_status$git_metrics$git_state)$fill$cmd_duration$nix_shell$all$character";
+      format = "[](fg:${colour_bg1})$username$hostname[](fg:${colour_bg1} bg:${colour_bg2})$directory\${custom.dir_git}\${custom.dir_end}$symbol($git_branch[](fg:${colour_bg3}))$symbol( $git_commit$git_status$git_metrics$git_state)$fill$cmd_duration$nix_shell$all$character";
 
       # Inside coloured boxes
       username = {
@@ -44,11 +44,11 @@ in {
       };
 
       #Custom seperators for when in git vs not in git
-      custom.directory_git = {
+      custom.dir_git = {
         format = "[](fg:${colour_bg2} bg:${colour_bg3})";
         when = "git rev-parse --is-inside-work-tree >/dev/null 2>&1";
       };
-      custom.directory_end = {
+      custom.dir_end = {
         format = "[](fg:${colour_bg2})";
         when = "! git rev-parse --is-inside-work-tree >/dev/null 2>&1";
       };
