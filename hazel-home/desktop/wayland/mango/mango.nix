@@ -9,7 +9,7 @@
   wayland.windowManager.mango = {
     enable = true;
     settings = {
-      exec-once = [
+      exec_once = [
         "swaynotificationcenter"
         "clipse -listen"
         "udiskie"
@@ -18,7 +18,7 @@
         "noctalia"
         "flameshot"
       ];
-      monitorrule = "name:^DP-3$, width:1920, height:1080, refresh:143.854996, x:0, y:0, scale:1.000000, rr:0";
+      monitor_rule = "name:^DP-3$, width:1920, height:1080, refresh:143.854996, x:0, y:0, scale:1.000000, rr:0";
       allow_tearing = 1;
       xkb_rules_layout = "gb";
     };
