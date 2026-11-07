@@ -11,6 +11,7 @@
     audacity
     reaper
     krita
+    stremio-linux-shell
 
     # Multimedia
     legcord
