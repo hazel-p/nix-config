@@ -28,6 +28,12 @@
     wireplumber.enable = true;
   };
 
+  # Enable Bluetooth
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = false;
+  };
+
   programs.dconf.enable = true;
 
   # Enable sharing with home-manager modules
