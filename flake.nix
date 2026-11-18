@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -28,16 +29,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    
     noctalia = {
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     mangowm = {
       url = "github:mangowm/mango";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -52,6 +48,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-unstable,
     home-manager,
     ...
   } @ inputs: let
@@ -62,7 +59,19 @@
     ];
     forAllSystems = nixpkgs.lib.genAttrs systems;
   in {
+    # Add a formatter! Use with `nix fmt`
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+
+    # Add unstable as an overlay! no idea how this works!
+    overlays = {
+      unstable-packages = final: _prev: {
+        unstablePkgs = import inputs.nixpkgs-unstable {
+          system = final.stdenv.hostPlatform.system;
+          config.allowUnfree = true;
+        };
+      };
+    };
+
     nixosConfigurations = {
       # Optiplex Setup
       melpomene = nixpkgs.lib.nixosSystem {

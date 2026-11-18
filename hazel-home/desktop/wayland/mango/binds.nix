@@ -10,7 +10,6 @@
 
       "SUPER, n, switch_layout"
 
-      
       "SUPER, k, viewtoleft"
       "SUPER, h, viewtoright"
       "SUPER+SHIFT, k, tagtoleft"

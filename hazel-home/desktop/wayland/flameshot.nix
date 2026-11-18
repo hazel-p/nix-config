@@ -7,24 +7,24 @@
   ...
 }: {
   services.flameshot = {
-  enable = true;
-  settings = {
-    General = {
-      disabledTrayIcon = true;
-      showStartupLaunchMessage = false;
-      saveAsFileExtension = ".png";
-      showDesktopNotification = true;
-      showAbortNotification = false;
-      showSidePanelButton = true;
+    enable = true;
+    settings = {
+      General = {
+        disabledTrayIcon = true;
+        showStartupLaunchMessage = false;
+        saveAsFileExtension = ".png";
+        showDesktopNotification = true;
+        showAbortNotification = false;
+        showSidePanelButton = true;
 
-      # Color Customization
-      uiColor = "#740096";
-      contrastUiColor = "#270032";
-      drawColor = "#ff0000";
+        # Color Customization
+        uiColor = "#740096";
+        contrastUiColor = "#270032";
+        drawColor = "#ff0000";
 
-      useGrimAdapter = true;
-      disabledGrimWarning = true;
+        useGrimAdapter = true;
+        disabledGrimWarning = true;
+      };
     };
   };
-};
 }

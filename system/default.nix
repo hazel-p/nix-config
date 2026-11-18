@@ -45,7 +45,11 @@
   console.keyMap = "uk";
 
   # Nix
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    overlays = [ inputs.self.overlays.unstable-packages ];
+    config.allowUnfree = true;
+  };
+
   nix = {
     gc = {
       automatic = true;

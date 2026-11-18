@@ -13,10 +13,12 @@
     krita
     stremio-linux-shell
 
+    # Modding
+    unstablePkgs.intiface-central
+
     # Multimedia
     legcord
     prismlauncher
-    intiface-central
 
     # UI Productivity
     obsidian
