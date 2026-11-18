@@ -15,9 +15,10 @@
 
     # Modding
     unstablePkgs.intiface-central
+    unstablePkgs.deadlock-mod-manager
 
     # Multimedia
-    legcord
+    unstablePkgs.legcord
     prismlauncher
 
     # UI Productivity
